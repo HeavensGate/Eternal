@@ -160,6 +160,8 @@
 
 	send_resources()
 	nanomanager.send_resources(src)
+	
+	message_admins("\blue ACCESS: User [ckey] connected to the server.")
 
 	if(prefs.lastchangelog != changelog_hash) //bolds the changelog button on the interface so we know there are updates.
 		winset(src, "rpane.changelog", "background-color=#eaeaea;font-style=bold")
@@ -177,6 +179,7 @@
 		admins -= src
 	directory -= ckey
 	clients -= src
+	message_admins("\blue ACCESS: User [ckey] disconnected from the server.")
 	return ..()
 
 
