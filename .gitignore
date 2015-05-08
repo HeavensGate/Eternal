@@ -5,7 +5,9 @@
 *.dmb
 *.lk
 *.orig
+*.backup
 data/
 cfg/
 core.*
 libmysqlclient.so
+
