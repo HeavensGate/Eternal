@@ -38,6 +38,8 @@
 	else
 		if(shoes)
 			tally += shoes.slowdown
+		else if(!shoes && (species.name == "Tajara" || species.name == "Unathi")) //If you're a race that doesn't need shoes ~Aztec
+			tally += SHOES_SLOWDOWN
 
 		for(var/organ_name in list("l_foot","r_foot","l_leg","r_leg"))
 			var/datum/organ/external/E = get_organ(organ_name)
@@ -47,7 +49,7 @@
 				tally += 0.5
 			else if(E.status & ORGAN_BROKEN)
 				tally += 1.5
-	
+
 	if(shock_stage >= 10) tally += 3
 
 	if(FAT in src.mutations)

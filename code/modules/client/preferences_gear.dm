@@ -631,6 +631,12 @@ var/global/list/gear_datums = list()
 	cost = 2
 	slot = slot_shoes
 
+/datum/gear/clothboots
+	display_name = "cloth footwraps"
+	path = /obj/item/clothing/shoes/clothboots
+	cost = 1
+	slot = slot_shoes
+
 /datum/gear/sandal
 	display_name = "sandals"
 	path = /obj/item/clothing/shoes/sandal
