@@ -2,8 +2,8 @@
 language: c
 
 env:
-  BYOND_MAJOR="506"
-  BYOND_MINOR="1247"
+  BYOND_MAJOR="508"
+  BYOND_MINOR="1290"
 
 before_install:
   - sudo apt-get update -qq
