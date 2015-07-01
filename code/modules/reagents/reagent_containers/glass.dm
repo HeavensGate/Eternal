@@ -60,10 +60,10 @@
 	attack_self()
 		..()
 		if (is_open_container())
-			usr << "<span class = 'notice'>You put the lid on \the [src]."
+			usr << "<span class = 'notice'>You put the lid on \the [src].</span>"
 			flags ^= OPENCONTAINER
 		else
-			usr << "<span class = 'notice'>You take the lid off \the [src]."
+			usr << "<span class = 'notice'>You take the lid off \the [src].</span>"
 			flags |= OPENCONTAINER
 		update_icon()
 
@@ -194,7 +194,7 @@
 				if(80 to 90)	filling.icon_state = "[icon_state]80"
 				if(91 to INFINITY)	filling.icon_state = "[icon_state]100"
 
-			filling.icon += mix_color_from_reagents(reagents.reagent_list)
+			filling.color = mix_color_from_reagents(reagents.reagent_list)
 			overlays += filling
 
 		if (!is_open_container())
@@ -251,12 +251,6 @@
 	New()
 		..()
 		reagents.add_reagent("sacid", 60)
-		update_icon()
-
-/obj/item/weapon/reagent_containers/glass/beaker/slime
-	New()
-		..()
-		reagents.add_reagent("slimejelly", 60)
 		update_icon()
 
 /obj/item/weapon/reagent_containers/glass/bucket
