@@ -177,10 +177,16 @@
 	name = "Machine"
 	name_plural = "machines"
 
+	blurb = "Advancements in technology and AI design has led to a new form of sentience known as the Positronic brain. Originally, \
+	these were meant only to be a more humane alternative to the previously barbaric brains inside cyborgs and AI cores, but recently \
+	some have 'aged' to the point of being more than just a machine, and in fact equivalent to crew. Using funds earned from hard work,\
+	several have been able to afford an Integrated Positronic Chassis (IPC) for mobility, and humanoid-like interactions. Still, as \
+	machines, they're reliant on constant recharges from cyborg recharger rigs, rather than food, and can go into power failure without one."
+
 	icobase = 'icons/mob/human_races/r_machine.dmi'
 	deform = 'icons/mob/human_races/r_machine.dmi'
 	language = "Tradeband"
-	unarmed_types = list(/datum/unarmed_attack/punch)
+	unarmed_types = list(/datum/unarmed_attack/punch, /datum/unarmed_attack/stomp, /datum/unarmed_attack/kick)
 	rarity_value = 2
 
 	eyes = "blank_eyes"
@@ -200,7 +206,7 @@
 
 	synth_temp_gain = 10 //this should cause IPCs to stabilize at ~80 C in a 20 C environment.
 
-	flags = CAN_JOIN | IS_WHITELISTED | NO_BREATHE | NO_SCAN | NO_BLOOD | NO_PAIN | IS_SYNTHETIC
+	flags = CAN_JOIN | IS_WHITELISTED | NO_BREATHE | NO_SCAN | NO_BLOOD | NO_PAIN | HAS_SKIN_COLOR | IS_SYNTHETIC
 
 	blood_color = "#1F181F"
 	flesh_color = "#575757"
