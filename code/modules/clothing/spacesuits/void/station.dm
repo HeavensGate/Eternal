@@ -114,7 +114,7 @@
 	item_color = "ipcminer"
 
 /obj/item/clothing/suit/space/void/machine
-	name = "Liquid cooled hardsuit"
+	name = "Liquid cooled voidsuit"
 	desc = "A heavy chassis with ports lining the inside. Would not recommend being inside if you don't have anywhere to plug in."
 	armor = list(melee = 40, bullet = 5, laser = 20,energy = 5, bomb = 35, bio = 100, rad = 50)
 	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd)
