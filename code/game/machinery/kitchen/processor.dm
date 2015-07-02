@@ -56,7 +56,7 @@
 
 		slime
 			input = /mob/living/carbon/slime
-		//	output = /obj/item/weapon/reagent_containers/glass/beaker/slime
+			output = /obj/item/weapon/reagent_containers/glass/beaker/slime
 
 		monkey
 			process(loc, what)

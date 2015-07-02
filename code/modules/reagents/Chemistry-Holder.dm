@@ -353,11 +353,8 @@ datum
 								if(C.result)
 									feedback_add_details("chemical_reaction","[C.result]|[C.result_amount*multiplier]")
 									multiplier = max(multiplier, 1) //this shouldnt happen ...
-									if(!isnull(C.resultcolor)) //paints
-										add_reagent(C.result, C.result_amount*multiplier, C.resultcolor)
-									else
-										add_reagent(C.result, C.result_amount*multiplier)
-										set_data(C.result, preserved_data)
+									add_reagent(C.result, C.result_amount*multiplier)
+									set_data(C.result, preserved_data)
 
 									//add secondary products
 									for(var/S in C.secondary_results)
@@ -498,20 +495,7 @@ datum
 											if(!istype(D, /datum/disease/advance))
 												preserve += D
 										R.data["viruses"] = preserve
-						if(R.id == "paint" && reagent == "paint")
-							if(R.color && data)
-								var/list/mix = new /list(2)
-								//fill the list
-								var/datum/reagent/paint/P = chemical_reagents_list["paint"]
-								var/datum/reagent/paint/P1 = new P.type()
-								P1.color = R.color
-								P1.volume = R.volume - amount //since we just increased that
-								var/datum/reagent/paint/P2 = new P.type()
-								P2.color = data
-								P2.volume = amount
-								mix[1] = P1
-								mix[2] = P2
-								R.color = mix_color_from_reagents(mix)
+
 						if(!safety)
 							handle_reactions()
 						return 0
@@ -523,10 +507,7 @@ datum
 					reagent_list += R
 					R.holder = src
 					R.volume = amount
-					if(reagent == "paint")
-						R.color = data
-					else
-						SetViruses(R, data) // Includes setting data for blood
+					SetViruses(R, data) // Includes setting data
 
 					//debug
 					//world << "Adding data"
@@ -630,7 +611,6 @@ datum
 					my_atom.reagents = null
 
 			copy_data(var/datum/reagent/current_reagent)
-				if (current_reagent.id == "paint") return current_reagent.color
 				if (!current_reagent || !current_reagent.data) return null
 				if (!istype(current_reagent.data, /list)) return current_reagent.data
 
