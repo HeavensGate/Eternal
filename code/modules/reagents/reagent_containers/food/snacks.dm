@@ -9,8 +9,6 @@
 	var/trash = null
 	var/slice_path
 	var/slices_num
-	var/dried_type = null
-	var/dry = 0
 	center_of_mass = list("x"=15, "y"=15)
 	w_class = 2
 
@@ -157,7 +155,7 @@
 
 	if (is_sliceable())
 		//these are used to allow hiding edge items in food that is not on a table/tray
-		var/can_slice_here = isturf(src.loc) && ((locate(/obj/structure/table) in src.loc) || (locate(/obj/machinery/optable) in src.loc) || (locate(/obj/item/weapon/tray) in src.loc))
+		var/can_slice_here = isturf(src.loc) && ((locate(/obj/structure/table) in src.loc) || (locate(/obj/machinery/optable) in src.loc) || (locate(/obj/item/weapon/tray) in src.loc) || (locate(/obj/item/pizzabox) in src.loc))
 		var/hide_item = !has_edge(W) || !can_slice_here
 
 		if (hide_item)
@@ -179,7 +177,7 @@
 				return
 
 			var/slices_lost = 0
-			if (W.w_class > 3)
+			if (W.w_class > 3 || istype(W, /obj/item/weapon/wirecutters))
 				user.visible_message("\blue [user] crudely slices \the [src] with [W]!", "\blue You crudely slice \the [src] with your [W]!")
 				slices_lost = rand(1,min(1,round(slices_num/2)))
 			else
@@ -467,41 +465,31 @@
 	icon_state = "egg"
 	filling_color = "#FDFFD1"
 
-/obj/item/weapon/reagent_containers/food/snacks/egg/New()
-	..()
-	reagents.add_reagent("egg", 3)
-
-/obj/item/weapon/reagent_containers/food/snacks/egg/afterattack(obj/O as obj, mob/user as mob, proximity)
-	if(istype(O,/obj/machinery/microwave))
-		return ..()
-	if(!(proximity && O.is_open_container()))
-		return
-	user << "You crack \the [src] into \the [O]."
-	reagents.trans_to(O, reagents.total_volume)
-	user.drop_from_inventory(src)
-	del(src)
-
-/obj/item/weapon/reagent_containers/food/snacks/egg/throw_impact(atom/hit_atom)
-	..()
-	new/obj/effect/decal/cleanable/egg_smudge(src.loc)
-	src.reagents.reaction(hit_atom, TOUCH)
-	src.visible_message("\red [src.name] has been squashed.","\red You hear a smack.")
-	del(src)
-
-/obj/item/weapon/reagent_containers/food/snacks/egg/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype( W, /obj/item/toy/crayon ))
-		var/obj/item/toy/crayon/C = W
-		var/clr = C.colourName
-
-		if(!(clr in list("blue","green","mime","orange","purple","rainbow","red","yellow")))
-			usr << "\blue The egg refuses to take on this color!"
-			return
-
-		usr << "\blue You color \the [src] [clr]"
-		icon_state = "egg-[clr]"
-		item_color = clr
-	else
+	New()
 		..()
+		reagents.add_reagent("egg", 3)
+
+	throw_impact(atom/hit_atom)
+		..()
+		new/obj/effect/decal/cleanable/egg_smudge(src.loc)
+		src.reagents.reaction(hit_atom, TOUCH)
+		src.visible_message("\red [src.name] has been squashed.","\red You hear a smack.")
+		del(src)
+
+	attackby(obj/item/weapon/W as obj, mob/user as mob)
+		if(istype( W, /obj/item/toy/crayon ))
+			var/obj/item/toy/crayon/C = W
+			var/clr = C.colourName
+
+			if(!(clr in list("blue","green","mime","orange","purple","rainbow","red","yellow")))
+				usr << "\blue The egg refuses to take on this color!"
+				return
+
+			usr << "\blue You color \the [src] [clr]"
+			icon_state = "egg-[clr]"
+			item_color = clr
+		else
+			..()
 
 /obj/item/weapon/reagent_containers/food/snacks/egg/blue
 	icon_state = "egg-blue"
@@ -559,16 +547,12 @@
 		reagents.add_reagent("protein", 2)
 
 /obj/item/weapon/reagent_containers/food/snacks/flour
-	name = "flour sack"
-	desc = "A big bag of flour. Good for baking!"
-	icon = 'icons/obj/food.dmi'
+	name = "flour"
+	desc = "A small bag filled with some flour."
 	icon_state = "flour"
-	item_state = "flour"
 	New()
 		..()
-		reagents.add_reagent("flour", 30)
-		src.pixel_x = rand(-10.0, 10)
-		src.pixel_y = rand(-10.0, 10)
+		reagents.add_reagent("nutriment", 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/organ
 	name = "organ"
@@ -710,23 +694,6 @@
 		reagents.add_reagent("protein", 6)
 		bitesize = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/donkpocket/sinpocket
-	name = "\improper Sin-pocket"
-	desc = "The food of choice for the veteran. Do <B>NOT</B> overconsume."
-	filling_color = "#6D6D00"
-	heated_reagents = list("doctorsdelight" = 5, "hyperzine" = 0.75, "synaptizine" = 0.25)
-	var/has_been_heated = 0
-
-/obj/item/weapon/reagent_containers/food/snacks/donkpocket/sinpocket/attack_self(mob/user)
-	if(has_been_heated)
-		user << "<span class='notice'>The heating chemicals have already been spent.</span>"
-		return
-	has_been_heated = 1
-	user.visible_message("<span class='notice'>[user] crushes \the [src] package.</span>", "You crush \the [src] package and feel a comfortable heat build up.")
-	spawn(200)
-		user << "You think \the [src] is ready to eat about now."
-		heat()
-
 /obj/item/weapon/reagent_containers/food/snacks/donkpocket
 	name = "Donk-pocket"
 	desc = "The food of choice for the seasoned traitor."
@@ -739,22 +706,12 @@
 		reagents.add_reagent("protein", 2)
 
 	var/warm = 0
-	var/list/heated_reagents = list("tricordrazine" = 5)
-	proc/heat()
-		warm = 1
-		for(var/reagent in heated_reagents)
-			reagents.add_reagent(reagent, heated_reagents[reagent])
-		bitesize = 6
-		name = "Warm " + name
-		cooltime()
-
-	proc/cooltime()
+	proc/cooltime() //Not working, derp?
 		if (src.warm)
-			spawn(4200)
+			spawn( 4200 )
 				src.warm = 0
-				for(var/reagent in heated_reagents)
-					src.reagents.del_reagent(reagent)
-				src.name = initial(name)
+				src.reagents.del_reagent("tricordrazine")
+				src.name = "donk-pocket"
 		return
 
 /obj/item/weapon/reagent_containers/food/snacks/brainburger
@@ -1612,18 +1569,24 @@
 	desc = "Still wrapped in some paper."
 	icon_state = "monkeycubewrap"
 	wrapped = 1
+
+
 /obj/item/weapon/reagent_containers/food/snacks/monkeycube/farwacube
 	name = "farwa cube"
 	monkey_type = /mob/living/carbon/monkey/tajara
 /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube
 	name = "farwa cube"
 	monkey_type =/mob/living/carbon/monkey/tajara
+
+
 /obj/item/weapon/reagent_containers/food/snacks/monkeycube/stokcube
 	name = "stok cube"
 	monkey_type = /mob/living/carbon/monkey/unathi
 /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube
 	name = "stok cube"
 	monkey_type =/mob/living/carbon/monkey/unathi
+
+
 /obj/item/weapon/reagent_containers/food/snacks/monkeycube/neaeracube
 	name = "neaera cube"
 	monkey_type = /mob/living/carbon/monkey/skrell
@@ -2103,7 +2066,19 @@
 
 	New()
 		..()
-		name = pick(list("borsch","bortsch","borstch","borsh","borshch","borscht"))
+		switch(rand(1,6))
+			if(1)
+				name = "borsch"
+			if(2)
+				name = "bortsch"
+			if(3)
+				name = "borstch"
+			if(4)
+				name = "borsh"
+			if(5)
+				name = "borshch"
+			if(6)
+				name = "borscht"
 		reagents.add_reagent("nutriment", 8)
 		bitesize = 2
 
@@ -2819,6 +2794,23 @@
 ///////////////////////////////////////////
 // new old food stuff from bs12
 ///////////////////////////////////////////
+
+// Flour + egg = dough
+/obj/item/weapon/reagent_containers/food/snacks/flour/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(istype(W,/obj/item/weapon/reagent_containers/food/snacks/egg))
+		new /obj/item/weapon/reagent_containers/food/snacks/dough(src)
+		user << "You make some dough."
+		del(W)
+		del(src)
+
+// Egg + flour = dough
+/obj/item/weapon/reagent_containers/food/snacks/egg/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(istype(W,/obj/item/weapon/reagent_containers/food/snacks/flour))
+		new /obj/item/weapon/reagent_containers/food/snacks/dough(src)
+		user << "You make some dough."
+		del(W)
+		del(src)
+
 /obj/item/weapon/reagent_containers/food/snacks/dough
 	name = "dough"
 	desc = "A piece of dough."
@@ -2855,8 +2847,6 @@
 	desc = "A building block of an impressive dish."
 	icon = 'icons/obj/food_ingredients.dmi'
 	icon_state = "doughslice"
-	slice_path = /obj/item/weapon/reagent_containers/food/snacks/spagetti
-	slices_num = 1
 	bitesize = 2
 	New()
 		..()
