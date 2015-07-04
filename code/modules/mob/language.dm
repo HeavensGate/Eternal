@@ -158,7 +158,7 @@
 	return capitalize(new_name)
 
 /datum/language/tajaran
-	name = "Siik'tajr"
+	name = "Siik'mas"
 	desc = "The traditionally employed tongue of Ahdomai, composed of expressive yowls and chirps. Native to the Tajaran."
 	speech_verb = "mrowls"
 	ask_verb = "mrowls"
