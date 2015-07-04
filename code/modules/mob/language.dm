@@ -191,6 +191,17 @@
 	flags = WHITELISTED
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix","*","!")
 
+/datum/language/Machine
+	name = "Encoded Audio Language"
+	desc = "A fast paced array of beeps and buzzes, mostly used by machines."
+	speech_verb = "beeps"
+	ask_verb = "buzzes"
+	exclaim_verb = "chirps"
+	colour = "machine"
+	key = "p"
+	flags = RESTRICTED
+	syllables = list("z","zz","zzz","dong","ding","bep","deet","buzz","zzt","*","!","boop","chirp","beep","frotz")
+
 /datum/language/vox
 	name = "Vox-pidgin"
 	desc = "The common tongue of the various Vox ships making up the Shoal. It sounds like chaotic shrieking to everyone else."

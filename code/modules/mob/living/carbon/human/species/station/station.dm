@@ -210,7 +210,7 @@
 
 	icobase = 'icons/mob/human_races/r_machine.dmi'
 	deform = 'icons/mob/human_races/r_machine.dmi'
-	language = "Tradeband"
+	language = "Encoded Audio Language"
 	unarmed_types = list(/datum/unarmed_attack/punch, /datum/unarmed_attack/stomp, /datum/unarmed_attack/kick)
 	rarity_value = 2
 
