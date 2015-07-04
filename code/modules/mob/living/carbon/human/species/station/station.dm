@@ -68,7 +68,7 @@
 	tail = "tajtail"
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
 	darksight = 8
-	slowdown = -1
+	slowdown = -0.6 //Supercat nerf
 	brute_mod = 1.2
 
 	blurb = "The Tajaran race is a species of feline-like bipeds hailing from the planet of Ahdomai in the \
