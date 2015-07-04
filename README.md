@@ -4,7 +4,7 @@
 
 ---
 
-Eternal is a fork of the source code for Baystation 12, hosted by Heaven's Gate.
+Eternal is a fork of the source code for Baystation 12, hosted by [Heaven's Gate](http://www.heavensgatestation.com/). 
 
 ###Table of Contents:
 
@@ -42,9 +42,9 @@ This will take a while to download, but it provides an easier method for updatin
 Once the repository is in place, run this command:
 ```bash
 cd Eternal
-git update-index --assume-unchanged baystation12.int
+git update-index --assume-unchanged eternal.int
 ```
-Now git will ignore changes to the file baystation12.int.
+Now git will ignore changes to the file eternal.int.
 
 ###INSTALLATION
 
@@ -66,7 +66,7 @@ You'll also want to edit admins.txt to remove the default admins and add your ow
 
 where the BYOND key must be in lowercase and the admin rank must be properly capitalised.  There are a bunch more admin ranks, but these two should be enough for most servers, assuming you have trustworthy admins.
 
-Finally, to start the server, run Dream Daemon and enter the path to your compiled baystation12.dmb file.  Make sure to set the port to the one you  specified in the config.txt, and set the Security box to 'Trusted'.  Then press GO and the server should start up and be ready to join.
+Finally, to start the server, run Dream Daemon and enter the path to your compiled eternal.dmb file.  Make sure to set the port to the one you  specified in the config.txt, and set the Security box to 'Trusted'.  Then press GO and the server should start up and be ready to join.
 
 ---
 
