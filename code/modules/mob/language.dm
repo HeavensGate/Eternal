@@ -158,7 +158,7 @@
 	return capitalize(new_name)
 
 /datum/language/tajaran
-	name = "Siik'tajr"
+	name = "Siik'mas"
 	desc = "The traditionally employed tongue of Ahdomai, composed of expressive yowls and chirps. Native to the Tajaran."
 	speech_verb = "mrowls"
 	ask_verb = "mrowls"
@@ -190,6 +190,17 @@
 	key = "k"
 	flags = WHITELISTED
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix","*","!")
+
+/datum/language/Machine
+	name = "Encoded Audio Language"
+	desc = "A fast paced array of beeps and buzzes, mostly used by machines."
+	speech_verb = "beeps"
+	ask_verb = "buzzes"
+	exclaim_verb = "chirps"
+	colour = "machine"
+	key = "p"
+	flags = RESTRICTED
+	syllables = list("z","zz","zzz","dong","ding","bep","deet","buzz","zzt","*","!","boop","chirp","beep","frotz")
 
 /datum/language/vox
 	name = "Vox-pidgin"
