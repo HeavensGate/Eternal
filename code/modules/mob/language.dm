@@ -198,7 +198,7 @@
 	ask_verb = "buzzes"
 	exclaim_verb = "chirps"
 	colour = "machine"
-	key = "p"
+	key = "z"
 	flags = RESTRICTED
 	syllables = list("z","zz","zzz","dong","ding","bep","deet","buzz","zzt","*","!","boop","chirp","beep","frotz")
 
