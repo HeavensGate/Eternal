@@ -66,6 +66,7 @@
 	deform = 'icons/mob/human_races/r_def_tajaran.dmi'
 	language = "Siik'mas"
 	tail = "tajtail"
+	ears = "tajears"
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
 	darksight = 8
 	slowdown = -0.6 //Supercat nerf

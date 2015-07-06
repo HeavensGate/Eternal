@@ -406,6 +406,14 @@ proc/get_damage_icon_part(damage_state, body_part)
 	//base icons
 	var/icon/face_standing	= new /icon('icons/mob/human_face.dmi',"bald_s")
 
+//ears
+	if(species.ears)
+		if(!(head && (head.flags & BLOCKHEADHAIR)))
+			var/icon/ears_s = new /icon("icon" = 'icons/effects/species.dmi', "icon_state" = "[species.ears]_s")
+			ears_s.Blend(rgb(r_skin, g_skin, b_skin), ICON_ADD)
+
+			face_standing.Blend(ears_s, ICON_OVERLAY)
+
 	if(f_style)
 		var/datum/sprite_accessory/facial_hair_style = facial_hair_styles_list[f_style]
 		if(facial_hair_style && facial_hair_style.species_allowed && (src.species.name in facial_hair_style.species_allowed))
