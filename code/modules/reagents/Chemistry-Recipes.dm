@@ -131,7 +131,7 @@ datum
 			name = "Water"
 			id = "water"
 			result = "water"
-			required_reagents = list("oxygen" = 2, "hydrogen" = 1)
+			required_reagents = list("oxygen" = 1, "hydrogen" = 2)
 			result_amount = 1
 
 		thermite
@@ -211,13 +211,6 @@ datum
 			required_reagents = list("bicaridine" = 2, "clonexadone" = 2)
 			required_catalysts = list("phoron" = 5)
 			result_amount = 2
-
-		virus_food
-			name = "Virus Food"
-			id = "virusfood"
-			result = "virusfood"
-			required_reagents = list("water" = 1, "milk" = 1)
-			result_amount = 5
 
 		leporazine
 			name = "Leporazine"

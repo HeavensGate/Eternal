@@ -18,6 +18,7 @@
 	var/flesh_color = "#FFC896"                          // Pink.
 	var/base_color                                       // Used by changelings. Should also be used for icon previes..
 	var/tail                                             // Name of tail image in species effects icon file.
+	var/ears = null                                      // Name of ears image in species effects icon file.
 	var/race_key = 0       	                             // Used for mob icon cache string.
 	var/icon/icon_template                               // Used for mob icon generation for non-32x32 species.
 
@@ -65,6 +66,20 @@
 	var/light_dam                                     // If set, mob will be damaged in light over this value and heal in light below its negative.
 	var/body_temperature = 310.15	                  // Non-IS_SYNTHETIC species will try to stabilize at this temperature.
 	                                                  // (also affects temperature processing)
+
+	var/heat_discomfort_level = 315                   // Aesthetic messages about feeling warm.
+	var/cold_discomfort_level = 285                   // Aesthetic messages about feeling chilly.
+	var/list/heat_discomfort_strings = list(
+		"You feel sweat drip down your neck.",
+		"You feel uncomfortably warm.",
+		"Your skin prickles in the heat."
+		)
+	var/list/cold_discomfort_strings = list(
+		"You feel chilly.",
+		"You shiver suddely.",
+		"Your chilly flesh stands out in goosebumps."
+		)
+
 	// HUD data vars.
 	var/datum/hud_data/hud
 	var/hud_type
@@ -99,6 +114,27 @@
 	unarmed_attacks = list()
 	for(var/u_type in unarmed_types)
 		unarmed_attacks += new u_type()
+
+/datum/species/proc/get_environment_discomfort(var/mob/living/carbon/human/H, var/msg_type)
+
+	if(!prob(5))
+		return
+
+	var/covered = 0 // Basic coverage can help.
+	for(var/obj/item/clothing/clothes in H)
+		if(H.l_hand == clothes|| H.r_hand == clothes)
+			continue
+		if((clothes.body_parts_covered & UPPER_TORSO) && (clothes.body_parts_covered & LOWER_TORSO))
+			covered = 1
+			break
+
+	switch(msg_type)
+		if("cold")
+			if(!covered)
+				H << "<span class='danger'>[pick(cold_discomfort_strings)]</span>"
+		if("heat")
+			if(covered)
+				H << "<span class='danger'>[pick(heat_discomfort_strings)]</span>"
 
 /datum/species/proc/get_random_name(var/gender)
 	var/datum/language/species_language = all_languages[language]

@@ -614,3 +614,12 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/dead/observer/canface()
 	return 1
+
+/mob/dead/observer/verb/char_edit()
+	set category = "Ghost"
+	set name = "Edit character"
+	set desc = "Edit your saved characters while waiting. (Doesn't change your ghost's sprites!)"
+
+	set src = usr
+
+	client.prefs.ShowChoices(usr) //Let's see if this works.
