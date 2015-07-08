@@ -7049,7 +7049,7 @@
 "cFC" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/simulated/floor/plating,/area/engine/engine_room)
 "cFD" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/simulated/floor/plating,/area/engine/engine_room)
 "cFE" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 10},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/plating,/area/engine/engine_room)
-"cFF" = (/obj/machinery/camera{c_tag = "Engine East"; dir = 2; network = list("SS13")},/obj/machinery/power/smes/buildable{charge = 5e+006; inputting = 1; output_level = 120000; RCon_tag = "Engine Energy Storage"},/obj/structure/cable/cyan{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/plating,/area/engine/engine_room)
+"cFF" = (/obj/machinery/camera{c_tag = "Engine East"; dir = 2; network = list("SS13")},/obj/structure/cable/cyan{d2 = 4; icon_state = "0-4"},/obj/machinery/power/smes/buildable{charge = 5e+006; input_attempt = 1; output_level = 120000; RCon_tag = "Engine Energy Storage"},/turf/simulated/floor/plating,/area/engine/engine_room)
 "cFG" = (/obj/structure/cable/cyan{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/plating,/area/engine/engine_room)
 "cFH" = (/obj/machinery/power/tracker,/obj/structure/cable/yellow{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/plating/airless,/area/solar/port)
 "cFI" = (/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/plating/airless,/area/solar/port)
