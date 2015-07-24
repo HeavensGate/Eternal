@@ -87,6 +87,8 @@
 /obj/item/weapon/archaeological_find/New(loc, var/new_item_type)
 	if(new_item_type)
 		find_type = new_item_type
+	else if(prob(50))
+		find_type = rand(29, 31) //50% chance it's a fossil. Xeno plants/animals too hard to get without this
 	else
 		find_type = rand(1,34)	//update this when you add new find types
 
