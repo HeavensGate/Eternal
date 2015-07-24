@@ -295,6 +295,7 @@
 		if(BE_CULTIST)		roletext="cultist"
 		if(BE_NINJA)		roletext="ninja"
 		if(BE_RAIDER)		roletext="raider"
+		if(BE_VAMPIRE)		roletext="vampire"
 
 	// Assemble a list of active players without jobbans.
 	for(var/mob/new_player/player in player_list)

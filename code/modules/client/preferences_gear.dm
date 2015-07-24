@@ -205,6 +205,24 @@ var/global/list/gear_datums = list()
 	cost = 2
 	slot = slot_head
 
+/datum/gear/scrubcap
+	display_name = "medical cap, blue"
+	path = /obj/item/clothing/head/surgery/blue
+	cost = 2
+	slot = slot_head
+
+/datum/gear/gscrubcap
+	display_name = "medical cap, green"
+	path = /obj/item/clothing/head/surgery/green
+	cost = 2
+	slot = slot_head
+
+/datum/gear/pscrubcap
+	display_name = "medical cap, purple"
+	path = /obj/item/clothing/head/surgery/purple
+	cost = 2
+	slot = slot_head
+
 // Wig by Earthcrusher, blame him.
 /datum/gear/philosopher_wig
 	display_name = "natural philosopher's wig"
@@ -287,6 +305,24 @@ var/global/list/gear_datums = list()
 	path = /obj/item/clothing/under/kilt
 	slot = slot_w_uniform
 	cost = 3
+
+/datum/gear/scrubs
+	display_name = "medical scrubs, blue"
+	path = /obj/item/clothing/under/rank/medical/blue
+	slot = slot_w_uniform
+	cost = 2
+
+/datum/gear/gscrubs
+	display_name = "medical scrubs, green"
+	path = /obj/item/clothing/under/rank/medical/green
+	slot = slot_w_uniform
+	cost = 2
+
+/datum/gear/pscrubs
+	display_name = "medical scrubs, purple"
+	path = /obj/item/clothing/under/rank/medical/purple
+	slot = slot_w_uniform
+	cost = 2
 
 /datum/gear/skirt_blue
 	display_name = "plaid skirt, blue"
