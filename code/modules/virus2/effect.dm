@@ -139,6 +139,9 @@
 			H.update_body(1)
 		mob.adjustToxLoss(15*multiplier)
 
+	vampire
+		stage = 3
+
 	deactivate(var/mob/living/carbon/mob,var/multiplier)
 		if(istype(mob, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = mob

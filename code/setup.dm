@@ -598,6 +598,7 @@
 #define BE_PLANT      4096
 #define BE_MUTINEER   8192
 #define BE_PAI        16384
+#define BE_VAMPIRE	32768
 
 //Not sure if moving this to global.dm would break the defines.
 var/list/be_special_flags = list(
@@ -615,7 +616,8 @@ var/list/be_special_flags = list(
 	"Raider" = BE_RAIDER,
 	"Diona" = BE_PLANT,
 	"Mutineer" = BE_MUTINEER,
-	"pAI" = BE_PAI
+	"pAI" = BE_PAI,
+	"Vampire" = BE_VAMPIRE
 	)
 
 #define AGE_MIN 17			//youngest a character can be
@@ -803,3 +805,18 @@ var/list/be_special_flags = list(
 #define SUIT_SENSOR_BINARY 1
 #define SUIT_SENSOR_VITAL 2
 #define SUIT_SENSOR_TRACKING 3
+
+// Vampire power defines
+#define VAMP_REJUV 1
+#define VAMP_GLARE 2
+#define VAMP_HYPNO 3
+#define VAMP_SHAPE 4
+#define VAMP_VISION 5
+#define VAMP_DISEASE 6
+#define VAMP_CLOAK 7
+#define VAMP_BATS 8
+#define VAMP_SCREAM 9
+#define VAMP_JAUNT 10
+#define VAMP_SLAVE 11
+#define VAMP_BLINK 12
+#define VAMP_FULL 13

@@ -754,3 +754,40 @@ steam.start() -- spawns the effect
 				dmglevel = 3
 
 			if(dmglevel<4) holder.ex_act(dmglevel)
+
+//blood steam
+
+
+/obj/effect/effect/blood_steam
+	name = "blood_steam"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "blood_extinguish"
+	density = 0
+
+/datum/effect/effect/system/blood_steam_spread
+
+	set_up(n = 3, c = 0, turf/loc)
+		if(n > 10)
+			n = 10
+		number = n
+		cardinals = c
+		location = loc
+
+	start()
+		var/i = 0
+		for(i=0, i<src.number, i++)
+			spawn(0)
+				if(holder)
+					src.location = get_turf(holder)
+				var/obj/effect/effect/blood_steam/blood_steam = new /obj/effect/effect/blood_steam(src.location)
+				var/direction
+				if(src.cardinals)
+					direction = pick(cardinal)
+				else
+					direction = pick(alldirs)
+				for(i=0, i<pick(1,2,3), i++)
+					sleep(5)
+					step(blood_steam,direction)
+				spawn(20)
+					blood_steam.delete()
+
