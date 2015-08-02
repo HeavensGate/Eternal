@@ -84,7 +84,10 @@ var/list/admin_verbs_admin = list(
 	/client/proc/freeze,
 	/client/proc/freezemecha,
 	/client/proc/fules,
-	/client/proc/event_manager_panel
+	/client/proc/event_manager_panel,
+	/client/proc/cleartox,
+	/client/proc/fillspace,
+	/client/proc/panicbunker
 )
 var/list/admin_verbs_ban = list(
 	/client/proc/unban_panel,
@@ -162,9 +165,7 @@ var/list/admin_verbs_debug = list(
 	/client/proc/callproc,
 	/client/proc/toggledebuglogs,
 	/client/proc/SDQL_query,
-	/client/proc/SDQL2_query,
-	/client/proc/cleartox,
-	/client/proc/fillspace
+	/client/proc/SDQL2_query
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
