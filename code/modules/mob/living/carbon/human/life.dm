@@ -39,7 +39,15 @@
 	set background = 1
 
 	if (monkeyizing)	return
+
 	if(!loc)			return	// Fixing a null error that occurs when the mob isn't found in the world -- TLE
+
+	if (frozen) //Don't do anything but make him fall over and dim the screen
+		blinded = 1
+		stat = UNCONSCIOUS
+		update_canmove()
+		handle_regular_hud_updates()
+		return
 
 	..()
 
