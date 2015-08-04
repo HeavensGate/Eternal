@@ -181,6 +181,9 @@
 	var/aliens_allowed = 0
 	var/ninjas_allowed = 0
 	var/abandon_allowed = 1
+	var/ic_allowed = 1
+	var/pray_allowed = 1
+	var/pms_allowed = 1
 	var/ooc_allowed = 1
 	var/looc_allowed = 1
 	var/dooc_allowed = 1

@@ -9,7 +9,7 @@
 /mob/verb/say_verb(message as text)
 	set name = "Say"
 	set category = "IC"
-	if(say_disabled)	//This is here to try to identify lag problems
+	if(!config.ic_allowed)	//This is here to try to identify lag problems
 		usr << "\red Speech is currently admin-disabled."
 		return
 	//Let's try to make users fix their errors - we try to detect single, out-of-place letters and 'unintended' words
@@ -32,7 +32,7 @@
 	set name = "Me"
 	set category = "IC"
 
-	if(say_disabled)	//This is here to try to identify lag problems
+	if(!config.ic_allowed)	//This is here to try to identify lag problems
 		usr << "\red Speech is currently admin-disabled."
 		return
 
