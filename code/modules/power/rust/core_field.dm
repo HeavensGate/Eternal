@@ -173,7 +173,10 @@ Deuterium-tritium fusion: 4.5 x 10^7 K
 	if(mega_energy > 0 && held_phoron.gas["phoron"])
 		var/heat_capacity = held_phoron.heat_capacity()//200 * number of phoron moles
 		if(heat_capacity > 0.0003)	//formerly MINIMUM_HEAT_CAPACITY
-			held_phoron.temperature = (heat_capacity + mega_energy * 35000)/heat_capacity
+			if(heat_capacity + mega_energy > 2.85714e+31)
+				held_phoron.temperature = MAX_VAR
+			else
+				held_phoron.temperature = heat_capacity + mega_energy * 35000/heat_capacity
 
 	//if there is too much phoron in the field, lose some
 	/*if( held_phoron.phoron > (MOLES_CELLSTANDARD * 7) * (50 / field_strength) )

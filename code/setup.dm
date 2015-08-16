@@ -2,6 +2,8 @@
 
 #define DEBUG
 
+#define MAX_VAR 1e+36  //Probably.
+
 #define PI 3.1415
 
 #define R_IDEAL_GAS_EQUATION	8.31 //kPa*L/(K*mol)
