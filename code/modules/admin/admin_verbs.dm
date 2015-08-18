@@ -60,6 +60,9 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/togglelooc,		/*toggles looc on/off for everyone*/
 	/datum/admins/proc/toggleoocdead,	/*toggles ooc on/off for everyone who is dead*/
 	/datum/admins/proc/toggledsay,		/*toggles dsay on/off for everyone*/
+	/datum/admins/proc/togglepms,
+	/datum/admins/proc/togglepray,
+	/datum/admins/proc/toggleic,
 	/client/proc/game_panel,			/*game panel, allows to change game-mode etc*/
 	/client/proc/cmd_admin_say,			/*admin-only ooc chat*/
 	/datum/admins/proc/PlayerNotes,
@@ -81,7 +84,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/toggle_antagHUD_restrictions,
 	/client/proc/allow_character_respawn,    /* Allows a ghost to respawn */
 	/client/proc/clean,
-	/client/proc/freeze,
+	/datum/admins/proc/freeze,
 	/client/proc/freezemecha,
 	/client/proc/fules,
 	/client/proc/event_manager_panel,
@@ -182,7 +185,7 @@ var/list/admin_verbs_permissions = list(
 	)
 var/list/admin_verbs_rejuv = list(
 	/client/proc/respawn_character,
-	/client/proc/freeze,
+	/datum/admins/proc/freeze,
 	/client/proc/freezemecha
 	)
 
@@ -258,7 +261,7 @@ var/list/admin_verbs_hideable = list(
 	/proc/release,
 	/client/proc/fules,
 	/client/proc/clean,
-	/client/proc/freeze,
+	/datum/admins/proc/freeze,
 	/client/proc/freezemecha
 	)
 var/list/admin_verbs_mod = list(
@@ -331,7 +334,7 @@ var/list/admin_verbs_mentor = list(
 		debug_verbs,
 		/client/proc/nuke,
 		/client/proc/fules,
-		/client/proc/freeze,
+		/datum/admins/proc/freeze,
 		/client/proc/freezemecha,
 		/client/proc/clean
 		)

@@ -54,6 +54,7 @@ var/global/floorIsLava = 0
 		<a href='?src=\ref[src];traitor=\ref[M]'>TP</a> -
 		<a href='?src=\ref[usr];priv_msg=\ref[M]'>PM</a> -
 		<a href='?src=\ref[src];subtlemessage=\ref[M]'>SM</a> -
+		<a href='?src=\ref[src];freeze=\ref[M]'>ICE</a> -
 		<a href='?src=\ref[src];adminplayerobservejump=\ref[M]'>JMP</a>\] </b><br>
 		<b>Mob type</b> = [M.type]<br><br>
 		<A href='?src=\ref[src];boot2=\ref[M]'>Kick</A> |
@@ -732,6 +733,45 @@ var/global/floorIsLava = 0
 		world << "\blue <b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Announces:</b>\n \t [message]"
 		log_admin("Announce: [key_name(usr)] : [message]")
 	feedback_add_details("admin_verb","A") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/datum/admins/proc/toggleic()
+	set category = "Server"
+	set desc="Globally Toggles Say and Me"
+	set name="Toggle IC"
+	config.ic_allowed = !(config.ic_allowed)
+	if (config.ic_allowed)
+		world << "<B>Speech has been globally enabled!</B>"
+	else
+		world << "<B>Speech in-game has been globally disabled!</B>"
+	log_admin("[key_name(usr)] toggled IC.")
+	message_admins("[key_name_admin(usr)] toggled IC.", 1)
+	feedback_add_details("admin_verb","TIC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/datum/admins/proc/togglepray()
+	set category = "Server"
+	set desc="Globally Toggles prayers"
+	set name="Toggle prayers"
+	config.pray_allowed = !(config.pray_allowed)
+	if (config.pray_allowed)
+		world << "<B>Prayer has been globally enabled!</B>"
+	else
+		world << "<B>Prayer has been globally disabled!</B>"
+	log_admin("[key_name(usr)] toggled prayer.")
+	message_admins("[key_name_admin(usr)] toggled prayer.", 1)
+	feedback_add_details("admin_verb","TPRAY") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/datum/admins/proc/togglepms()
+	set category = "Server"
+	set desc="Globally Toggles Ahelps and PMs. (For anti-spam ONLY. Don't make me regret making this.)"
+	set name="Toggle PMs"
+	config.pms_allowed = !(config.pms_allowed)
+	if (config.pms_allowed)
+		world << "<B>AdminHelp has been globally enabled!</B>"
+	else
+		world << "<B>AdminHelp has been globally disabled!</B>"
+	log_admin("[key_name(usr)] toggled Ahelp.")
+	message_admins("[key_name_admin(usr)] toggled Ahelp.", 1)
+	feedback_add_details("admin_verb","TAHELP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleooc()
 	set category = "Server"

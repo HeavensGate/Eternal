@@ -1,8 +1,12 @@
+//obj/machinery/power/rad_collector
+
+//obj/machinery/power/rad_collector/proc/recieve_pulse(var/pulse_strength)
 
 /obj/machinery/rust/rad_source
 	var/mega_energy = 0
 	var/time_alive = 0
 	var/source_alive = 2
+	var/frame
 	New()
 		..()
 
@@ -17,8 +21,28 @@
 			if(time_alive < 0)
 				del(src)
 
-		//radiate mobs nearby here
+		//radiate mobs nearby here every so often
 		//
+		if(prob(15))
+			var/toxrange = 10
+			var/toxdamage = 4
+			var/radiation = 15
+			var/radiationmin = 3
+			if (src.mega_energy>200)
+				toxdamage = round(((src.mega_energy-150)/50)*4,1)
+				radiation = round(((src.mega_energy-150)/50)*5,1)
+				radiationmin = round((radiation/5),1)//
+			for(var/mob/living/M in view(toxrange, src.loc))
+				M.apply_effect(rand(radiationmin,radiation), IRRADIATE)
+				toxdamage = (toxdamage - (toxdamage*M.getarmor(null, "rad")))
+				M.apply_effect(toxdamage, TOX)
+
+
+
+		for(var/obj/machinery/power/rad_collector/R in rad_collectors)
+			if(get_dist(R, src) <= 15) // Better than using orange() every process
+				R.receive_pulse(mega_energy) //Eh close enough. Probably.
+			return
 
 /*
 /obj/machinery/rust

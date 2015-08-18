@@ -85,6 +85,7 @@
 	var/lastpuke = 0
 	var/unacidable = 0
 	var/small = 0
+	var/slippage = 0 					//If this goes over 2 while on wet floor, you slip.
 	var/list/pinned = list()            // List of things pinning this creature to walls (see living_defense.dm)
 	var/list/embedded = list()          // Embedded items, since simple mobs don't have organs.
 	var/list/languages = list()         // For speaking/listening.
@@ -214,7 +215,7 @@
 	var/universal_understand = 0 // Set to 1 to enable the mob to understand everyone, not necessarily speak
 
 	var/stance_damage = 0 //Whether this mob's ability to stand has been affected
-	
+
 	//SSD var, changed it up some so people can have special things happen for different mobs when SSD.
 	var/player_logged = 0
 

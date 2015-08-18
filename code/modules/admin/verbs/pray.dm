@@ -2,8 +2,8 @@
 	set category = "IC"
 	set name = "Pray"
 
-	if(say_disabled)	//This is here to try to identify lag problems
-		usr << "\red Speech is currently admin-disabled."
+	if(!config.pray_allowed)	//This is here to try to identify lag problems
+		usr << "\red Prayer is currently admin-disabled."
 		return
 
 	msg = sanitize(copytext(msg, 1, MAX_MESSAGE_LEN))
