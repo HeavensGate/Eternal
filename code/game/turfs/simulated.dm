@@ -80,14 +80,22 @@
 			if (C.buckled_mob == M)
 				noslip = 1
 		if((wet == 1 && M.m_intent == "walk") || noslip)
+			M.slippage = 0 //Reset the slippy
 			return // no slipping while sitting in a chair, plz
 
 		if(src.wet)
-			var/slip_dist = 1
-			var/slip_stun = 6
-			var/floor_type = "wet"
+			var/slip_dist
+			var/slip_stun
+			var/floor_type
 
 			switch(src.wet)
+				if(1)
+					if(M.slippage >= 2) //Have they run over two tiles or more?
+						slip_dist = 1
+						slip_stun = 2
+						floor_type = "wet"
+					else
+						M.slippage++
 				if(2) // Lube
 					floor_type = "slippery"
 					slip_dist = 4
@@ -95,15 +103,17 @@
 				if(3) // Ice
 					floor_type = "icy"
 					slip_stun = 4
-
-			if(M.slip("the [floor_type] floor",slip_stun))
-				for(var/i = 0;i<slip_dist;i++)
-					step(M, M.dir)
-					sleep(1)
-			else
-				M.inertia_dir = 0
+			if(slip_dist)
+				if(M.slip("the [floor_type] floor",slip_stun))
+					for(var/i = 0;i<slip_dist;i++)
+						step(M, M.dir)
+						sleep(1)
+					M.slippage = 1
+				else
+					M.inertia_dir = 0
 		else
 			M.inertia_dir = 0
+			M.slippage = 0
 
 	..()
 
@@ -131,3 +141,5 @@
 		this.blood_DNA["UNKNOWN BLOOD"] = "X*"
 	else if( istype(M, /mob/living/silicon/robot ))
 		new /obj/effect/decal/cleanable/blood/oil(src)
+
+
