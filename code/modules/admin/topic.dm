@@ -1314,6 +1314,10 @@
 		var/mob/M = locate(href_list["adminplayeropts"])
 		show_player_panel(M)
 
+	else if(href_list["freeze"])
+		var/mob/M = locate(href_list["freeze"])
+		freeze(M)
+
 	else if(href_list["adminplayerobservejump"])
 		if(!check_rights(R_MENTOR|R_MOD|R_ADMIN))	return
 

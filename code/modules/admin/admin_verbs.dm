@@ -84,7 +84,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/toggle_antagHUD_restrictions,
 	/client/proc/allow_character_respawn,    /* Allows a ghost to respawn */
 	/client/proc/clean,
-	/client/proc/freeze,
+	/datum/admins/proc/freeze,
 	/client/proc/freezemecha,
 	/client/proc/fules,
 	/client/proc/event_manager_panel,
@@ -185,7 +185,7 @@ var/list/admin_verbs_permissions = list(
 	)
 var/list/admin_verbs_rejuv = list(
 	/client/proc/respawn_character,
-	/client/proc/freeze,
+	/datum/admins/proc/freeze,
 	/client/proc/freezemecha
 	)
 
@@ -261,7 +261,7 @@ var/list/admin_verbs_hideable = list(
 	/proc/release,
 	/client/proc/fules,
 	/client/proc/clean,
-	/client/proc/freeze,
+	/datum/admins/proc/freeze,
 	/client/proc/freezemecha
 	)
 var/list/admin_verbs_mod = list(
@@ -334,7 +334,7 @@ var/list/admin_verbs_mentor = list(
 		debug_verbs,
 		/client/proc/nuke,
 		/client/proc/fules,
-		/client/proc/freeze,
+		/datum/admins/proc/freeze,
 		/client/proc/freezemecha,
 		/client/proc/clean
 		)

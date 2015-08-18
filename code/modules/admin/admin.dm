@@ -54,6 +54,7 @@ var/global/floorIsLava = 0
 		<a href='?src=\ref[src];traitor=\ref[M]'>TP</a> -
 		<a href='?src=\ref[usr];priv_msg=\ref[M]'>PM</a> -
 		<a href='?src=\ref[src];subtlemessage=\ref[M]'>SM</a> -
+		<a href='?src=\ref[src];freeze=\ref[M]'>ICE</a> -
 		<a href='?src=\ref[src];adminplayerobservejump=\ref[M]'>JMP</a>\] </b><br>
 		<b>Mob type</b> = [M.type]<br><br>
 		<A href='?src=\ref[src];boot2=\ref[M]'>Kick</A> |
