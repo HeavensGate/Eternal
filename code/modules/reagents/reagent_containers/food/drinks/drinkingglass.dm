@@ -5,7 +5,7 @@
 	desc = "Your standard drinking glass."
 	icon_state = "glass_empty"
 	amount_per_transfer_from_this = 5
-	volume = 30
+	volume = 50 //Is 50 because drinks mix easier.
 	center_of_mass = list("x"=16, "y"=10)
 
 	on_reagent_change()
