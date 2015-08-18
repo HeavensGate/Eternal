@@ -86,3 +86,10 @@
 		t += "<A href='?src=\ref[src];close=1'>Close</A><BR>"
 		user << browse(t, "window=gyrotron_controller;size=500x400")
 		user.machine = src
+
+	attack_hand(mob/user)
+		add_fingerprint(user)
+		interact(user)
+
+	attack_ai(mob/user)
+		attack_hand(user)
