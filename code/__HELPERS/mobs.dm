@@ -90,20 +90,48 @@ proc/RoundHealth(health)
 	switch(health)
 		if(100 to INFINITY)
 			return "health100"
-		if(70 to 100)
+		if(90 to 100)
+			return "health90"
+		if(80 to 90)
 			return "health80"
-		if(50 to 70)
+		if(70 to 80)
+			return "health70"
+		if(60 to 70)
 			return "health60"
-		if(30 to 50)
+		if(50 to 60)
+			return "health50"
+		if(30 to 40)
 			return "health40"
-		if(18 to 30)
-			return "health25"
-		if(5 to 18)
+		if(20 to 30)
+			return "health30"
+		if(10 to 20)
+			return "health20"
+		if(5 to 10)
 			return "health10"
-		if(1 to 5)
+		if(0 to 5)
 			return "health1"
-		if(-99 to 0)
+		if(-10 to 0)
 			return "health0"
+		if(-20 to -10)
+			return "health-10"
+		if(-30 to -20)
+			return "health-20"
+		if(-40 to -30)
+			return "health-30"
+		if(-50 to -40)
+			return "health-40"
+		if(-60 to -50)
+			return "health-50"
+		if(-70 to -60)
+			return "health-60"
+		if(-70 to -80)
+			return "health-70"
+		if(-80 to -90)
+			return "health-80"
+		if(-90 to -95)
+			return "health-90"
+		if(-95 to -100)
+			return "health-95"
 		else
 			return "health-100"
 	return "0"
