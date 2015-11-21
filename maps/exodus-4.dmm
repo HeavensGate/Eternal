@@ -108,7 +108,7 @@
 "cd" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/item/weapon/storage/box/lights/mixed,/obj/structure/sign/securearea{desc = "A warning sign which reads 'HIGH VOLTAGE'"; icon_state = "shock"; name = "HIGH VOLTAGE"; pixel_x = 0; pixel_y = -32},/turf/simulated/floor/plating,/area/djstation)
 "ce" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/machinery/atmospherics/pipe/simple/visible,/turf/simulated/floor/plating,/area/djstation)
 "cf" = (/obj/structure/cable{d2 = 8; icon_state = "0-8"},/obj/machinery/telecomms/relay/preset/ruskie,/turf/simulated/floor/plating,/area/djstation)
-"cg" = (/obj/structure/table/rack,/obj/item/clothing/suit/space/syndicate,/obj/item/clothing/head/helmet/space/syndicate,/obj/item/clothing/mask/breath,/turf/simulated/floor/plating,/area/djstation)
+"cg" = (/obj/structure/table/rack,/obj/item/clothing/suit/space/syndicate,/obj/item/clothing/head/helmet/space/syndicate,/obj/item/clothing/mask/breath,/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/plating,/area/djstation)
 "ch" = (/obj/structure/table/rack,/obj/item/weapon/module/power_control,/obj/item/weapon/module/power_control,/obj/item/weapon/module/power_control,/obj/item/weapon/module/power_control,/obj/item/weapon/module/power_control,/obj/item/weapon/module/power_control,/turf/simulated/floor/plating,/area/djstation)
 "ci" = (/obj/machinery/driver_button{id = "constructiondriver2"; name = "Construction Driver #2"; pixel_x = 25; pixel_y = 7},/turf/simulated/floor/plating,/area/djstation)
 "cj" = (/obj/structure/lattice,/turf/space,/area/constructionsite/maintenance)
