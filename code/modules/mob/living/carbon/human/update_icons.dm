@@ -108,14 +108,14 @@ Please contact me on #coderbus IRC. ~Carn x
 #define MUTATIONS_LAYER			1
 #define DAMAGE_LAYER			2
 #define UNIFORM_LAYER			3
-#define TAIL_LAYER				4		//bs12 specific. this hack is probably gonna come back to haunt me
-#define ID_LAYER				5
-#define SHOES_LAYER				6
-#define GLOVES_LAYER			7
-#define SUIT_LAYER				8
-#define GLASSES_LAYER			9
-#define BELT_LAYER				10		//Possible make this an overlay of somethign required to wear a belt?
-#define SUIT_STORE_LAYER		11
+#define ID_LAYER				4
+#define SHOES_LAYER				5
+#define GLOVES_LAYER			6
+#define SUIT_LAYER				7
+#define GLASSES_LAYER			8
+#define BELT_LAYER				9		//Possible make this an overlay of somethign required to wear a belt?
+#define SUIT_STORE_LAYER		10
+#define TAIL_LAYER				11		//bs12 specific. this hack is probably gonna come back to haunt me
 #define BACK_LAYER				12
 #define HAIR_LAYER				13		//TODO: make part of head layer?
 #define EARS_LAYER				14
@@ -405,6 +405,14 @@ proc/get_damage_icon_part(damage_state, body_part)
 
 	//base icons
 	var/icon/face_standing	= new /icon('icons/mob/human_face.dmi',"bald_s")
+
+//ears
+	if(species.ears)
+		if(!(head && (head.flags & BLOCKHEADHAIR)))
+			var/icon/ears_s = new /icon("icon" = 'icons/effects/species.dmi', "icon_state" = "[species.ears]_s")
+			ears_s.Blend(rgb(r_skin, g_skin, b_skin), ICON_ADD)
+
+			face_standing.Blend(ears_s, ICON_OVERLAY)
 
 	if(f_style)
 		var/datum/sprite_accessory/facial_hair_style = facial_hair_styles_list[f_style]

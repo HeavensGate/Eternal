@@ -57,8 +57,12 @@ var/list/admin_verbs_admin = list(
 	/client/proc/investigate_show,		/*various admintools for investigation. Such as a singulo grief-log*/
 	/client/proc/secrets,
 	/datum/admins/proc/toggleooc,		/*toggles ooc on/off for everyone*/
+	/datum/admins/proc/togglelooc,		/*toggles looc on/off for everyone*/
 	/datum/admins/proc/toggleoocdead,	/*toggles ooc on/off for everyone who is dead*/
 	/datum/admins/proc/toggledsay,		/*toggles dsay on/off for everyone*/
+	/datum/admins/proc/togglepms,
+	/datum/admins/proc/togglepray,
+	/datum/admins/proc/toggleic,
 	/client/proc/game_panel,			/*game panel, allows to change game-mode etc*/
 	/client/proc/cmd_admin_say,			/*admin-only ooc chat*/
 	/datum/admins/proc/PlayerNotes,
@@ -80,10 +84,13 @@ var/list/admin_verbs_admin = list(
 	/client/proc/toggle_antagHUD_restrictions,
 	/client/proc/allow_character_respawn,    /* Allows a ghost to respawn */
 	/client/proc/clean,
-	/client/proc/freeze,
+	/datum/admins/proc/freeze,
 	/client/proc/freezemecha,
 	/client/proc/fules,
-	/client/proc/event_manager_panel
+	/client/proc/event_manager_panel,
+	/client/proc/cleartox,
+	/client/proc/fillspace,
+	/client/proc/panicbunker
 )
 var/list/admin_verbs_ban = list(
 	/client/proc/unban_panel,
@@ -161,9 +168,7 @@ var/list/admin_verbs_debug = list(
 	/client/proc/callproc,
 	/client/proc/toggledebuglogs,
 	/client/proc/SDQL_query,
-	/client/proc/SDQL2_query,
-	/client/proc/cleartox,
-	/client/proc/fillspace
+	/client/proc/SDQL2_query
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
@@ -180,7 +185,7 @@ var/list/admin_verbs_permissions = list(
 	)
 var/list/admin_verbs_rejuv = list(
 	/client/proc/respawn_character,
-	/client/proc/freeze,
+	/datum/admins/proc/freeze,
 	/client/proc/freezemecha
 	)
 
@@ -256,7 +261,7 @@ var/list/admin_verbs_hideable = list(
 	/proc/release,
 	/client/proc/fules,
 	/client/proc/clean,
-	/client/proc/freeze,
+	/datum/admins/proc/freeze,
 	/client/proc/freezemecha
 	)
 var/list/admin_verbs_mod = list(
@@ -329,7 +334,7 @@ var/list/admin_verbs_mentor = list(
 		debug_verbs,
 		/client/proc/nuke,
 		/client/proc/fules,
-		/client/proc/freeze,
+		/datum/admins/proc/freeze,
 		/client/proc/freezemecha,
 		/client/proc/clean
 		)

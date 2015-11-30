@@ -67,6 +67,8 @@
 	var/automute_on = 0					//enables automuting/spam prevention
 	var/jobs_have_minimal_access = 0	//determines whether jobs use minimal access or expanded access.
 
+	var/panic_bunker = 0				// prevents new people it hasn't seen before from connecting
+
 	var/cult_ghostwriter = 1               //Allows ghosts to write in blood in cult rounds...
 	var/cult_ghostwriter_req_cultists = 10 //...so long as this many cultists are active.
 
@@ -99,7 +101,7 @@
 	var/alert_desc_red_downto = "The self-destruct mechanism has been deactivated, there is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised."
 	var/alert_desc_delta = "The station's self-destruct mechanism has been engaged. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill."
 	var/alert_desc_gamma = "In light of recent events, a nuclear warhead has been fired from the defensive perimeter to liquidate our assets. The station will be impacted in 15 seconds, and by the end of this transmission you will probably already be deceased. It was nice knowing you..."
-	
+
 	var/forbid_singulo_possession = 0
 
 	//game_options.txt configs
@@ -179,7 +181,11 @@
 	var/aliens_allowed = 0
 	var/ninjas_allowed = 0
 	var/abandon_allowed = 1
+	var/ic_allowed = 1
+	var/pray_allowed = 1
+	var/pms_allowed = 1
 	var/ooc_allowed = 1
+	var/looc_allowed = 1
 	var/dooc_allowed = 1
 	var/dsay_allowed = 1
 
@@ -384,6 +390,9 @@
 				if ("disable_ooc")
 					config.ooc_allowed = 0
 
+				if ("disable_looc")
+					config.looc_allowed = 0
+
 				if ("disable_entry")
 					config.enter_allowed = 0
 
@@ -464,7 +473,7 @@
 
 				if("alert_gamma")
 					config.alert_desc_gamma = value
-				
+
 				if("forbid_singulo_possession")
 					forbid_singulo_possession = 1
 
@@ -473,6 +482,9 @@
 
 				if("allow_holidays")
 					Holiday = 1
+
+				if("panic_bunker")
+					config.panic_bunker = 1
 
 				if("use_irc_bot")
 					use_irc_bot = 1

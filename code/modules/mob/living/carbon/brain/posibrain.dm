@@ -46,6 +46,38 @@
 		else if (response == "Never for this round")
 			C.prefs.be_special ^= BE_AI
 
+/obj/item/device/mmi/posibrain/attackby(obj/item/device/W, mob/user)
+	if(istype(W, /obj/item/device/paicard))
+		var/obj/item/device/paicard/D = W
+		var/mob/living/silicon/pai/M = D.pai
+		if(src.brainmob.ckey == null)
+			if(M.ckey == null)
+				user << "\blue There is nothing to transfer from the paicard."
+			else
+				if(M.mind)
+					M.mind.transfer_to(brainmob)
+				if(brainmob.mind)
+					brainmob.mind.assigned_role = "Positronic Brain"
+				brainmob << "\blue You feel slightly disoriented. That's normal when you're just a metal cube."
+				icon_state = "posibrain-occupied"
+				D.removePersonality()
+				user << "\blue You transfer the mind from the [D.name] to the [src]"
+		else
+			if(M == null)
+				M = new /mob/living/silicon/pai(D)
+				var/mob/living/silicon/pai/player = M
+				D.overlays += "pai-happy"
+				if(src.brainmob.ckey)
+					player.ckey = src.brainmob.ckey
+				player.name = pick(ninja_names)
+				player.real_name = player.name
+				processing_objects += D
+				D.pai = M
+				src.icon_state = "posibrain"
+				user << "\blue You transfer the mind from the [src] to the [D.name]"
+			else
+				user << "\blue The card is already occupied."
+
 
 /obj/item/device/mmi/digital/posibrain/transfer_identity(var/mob/living/carbon/H)
 	..()
@@ -66,7 +98,6 @@
 	src.brainmob << "<b>Remember, the purpose of your existence is to serve the crew and the station. Above all else, do no harm.</b>"
 	src.brainmob << "<b>Use say :b to speak to other artificial intelligences.</b>"
 	src.brainmob.mind.assigned_role = "Positronic Brain"
-
 	var/turf/T = get_turf_or_move(src.loc)
 	for (var/mob/M in viewers(T))
 		M.show_message("\blue The positronic brain chimes quietly.")

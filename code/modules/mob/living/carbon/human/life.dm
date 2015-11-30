@@ -39,7 +39,15 @@
 	set background = 1
 
 	if (monkeyizing)	return
+
 	if(!loc)			return	// Fixing a null error that occurs when the mob isn't found in the world -- TLE
+
+	if (frozen) //Don't do anything but make him fall over and dim the screen
+		blinded = 1
+		stat = UNCONSCIOUS
+		update_canmove()
+		handle_regular_hud_updates()
+		return
 
 	..()
 
@@ -618,7 +626,7 @@
 				else
 					apply_damage(HEAT_GAS_DAMAGE_LEVEL_3, BURN, "head", used_weapon = "Excessive Heat")
 					fire_alert = max(fire_alert, 2)
-			
+
 			else if(breath.temperature <= species.cold_level_1)
 				if(breath.temperature > species.cold_level_2)
 					apply_damage(COLD_GAS_DAMAGE_LEVEL_1, BURN, "head", used_weapon = "Excessive Cold")
@@ -702,7 +710,7 @@
 			//Body temperature is too hot.
 			fire_alert = max(fire_alert, 1)
 			if(status_flags & GODMODE)	return 1	//godmode
-			
+
 			if(bodytemperature < species.heat_level_2)
 				take_overall_damage(burn=HEAT_DAMAGE_LEVEL_1, used_weapon = "High Body Temperature")
 				fire_alert = max(fire_alert, 2)
@@ -716,7 +724,7 @@
 		else if(bodytemperature <= species.cold_level_1)
 			fire_alert = max(fire_alert, 1)
 			if(status_flags & GODMODE)	return 1	//godmode
-			
+
 			if(!istype(loc, /obj/machinery/atmospherics/unary/cryo_cell))
 				if(bodytemperature > species.cold_level_2)
 					take_overall_damage(burn=COLD_DAMAGE_LEVEL_1, used_weapon = "High Body Temperature")
@@ -773,7 +781,7 @@
 	*/
 
 	proc/stabilize_body_temperature()
-		if (species.flags & IS_SYNTHETIC)
+		if (species.flags & IS_SYNTHETIC && !istype(wear_suit, /obj/item/clothing/suit/space/void/machine)) // Assuming they're not wearing my new sexy hardsuit.
 			bodytemperature += species.synth_temp_gain		//just keep putting out heat.
 			return
 
@@ -1017,6 +1025,24 @@
 			//UNCONSCIOUS. NO-ONE IS HOME
 			if( (getOxyLoss() > 50) || (config.health_threshold_crit > health) )
 				Paralyse(3)
+
+			if (species && species.flags & IS_SYNTHETIC) // IPCs NEED power to not die. Atleast, Not Crit.
+				if (nutrition <= 150)
+					if (powerloss<160)
+						powerloss = min(powerloss+((150-nutrition)/(150/2)), 160)
+						updatehealth()
+						if (prob(0.5)) // Fairly low chance
+							Paralyse(1)
+							for(var/mob/V in hearers(src, null))
+								if (V!=src)
+									show_message("\red [src] shudders violently!", 2)
+							src << "\red You lock up breifly to conserve power."
+					if (prob(1)) // Yell at the IPC. Help them know WHY they're dying.
+						src << "\red [pick(list("WARNING","ERROR","PRIORITY"))]: [pick(list("POWER LEVELS", "CELL INTEGRITY"))] LOW. PLEASE [pick(list("FIND", "SEEK"))] [pick(list("POWER", "POWER SOURCE", "A CHARGER"))]!"
+				else if (powerloss>0)
+					powerloss = max(powerloss-10, 0)
+					updatehealth()
+
 
 			if(hallucination)
 				if(hallucination >= 20)
@@ -1606,7 +1632,7 @@
 		if(stat == 2)
 			holder.icon_state = "hudhealth-100" 	// X_X
 		else
-			var/percentage_health = RoundHealth((health-config.health_threshold_crit)/(maxHealth-config.health_threshold_crit)*100)
+			var/percentage_health = RoundHealth(health) //fuck this line in particular
 			holder.icon_state = "hud[percentage_health]"
 		hud_list[HEALTH_HUD] = holder
 

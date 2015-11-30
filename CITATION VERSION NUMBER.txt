@@ -1,3 +1,0 @@
-This is Citation version 1.0
--The one with the version number
--The one with the final powernet fixes (hopefully)

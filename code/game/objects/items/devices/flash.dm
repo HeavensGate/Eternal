@@ -1,6 +1,6 @@
 /obj/item/device/flash
 	name = "flash"
-	desc = "Used for blinding and being an asshole."
+	desc = "A control/deterrent device that blinds and stuns its target by emitting an extremely bright flash. Use with care - extreme eye-damage may result from misuse."
 	icon_state = "flash"
 	item_state = "flashbang"	//looks exactly like a flash (and nothing like a flashbang)
 	throwforce = 5

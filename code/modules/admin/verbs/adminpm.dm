@@ -37,6 +37,10 @@
 //Fetching a message if needed. src is the sender and C is the target client
 
 /client/proc/cmd_admin_pm(var/client/C, var/msg = null)
+
+	if(!holder && !config.pms_allowed)
+		src << "<font color='red'>Admin PMs are globally muted</font>"
+		return
 	if(prefs.muted & MUTE_ADMINHELP)
 		src << "<font color='red'>Error: Private-Message: You are unable to use PM-s (muted).</font>"
 		return

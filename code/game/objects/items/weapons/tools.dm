@@ -101,7 +101,7 @@
 	force = 6.0
 	throw_speed = 2
 	throw_range = 9
-	w_class = 2.0
+	w_class = 2.0 // Brute fix to being able to cut pizza (And other things) with wirecutters. Time will tell if the fix breaks more than it fixes.
 	matter = list("metal" = 80)
 	origin_tech = "materials=1;engineering=1"
 	attack_verb = list("pinched", "nipped")

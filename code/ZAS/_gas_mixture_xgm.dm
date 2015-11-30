@@ -84,7 +84,7 @@
 		var/giver_heat_capacity = giver.heat_capacity()
 		var/combined_heat_capacity = giver_heat_capacity + self_heat_capacity
 		if(combined_heat_capacity != 0)
-			temperature = (giver.temperature*giver_heat_capacity + temperature*self_heat_capacity)/combined_heat_capacity
+			temperature = min(MAX_VAR,(giver.temperature*giver_heat_capacity + temperature*self_heat_capacity)/combined_heat_capacity)
 
 	if((group_multiplier != 1)||(giver.group_multiplier != 1))
 		for(var/g in giver.gas)

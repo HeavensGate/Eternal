@@ -88,7 +88,7 @@ datum
 			on_new(var/data)
 				return
 
-			// Called when two reagents of the same are mixing.
+			// Called when two reagents of the same are mixing. <-- Blatant lies
 			on_merge(var/data)
 				return
 
@@ -1631,8 +1631,8 @@ datum
 				if(!M) M = holder.my_atom
 				if(prob(33))
 					M.take_organ_damage(1*REM, 0)
-				M.adjustOxyLoss(3)
-				if(prob(20)) M.emote("gasp")
+				if(M.losebreath < 15)
+					M.losebreath++
 				..()
 				return
 
@@ -2056,6 +2056,28 @@ datum
 */
 				..()
 				return
+
+		nutriment/protein // Bad for Skrell!
+			name = "animal protein"
+			id = "protein"
+			color = "#440000"
+
+			on_mob_life(var/mob/living/M, var/alien)
+				if(alien && alien == IS_SKRELL)
+					M.adjustToxLoss(0.5)
+					M.nutrition -= nutriment_factor
+				..()
+
+		nutriment/egg // Also bad for skrell. Not a child of protein because it might mess up, not sure.
+			name = "egg yolk"
+			id = "egg"
+			color = "#FFFFAA"
+
+			on_mob_life(var/mob/living/M, var/alien)
+				if(alien && alien == IS_SKRELL)
+					M.adjustToxLoss(0.5)
+					M.nutrition -= nutriment_factor
+				..()
 
 		lipozine
 			name = "Lipozine" // The anti-nutriment.
@@ -2569,7 +2591,7 @@ datum
 			name = "Carrot juice"
 			id = "carrotjuice"
 			description = "It is just like a carrot but without crunching."
-			color = "#973800" // rgb: 151, 56, 0
+			color = "#FF8C00" // rgb: 255, 140, 0
 
 			glass_icon_state = "carrotjuice"
 			glass_name = "glass of carrot juice"
@@ -2639,7 +2661,7 @@ datum
 			name = "Watermelon Juice"
 			id = "watermelonjuice"
 			description = "Delicious juice made from watermelon."
-			color = "#863333" // rgb: 134, 51, 51
+			color = "#B83333" // rgb: 184, 51, 51
 
 			glass_icon_state = "glass_red"
 			glass_name = "glass of watermelon juice"
@@ -2649,7 +2671,7 @@ datum
 			name = "Lemon Juice"
 			id = "lemonjuice"
 			description = "This juice is VERY sour."
-			color = "#863333" // rgb: 175, 175, 0
+			color = "#AFAF00" // rgb: 175, 175, 0
 
 			glass_icon_state = "lemonjuice"
 			glass_name = "glass of lemon juice"
@@ -2659,7 +2681,7 @@ datum
 			name = "Banana Juice"
 			id = "banana"
 			description = "The raw essence of a banana."
-			color = "#863333" // rgb: 175, 175, 0
+			color = "#C3AF00" // rgb: 195, 175, 0
 
 			glass_icon_state = "banana"
 			glass_name = "glass of banana juice"

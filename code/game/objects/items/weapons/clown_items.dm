@@ -8,17 +8,21 @@
 /*
  * Banana Peals
  */
+/*
 /obj/item/weapon/bananapeel/Crossed(AM as mob|obj)
 	if (istype(AM, /mob/living))
 		var/mob/living/M = AM
-		M.slip("the [src.name]",4)
+		M.slip("the [src.name]",4)   //NOPE.
+*/
 /*
  * Soap
  */
-/obj/item/weapon/soap/Crossed(AM as mob|obj) //EXACTLY the same as bananapeel for now, so it makes sense to put it in the same dm -- Urist
+ /* Screw soaps
+/obj/item/weapon/soap/Crossed(AM as mob|obj) //moving this shit here
 	if (istype(AM, /mob/living))
 		var/mob/living/M =	AM
-		M.slip("the [src.name]",3)
+			M.slip("the [src.name]",3)
+*/
 
 /obj/item/weapon/soap/afterattack(atom/target, mob/user as mob, proximity)
 	if(!proximity) return
