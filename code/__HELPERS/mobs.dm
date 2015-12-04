@@ -130,7 +130,7 @@ proc/RoundHealth(health)
 			return "health-80"
 		if(-90 to -80)
 			return "health-90"
-		if(-95 to -90)
+		if(-100 to -90)
 			return "health-95"
 		else
 			return "health-100"
