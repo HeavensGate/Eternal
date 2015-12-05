@@ -938,6 +938,10 @@ var/list/ghostteleportlocs = list()
 	name = "\improper Chapel Office"
 	icon_state = "chapeloffice"
 
+/area/chapel/crematorium
+	name = "\improper Chapel Crematorium"
+	icon_state = "chapeloffice"
+
 /area/lawoffice
 	name = "\improper Internal Affairs"
 	icon_state = "law"
