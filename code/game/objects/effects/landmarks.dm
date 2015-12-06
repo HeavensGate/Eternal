@@ -28,24 +28,16 @@
 		if("monkey")
 			monkeystart += loc
 			del(src)
+			
 		if("start")
 			newplayer_start += loc
 			del(src)
 
 		if("wizard")
 			wizardstart += loc
-			del(src)
 
 		if("JoinLate")
-			latejoin_cryo += loc
-			del(src)
-
-		if("JoinLateGateway")
-			latejoin_cryo += loc
-			del(src)
-
-		if("JoinLateCryo")
-			latejoin_cryo += loc
+			latejoin += loc
 			del(src)
 
 		if("JoinLateCyborg")

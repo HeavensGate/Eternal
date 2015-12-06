@@ -29,4 +29,4 @@ var/list/spawntypes = list()
 	
 /datum/spawnpoint/cryo/New()
 	..()
-	turfs = latejoin_cryo
+	turfs = latejoin
