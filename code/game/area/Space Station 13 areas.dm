@@ -1396,6 +1396,10 @@ var/list/ghostteleportlocs = list()
 	name = "Security Post - Science"
 	icon_state = "checkpoint1"
 
+/area/security/checkpoint/arrivals
+	name = "Security Post - Arrivals"
+	icon_state = "checkpoint1"
+
 /area/security/vacantoffice
 	name = "\improper Vacant Office"
 	icon_state = "security"
