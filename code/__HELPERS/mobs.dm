@@ -77,12 +77,12 @@ proc/age2agedescription(age)
 	switch(age)
 		if(0 to 1)			return "infant"
 		if(1 to 3)			return "toddler"
-		if(3 to 13)			return "child"
+		if(4 to 12)			return "child"
 		if(13 to 19)		return "teenager"
-		if(19 to 30)		return "young adult"
+		if(20 to 29)		return "young adult"
 		if(30 to 45)		return "adult"
-		if(45 to 60)		return "middle-aged"
-		if(60 to 70)		return "aging"
+		if(46 to 59)		return "middle-aged"
+		if(60 to 69)		return "aging"
 		if(70 to INFINITY)	return "elderly"
 		else				return "unknown"
 
@@ -90,47 +90,49 @@ proc/RoundHealth(health)
 	switch(health)
 		if(100 to INFINITY)
 			return "health100"
-		if(95 to 100)
+		if(95 to 99)		/*For telling patients to eat a warm donk pocket and go on with their shift.*/
 			return "health95"
-		if(90 to 95)
+		if(90 to 94)
 			return "health90"
-		if(80 to 90)
+		if(80 to 89)
 			return "health80"
-		if(70 to 80)
+		if(70 to 79)
 			return "health70"
-		if(60 to 70)
+		if(60 to 69)
 			return "health60"
-		if(50 to 60)
+		if(50 to 59)
 			return "health50"
-		if(40 to 50)
+		if(40 to 49)
 			return "health40"
-		if(30 to 40)
+		if(30 to 39)
 			return "health30"
-		if(20 to 30)
+		if(20 to 29)
 			return "health20"
-		if(10 to 20)
+		if(10 to 19)
 			return "health10"
-		if(0 to 10)
-			return "health0"
-		if(-10 to 0)
+		if(1 to 9)
+			return "health1"
+		if(-10 to 0) 		/*Hard crit begins here. The health bar will turn a brilliant red and deducted health will be black.*/
+			return "health-0"
+		if(-20 to -11)
 			return "health-10"
-		if(-20 to -10)
-			return "health-20"
 		if(-30 to -20)
+			return "health-20"
+		if(-40 to -31)
 			return "health-30"
-		if(-40 to -30)
+		if(-50 to -41)
 			return "health-40"
-		if(-50 to -40)
+		if(-60 to -51)
 			return "health-50"
-		if(-60 to -50)
+		if(-70 to -61)
 			return "health-60"
-		if(-70 to -60)
+		if(-80 to -71)
 			return "health-70"
-		if(-80 to -70)
+		if(-90 to -81)
 			return "health-80"
-		if(-90 to -80)
+		if(-94 to -91)
 			return "health-90"
-		if(-100 to -90)
+		if(-99 to -95)		/*HURRY UP, DOC!*/
 			return "health-95"
 		else
 			return "health-100"
