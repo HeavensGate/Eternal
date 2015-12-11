@@ -176,19 +176,8 @@
 
 /turf/simulated/floor/grass
 	name = "Grass patch"
-	icon_state = "grass1"
+	icon_state = "grass"
 	floor_type = /obj/item/stack/tile/grass
-
-	New()
-		icon_state = "grass[pick("1","2","3","4")]"
-		..()
-		spawn(4)
-			if(src)
-				update_icon()
-				for(var/direction in cardinal)
-					if(istype(get_step(src,direction),/turf/simulated/floor))
-						var/turf/simulated/floor/FF = get_step(src,direction)
-						FF.update_icon() //so siding get updated properly
 
 /turf/simulated/floor/carpet
 	name = "Carpet"

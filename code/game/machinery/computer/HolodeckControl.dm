@@ -355,7 +355,7 @@ var/global/list/holodeck_programs = list(
 
 /turf/simulated/floor/holofloor/grass
 	name = "Lush Grass"
-	icon_state = "grass1"
+	icon_state = "grass"
 	floor_type = /obj/item/stack/tile/grass
 
 	New()
