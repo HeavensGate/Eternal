@@ -40,11 +40,16 @@
 
 /******************************Lantern*******************************/
 
+// This is new.
 /obj/item/device/flashlight/lantern
 	name = "lantern"
+	desc = "A vintage, dusty lantern. Kind of spooky."
+	icon = 'icons/obj/lighting.dmi'
 	icon_state = "lantern"
-	desc = "A mining lantern."
-	brightness_on = 6			// luminosity when on
+	item_state = "lantern"
+	brightness_on = 6
+	w_class = 3
+	flags = CONDUCT
 
 /*****************************Pickaxe********************************/
 
