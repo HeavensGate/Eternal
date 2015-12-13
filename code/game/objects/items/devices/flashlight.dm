@@ -119,6 +119,16 @@
 	brightness_on = 2
 	w_class = 1
 
+// This is new.
+/obj/item/device/flashlight/lantern
+	name = "lantern"
+	desc = "A vintage, dusty lantern. Kind of spooky."
+	icon = 'icons/obj/lighting.dmi'
+	icon_state = "lantern"
+	item_state = "lantern"
+	brightness_on = 4
+	w_class = 3
+	flags = CONDUCT
 
 // the desk lamps are a bit special
 /obj/item/device/flashlight/lamp
@@ -129,7 +139,6 @@
 	brightness_on = 5
 	w_class = 4
 	flags = CONDUCT
-
 	on = 1
 
 
