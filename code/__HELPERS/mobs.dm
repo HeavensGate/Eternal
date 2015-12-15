@@ -90,49 +90,49 @@ proc/RoundHealth(health)
 	switch(health)
 		if(100 to INFINITY)
 			return "health100"
-		if(95 to 99)		//For telling patients to eat a warm donk pocket and go on with their shift.
+		if(95 to 100)		//For telling patients to eat a warm donk pocket and go on with their shift.
 			return "health95"
-		if(90 to 94)
+		if(90 to 95)
 			return "health90"
-		if(80 to 89)
+		if(80 to 90)
 			return "health80"
-		if(70 to 79)
+		if(70 to 80)
 			return "health70"
-		if(60 to 69)
+		if(60 to 70)
 			return "health60"
-		if(50 to 59)
+		if(50 to 60)
 			return "health50"
-		if(40 to 49)
+		if(40 to 50)
 			return "health40"
-		if(30 to 39)
+		if(30 to 40)
 			return "health30"
-		if(20 to 29)
+		if(20 to 30)
 			return "health20"
-		if(10 to 19)
+		if(10 to 20)
 			return "health10"
-		if(1 to 9)
+		if(0 to 10)
 			return "health1"
-		if(-9 to 0) 		//Hard crit begins here. The health bar will turn a brilliant red and deducted health will be black.
+		if(-10 to 0) 		//Hard crit begins here. The health bar will turn a brilliant red and deducted health will be black.
 			return "health-0"
-		if(-19 to -10)
+		if(-20 to -10)
 			return "health-10"
-		if(-29 to -20)
+		if(-30 to -20)
 			return "health-20"
-		if(-39 to -30)
+		if(-40 to -30)
 			return "health-30"
-		if(-49 to -40)
+		if(-50 to -40)
 			return "health-40"
-		if(-59 to -50)
+		if(-60 to -50)
 			return "health-50"
-		if(-69 to -60)
+		if(-70 to -60)
 			return "health-60"
-		if(-79 to -70)
+		if(-80 to -70)
 			return "health-70"
-		if(-89 to -80)
+		if(-90 to -80)
 			return "health-80"
-		if(-94 to -90)
+		if(-95 to -90)
 			return "health-90"
-		if(-99 to -95)		//HURRY UP, DOC!
+		if(-100 to -95)		//HURRY UP, DOC!
 			return "health-95"
 		else
 			return "health-100"
