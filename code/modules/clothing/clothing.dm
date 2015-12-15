@@ -68,7 +68,7 @@
 /obj/item/clothing/head/helmet/refit_for_species(var/target_species)
 	if(!species_restricted)
 		return //this item doesn't use the species_restricted system
-	
+
 	//Set species_restricted list
 	switch(target_species)
 		if("Skrell")
@@ -333,7 +333,10 @@ BLIND     // can't see anything
 	body_parts_covered = HEAD
 	slot_flags = SLOT_MASK
 	body_parts_covered = FACE|EYES
-	sprite_sheets = list("Vox" = 'icons/mob/species/vox/masks.dmi')
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/species/vox/masks.dmi',
+		"Tajara" = 'icons/mob/species/tajaran/masks.dmi',
+		"Unathi" = 'icons/mob/species/unathi/masks.dmi' )
 
 /obj/item/clothing/mask/update_clothing_icon()
 	if (ismob(src.loc))
