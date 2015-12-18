@@ -792,6 +792,7 @@ datum
 			reagent_state = LIQUID
 			color = "#800080"
 			overdose = 20
+			scannable = 1
 			custom_metabolism = 0.25 // Lasts 10 minutes for 15 units
 
 			on_mob_life(var/mob/living/M as mob)
@@ -1253,6 +1254,7 @@ datum
 			color = "#008000" // rgb: 200, 165, 220
 			custom_metabolism = 0.05
 			overdose = REAGENTS_OVERDOSE
+			scannable = 1
 
 			on_mob_life(var/mob/living/M as mob)
 				if(M.stat == 2.0)
@@ -1838,7 +1840,7 @@ datum
 		toxin/chloralhydrate
 			name = "Chloral Hydrate"
 			id = "chloralhydrate"
-			description = "A powerful sedative."
+			description = "A powerful, toxic sedative."
 			reagent_state = SOLID
 			color = "#000067" // rgb: 0, 0, 103
 			toxpwr = 1
@@ -1865,7 +1867,7 @@ datum
 		toxin/potassium_chloride
 			name = "Potassium Chloride"
 			id = "potassium_chloride"
-			description = "A delicious salt that stops the heart when injected into cardiac muscle."
+			description = "A delicious salt that stops the heart when injected into cardiac muscle. Not safe to eat!"
 			reagent_state = SOLID
 			color = "#FFFFFF" // rgb: 255,255,255
 			toxpwr = 0
@@ -2453,7 +2455,7 @@ datum
 		hell_ramen
 			name = "Hell Ramen"
 			id = "hell_ramen"
-			description = "The noodles are boiled, the flavors are artificial, just like being back in school."
+			description = "They call it hell for a reason."
 			reagent_state = LIQUID
 			nutriment_factor = 5 * REAGENTS_METABOLISM
 			color = "#302000" // rgb: 48, 32, 0
@@ -3067,7 +3069,7 @@ datum
 			reagent_state = LIQUID
 			color = "#FF8CFF" // rgb: 255, 140, 255
 			nutriment_factor = 1 * FOOD_METABOLISM
-
+			scannable = 1
 			glass_icon_state = "doctorsdelightglass"
 			glass_name = "glass of The Doctor's Delight"
 			glass_desc = "A healthy mixture of juices, guaranteed to keep you healthy until the next toolboxing takes place."
