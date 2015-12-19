@@ -173,6 +173,17 @@
 		..()
 		reagents.add_reagent("milk", 50)
 
+
+/obj/item/weapon/reagent_containers/food/drinks/eggnog
+	name = "Eggnog"
+	desc = "A dairy based beverage with a bit of kick!"
+	icon_state = "snowwhite"
+	item_state = "glass_empty"
+	center_of_mass = list("x"=16, "y"=9)
+	New()
+		..()
+		reagents.add_reagent("whiterussian", 50)
+
 /obj/item/weapon/reagent_containers/food/drinks/soymilk
 	name = "SoyMilk"
 	desc = "It's soy milk. White and nutritious goodness!"
