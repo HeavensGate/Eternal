@@ -37,11 +37,18 @@
 			wizardstart += loc
 
 		if("JoinLate")
-			latejoin += loc
+			latejoin_cryo += loc
+			message_admins("/green A player has spawned .")
+			del(src)
+		
+		if("JoinLateCryo")
+			latejoin_cryo += loc
+			message_admins("/green A player has spawned.")
 			del(src)
 
 		if("JoinLateCyborg")
 			latejoin_cyborg += loc
+			message_admins("/green A cyborg has spawned.")
 			del(src)
 
 		//prisoners
