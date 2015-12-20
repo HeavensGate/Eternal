@@ -835,14 +835,14 @@ datum
 			reaction_turf(var/turf/T, var/volume)
 				T.germ_level -= min(volume*20, T.germ_level)
 
-			reaction_mob(var/mob/living/M, var/method=TOUCH, var/volume)
+	/*		reaction_mob(var/mob/living/M, var/method=TOUCH, var/volume)
 				src = null
 				if (method==TOUCH)
 					if(istype(M, /mob/living/carbon/human))
 						if(M.health >= -100 && M.health <= 0)
 							M.crit_op_stage = 0.0
 				if (method==INGEST)
-					usr << "The liquid burns as it travels down your throat and esophagus. Do your insides feel squeaky clean, now? ."
+					usr << "Well, that was stupid."
 					M.adjustToxLoss(3)
 				return
 			on_mob_life(var/mob/living/M as mob)
@@ -1524,11 +1524,11 @@ datum
 		ethylredoxrazine	// FUCK YOU, ALCOHOL
 			name = "Ethylredoxrazine"
 			id = "ethylredoxrazine"
-			description = "A powerful oxidizer that neutralizes alcohol."
+			description = "A powerful oxidizer that reacts with ethanol."
 			reagent_state = SOLID
 			color = "#605048" // rgb: 96, 80, 72
 			overdose = REAGENTS_OVERDOSE
-			scannable = 1
+
 			on_mob_life(var/mob/living/M as mob)
 				if(!M) M = holder.my_atom
 				M.dizziness = 0
@@ -2061,7 +2061,6 @@ datum
 
 		nutriment/protein // Bad for Skrell!
 			name = "animal protein"
-			description = "A protein derived from animals."
 			id = "protein"
 			color = "#440000"
 
@@ -2073,7 +2072,6 @@ datum
 
 		nutriment/egg // Also bad for skrell. Not a child of protein because it might mess up, not sure.
 			name = "egg yolk"
-			description = "The yolk from an egg."
 			id = "egg"
 			color = "#FFFFAA"
 
@@ -2120,7 +2118,7 @@ datum
 		capsaicin
 			name = "Capsaicin Oil"
 			id = "capsaicin"
-			description = "An active component of chili peppers which induces a sensation of burning on the tissues of mammals."
+			description = "This is what makes chilis hot."
 			reagent_state = LIQUID
 			color = "#B31008" // rgb: 179, 16, 8
 
@@ -2154,7 +2152,7 @@ datum
 		condensedcapsaicin
 			name = "Condensed Capsaicin"
 			id = "condensedcapsaicin"
-			description = "A more-condensed form of capsaicin as a chemical agent used for self-defense and in police work."
+			description = "A chemical agent used for self-defense and in police work."
 			reagent_state = LIQUID
 			color = "#B31008" // rgb: 179, 16, 8
 
@@ -2241,7 +2239,7 @@ datum
 		frostoil
 			name = "Frost Oil"
 			id = "frostoil"
-			description = "A special oil extracted from ice peppers that noticably chills the body."
+			description = "A special oil that noticably chills the body. Extracted from Ice Peppers."
 			reagent_state = LIQUID
 			color = "#B31008" // rgb: 139, 166, 233
 
@@ -2273,7 +2271,7 @@ datum
 		blackpepper
 			name = "Black Pepper"
 			id = "blackpepper"
-			description = "A powder ground from peppercorns. Makes people sneeze."
+			description = "A powder ground from peppercorns. *AAAACHOOO*"
 			reagent_state = SOLID
 			// no color (ie, black)
 
@@ -2293,7 +2291,7 @@ datum
 		hot_coco // there's also drink/hot_coco for whatever reason
 			name = "Hot Chocolate"
 			id = "hot_coco"
-			description = "A hot, sweet, chocolaty drink made from ground cocoa beans and sometimes milk."
+			description = "Made with love! And cocoa beans."
 			reagent_state = LIQUID
 			nutriment_factor = 2 * REAGENTS_METABOLISM
 			color = "#403010" // rgb: 64, 48, 16
@@ -2457,7 +2455,7 @@ datum
 		hell_ramen
 			name = "Hell Ramen"
 			id = "hell_ramen"
-			description = "They call it hell ramen for a reason."
+			description = "They call it hell for a reason."
 			reagent_state = LIQUID
 			nutriment_factor = 5 * REAGENTS_METABOLISM
 			color = "#302000" // rgb: 48, 32, 0
@@ -2491,7 +2489,7 @@ datum
 		rice
 			name = "Rice"
 			id = "rice"
-			description = "It's a cereal grain, a seed of the grass species oryza sativa. Tastes like nothing."
+			description = "Enjoy the great taste of nothing."
 			reagent_state = SOLID
 			nutriment_factor = 1 * REAGENTS_METABOLISM
 			color = "#FFFFFF" // rgb: 0, 0, 0
@@ -2504,7 +2502,7 @@ datum
 		cherryjelly
 			name = "Cherry Jelly"
 			id = "cherryjelly"
-			description = "A sweet, transluscent, viscous substance derived from fruit preserves. Totally the best. Only to be spread on foods with excellent lateral symmetry."
+			description = "Totally the best. Only to be spread on foods with excellent lateral symmetry."
 			reagent_state = LIQUID
 			nutriment_factor = 1 * REAGENTS_METABOLISM
 			color = "#801E28" // rgb: 128, 30, 40
@@ -2521,7 +2519,7 @@ datum
 		drink
 			name = "Drink"
 			id = "drink"
-			description = "It's a drink of some sort."
+			description = "Uh, some kind of drink."
 			reagent_state = LIQUID
 			nutriment_factor = 1 * REAGENTS_METABOLISM
 			color = "#E78108" // rgb: 231, 129, 8
@@ -2549,12 +2547,12 @@ datum
 		drink/orangejuice
 			name = "Orange juice"
 			id = "orangejuice"
-			description = "Orange pulp blended into juice. With pulp!"
+			description = "Both delicious AND rich in Vitamin C, what more do you need?"
 			color = "#E78108" // rgb: 231, 129, 8
 
 			glass_icon_state = "glass_orange"
 			glass_name = "glass of orange juice"
-			glass_desc = "Both delicious, pulpy, AND rich in Vitamin C. What more do you need?"
+			glass_desc = "Vitamins! Yay!"
 
 			on_mob_life(var/mob/living/M as mob)
 				..()
@@ -2564,7 +2562,7 @@ datum
 		drink/tomatojuice
 			name = "Tomato Juice"
 			id = "tomatojuice"
-			description = "Tomatoes blended into juice."
+			description = "Tomatoes made into juice. What a waste of big, juicy tomatoes, huh?"
 			color = "#731008" // rgb: 115, 16, 8
 
 			glass_icon_state = "glass_red"
@@ -2579,12 +2577,12 @@ datum
 		drink/limejuice
 			name = "Lime Juice"
 			id = "limejuice"
-			description = "The pulp of limes blended into juice with added sugar for taste."
+			description = "The sweet-sour juice of limes."
 			color = "#365E30" // rgb: 54, 94, 48
 
 			glass_icon_state = "glass_green"
 			glass_name = "glass of lime juice"
-			glass_desc = "A glass of sweet-sour lime juice. Still kind of sour."
+			glass_desc = "A glass of sweet-sour lime juice"
 
 			on_mob_life(var/mob/living/M as mob)
 				..()
@@ -2594,7 +2592,7 @@ datum
 		drink/carrotjuice
 			name = "Carrot juice"
 			id = "carrotjuice"
-			description = "Carrots thoroughly blended into juice."
+			description = "It is just like a carrot but without crunching."
 			color = "#FF8C00" // rgb: 255, 140, 0
 
 			glass_icon_state = "carrotjuice"
@@ -2628,7 +2626,7 @@ datum
 		drink/grapejuice
 			name = "Grape Juice"
 			id = "grapejuice"
-			description = "Bunches of grapes blended into juice."
+			description = "It's grrrrrape!"
 			color = "#863333" // rgb: 134, 51, 51
 
 			glass_icon_state = "grapejuice"
@@ -2638,13 +2636,13 @@ datum
 		drink/grapesoda
 			name = "Grape Soda"
 			id = "grapesoda"
-			description = "Grape juice mixed with carbonated water."
+			description = "Grapes made into a fine drank."
 			color = "#421C52" // rgb: 98, 57, 53
 			adj_drowsy 	= 	-3
 
 			glass_icon_state = "gsodaglass"
 			glass_name = "glass of grape soda"
-			glass_desc = "Looks like a delicious drank!"
+			glass_desc = "Looks like a delicious drink!"
 
 		drink/poisonberryjuice
 			name = "Poison Berry Juice"
@@ -2654,7 +2652,7 @@ datum
 
 			glass_icon_state = "poisonberryjuice"
 			glass_name = "glass of poison berry juice"
-			glass_desc = "Do you really want to drink this?"
+			glass_desc = "A glass of deadly juice."
 
 			on_mob_life(var/mob/living/M as mob)
 				..()
@@ -2664,7 +2662,7 @@ datum
 		drink/watermelonjuice
 			name = "Watermelon Juice"
 			id = "watermelonjuice"
-			description = "Watermelon blended into juice."
+			description = "Delicious juice made from watermelon."
 			color = "#B83333" // rgb: 184, 51, 51
 
 			glass_icon_state = "glass_red"
@@ -2674,17 +2672,17 @@ datum
 		drink/lemonjuice
 			name = "Lemon Juice"
 			id = "lemonjuice"
-			description = "A very sour juice made from the blended pulp of lemons."
+			description = "This juice is VERY sour."
 			color = "#AFAF00" // rgb: 175, 175, 0
 
 			glass_icon_state = "lemonjuice"
 			glass_name = "glass of lemon juice"
-			glass_desc = "Your lips pucker just from looking at it."
+			glass_desc = "Sour..."
 
 		drink/banana
 			name = "Banana Juice"
 			id = "banana"
-			description = "The raw essence of a banana after a thorough grind."
+			description = "The raw essence of a banana."
 			color = "#C3AF00" // rgb: 195, 175, 0
 
 			glass_icon_state = "banana"
@@ -2694,7 +2692,7 @@ datum
 		drink/nothing
 			name = "Nothing"
 			id = "nothing"
-			description = "There's nothing there."
+			description = "Absolutely nothing."
 
 			glass_icon_state = "nothing"
 			glass_name = "glass of nothing"
@@ -2703,7 +2701,7 @@ datum
 		drink/potato_juice
 			name = "Potato Juice"
 			id = "potato"
-			description = "Potatoes blended to make juice."
+			description = "Juice of the potato. Bleh."
 			nutriment_factor = 2 * FOOD_METABOLISM
 			color = "#302000" // rgb: 48, 32, 0
 
@@ -2714,7 +2712,7 @@ datum
 		drink/milk
 			name = "Milk"
 			id = "milk"
-			description = "A slightly sweet, opaque, nutritious white liquid produced by the mammary glands of mammals."
+			description = "An opaque white liquid produced by the mammary glands of mammals."
 			color = "#DFDFDF" // rgb: 223, 223, 223
 
 			glass_icon_state = "glass_white"
@@ -2730,7 +2728,7 @@ datum
 		drink/milk/soymilk
 			name = "Soy Milk"
 			id = "soymilk"
-			description = "An opaque, white liquid made from soybeans."
+			description = "An opaque white liquid made from soybeans."
 			color = "#DFDFC7" // rgb: 223, 223, 199
 
 			glass_icon_state = "glass_white"
@@ -2740,17 +2738,17 @@ datum
 		drink/milk/cream
 			name = "Cream"
 			id = "cream"
-			description = "The fatty, still-liquid part of milk. Why don't you mix this with sum scotch, eh?"
+			description = "The fatty, still liquid part of milk. Why don't you mix this with sum scotch, eh?"
 			color = "#DFD7AF" // rgb: 223, 215, 175
 
 			glass_icon_state = "glass_white"
 			glass_name = "glass of cream"
-			glass_desc = "Mmm. Creamy."
+			glass_desc = "Ewwww..."
 
 		drink/grenadine
 			name = "Grenadine Syrup"
 			id = "grenadine"
-			description = "A sweet, tangy syrup in made in the modern day with proper pomegranate substitute."
+			description = "Made in the modern day with proper pomegranate substitute. Who uses real fruit, anyways?"
 			color = "#FF004F" // rgb: 255, 0, 79
 
 			glass_icon_state = "grenadineglass"
@@ -2761,7 +2759,7 @@ datum
 		drink/hot_coco
 			name = "Hot Chocolate"
 			id = "hot_coco"
-			description = "A hot, sweet, chocolaty beverage made from ground cocoa beans and sometimes milk."
+			description = "Made with love! And cocoa beans."
 			nutriment_factor = 2 * FOOD_METABOLISM
 			color = "#403010" // rgb: 64, 48, 16
 			adj_temp = 5
@@ -2773,7 +2771,7 @@ datum
 		drink/coffee
 			name = "Coffee"
 			id = "coffee"
-			description = "Coffee is a caffeinated brewed beverage prepared from roasted coffee beans of the coffee plant."
+			description = "Coffee is a brewed drink prepared from roasted seeds, commonly called coffee beans, of the coffee plant."
 			color = "#482000" // rgb: 72, 32, 0
 			adj_dizzy = -5
 			adj_drowsy = -3
@@ -2795,7 +2793,7 @@ datum
 		drink/coffee/icecoffee
 			name = "Iced Coffee"
 			id = "icecoffee"
-			description = "It's coffee with ice."
+			description = "Coffee and ice, refreshing and cool."
 			color = "#102838" // rgb: 16, 40, 56
 			adj_temp = -5
 
@@ -2806,7 +2804,7 @@ datum
 		drink/coffee/soy_latte
 			name = "Soy Latte"
 			id = "soy_latte"
-			description = "A caffeinated drink "
+			description = "A nice and tasty beverage while you are reading your hippie books."
 			color = "#664300" // rgb: 102, 67, 0
 			adj_sleepy = 0
 			adj_temp = 5
@@ -2880,7 +2878,7 @@ datum
 		drink/cold/tonic
 			name = "Tonic Water"
 			id = "tonic"
-			description = "Water with added quinine sulfate as an antimicrobial."
+			description = "It tastes strange but at least the quinine keeps the Space Malaria at bay."
 			color = "#664300" // rgb: 102, 67, 0
 			adj_dizzy = -5
 			adj_drowsy = -3
@@ -2893,7 +2891,7 @@ datum
 		drink/cold/sodawater
 			name = "Soda Water"
 			id = "sodawater"
-			description = "Not water and soda, water in which had carbon-dioxide dissolved under high pressure."
+			description = "A can of club soda. Why not make a scotch and soda?"
 			color = "#619494" // rgb: 97, 148, 148
 			adj_dizzy = -5
 			adj_drowsy = -3
@@ -2905,7 +2903,7 @@ datum
 		drink/cold/ice
 			name = "Ice"
 			id = "ice"
-			description = "Water frozen under temperatures of 273.15 K."
+			description = "Frozen water, your dentist wouldn't like you chewing this."
 			reagent_state = SOLID
 			color = "#619494" // rgb: 97, 148, 148
 
@@ -2916,7 +2914,7 @@ datum
 		drink/cold/space_cola
 			name = "Space Cola"
 			id = "cola"
-			description = "A sweetened, carbonated, caffeinated brand of soft drink."
+			description = "A refreshing beverage."
 			reagent_state = LIQUID
 			color = "#100800" // rgb: 16, 8, 0
 			adj_drowsy 	= 	-3
@@ -2928,7 +2926,7 @@ datum
 		drink/cold/nuka_cola
 			name = "Nuka Cola"
 			id = "nuka_cola"
-			description = "It's cola with an additional radioactive element."
+			description = "Cola, cola never changes."
 			color = "#100800" // rgb: 16, 8, 0
 			adj_sleepy = -2
 
@@ -2948,7 +2946,7 @@ datum
 		drink/cold/spacemountainwind
 			name = "Mountain Wind"
 			id = "spacemountainwind"
-			description = "A clear, sweet, carbonated soft drink."
+			description = "Blows right through you like a space wind."
 			color = "#102000" // rgb: 16, 32, 0
 			adj_drowsy = -7
 			adj_sleepy = -1
@@ -4276,7 +4274,7 @@ datum
 		ethanol/irishcarbomb
 			name = "Irish Car Bomb"
 			id = "irishcarbomb"
-			description = "An alcoholic beverage with coffee and cream."
+			description = "Mmm, tastes like chocolate cake..."
 			color = "#2E6671" // rgb: 46, 102, 113
 			boozepwr = 3
 			dizzy_adj = 5
@@ -4289,7 +4287,7 @@ datum
 		ethanol/syndicatebomb
 			name = "Syndicate Bomb"
 			id = "syndicatebomb"
-			description = "A highly alcoholic beverage comprised of cola and two other alcoholic ingredients."
+			description = "Tastes like terrorism!"
 			color = "#2E6671" // rgb: 46, 102, 113
 			boozepwr = 5
 
@@ -4301,7 +4299,7 @@ datum
 		ethanol/erikasurprise
 			name = "Erika Surprise"
 			id = "erikasurprise"
-			description = "A green alcoholic beverage made from tropical fruits."
+			description = "The surprise is it's green!"
 			color = "#2E6671" // rgb: 46, 102, 113
 			boozepwr = 3
 
@@ -4313,7 +4311,7 @@ datum
 		ethanol/driestmartini
 			name = "Driest Martini"
 			id = "driestmartini"
-			description = "A very dry martini without vermouth."
+			description = "Only for the experienced. You think you see sand floating in the glass."
 			nutriment_factor = 1 * FOOD_METABOLISM
 			color = "#2E6671" // rgb: 46, 102, 113
 			boozepwr = 4
@@ -4326,7 +4324,7 @@ datum
 		ethanol/bananahonk
 			name = "Banana Mama"
 			id = "bananahonk"
-			description = "An alcoholic "
+			description = "A drink from Clown Heaven."
 			nutriment_factor = 1 * REAGENTS_METABOLISM
 			color = "#FFFF91" // rgb: 255, 255, 140
 			boozepwr = 4
