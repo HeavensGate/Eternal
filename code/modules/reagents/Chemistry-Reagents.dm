@@ -3456,15 +3456,15 @@ datum
 			glass_desc = "A crystal clear glass of Griffeater gin."
 			glass_center_of_mass = list("x"=16, "y"=12)
 
-		ethanol/tequilla
+		ethanol/Tequila
 			name = "Tequila"
-			id = "tequilla"
+			id = "tequila"
 			description = "A strong and mildly flavoured, mexican produced spirit. Feeling thirsty hombre?"
 			color = "#FFFF91" // rgb: 255, 255, 145
 			boozepwr = 2
 
-			glass_icon_state = "tequillaglass"
-			glass_name = "glass of Tequilla"
+			glass_icon_state = "Tequilaglass"
+			glass_name = "glass of Tequila"
 			glass_desc = "Now all that's missing is the weird colored shades!"
 			glass_center_of_mass = list("x"=16, "y"=12)
 
@@ -3613,24 +3613,12 @@ datum
 								L.take_damage(100, 0)
 				holder.remove_reagent(src.id, FOOD_METABOLISM)
 
-		ethanol/rum
+		ethanol/rum //No more deadrum.
 			name = "Rum"
 			id = "rum"
 			description = "Yohoho and all that."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 1.5
-
-			glass_icon_state = "rumglass"
-			glass_name = "glass of rum"
-			glass_desc = "Now you want to Pray for a pirate suit, don't you?"
-			glass_center_of_mass = list("x"=16, "y"=12)
-
-		ethanol/deadrum
-			name = "Deadrum"
-			id = "rum" // duplicate ids?
-			description = "Popular with the sailors. Not very popular with everyone else."
-			color = "#664300" // rgb: 102, 67, 0
-			boozepwr = 1
 
 			glass_icon_state = "rumglass"
 			glass_name = "glass of rum"
@@ -3796,18 +3784,18 @@ datum
 
 			glass_icon_state = "bravebullglass"
 			glass_name = "glass of Brave Bull"
-			glass_desc = "Tequilla and coffee liquor, brought together in a mouthwatering mixture. Drink up."
+			glass_desc = "Tequila and coffee liquor, brought together in a mouthwatering mixture. Drink up."
 			glass_center_of_mass = list("x"=15, "y"=8)
 
-		ethanol/tequilla_sunrise
+		ethanol/Tequila_sunrise
 			name = "Tequila Sunrise"
-			id = "tequillasunrise"
+			id = "Tequilasunrise"
 			description = "Tequila and orange juice. Much like a Screwdriver, only Mexican~"
 			color = "#FFE48C" // rgb: 255, 228, 140
 			boozepwr = 2
 
-			glass_icon_state = "tequillasunriseglass"
-			glass_name = "glass of Tequilla Sunrise"
+			glass_icon_state = "Tequilasunriseglass"
+			glass_name = "glass of Tequila Sunrise"
 			glass_desc = "Oh great, now you feel nostalgic about sunrises back on Terra..."
 
 		ethanol/toxins_special
@@ -4370,6 +4358,24 @@ datum
 					M.confused = max(M.confused+15,15)
 				..()
 				return
+
+		ethanol/bluemotorcycle
+			name = "Blue Motorcycle A.M.F Cocktail"
+			id = "bluemotorcycle"
+			description = "Adios, my friend!"
+			nutriment_factor = 2 * FOOD_METABOLISM
+			color = "#00e1ff" // rgb: 0, 225, 255
+			boozepwr = 5 //This has five types of alcohol in it. You won't finish two drinks without suffering heavy consequences.
+			dizzy_adj =5
+			slurr_adj = 5
+			slur_start = 15
+			confused_start = 30
+
+			glass_icon_state = "amfglass"
+			glass_name = "glass of Blue Motorcycle Cocktail"
+			glass_desc = "Adios, my friend!"
+			glass_center_of_mass = list("x"=16, "y"=7)
+
 
 // Undefine the alias for REAGENTS_EFFECT_MULTIPLER
 #undef REM
