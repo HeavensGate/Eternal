@@ -1028,7 +1028,7 @@
 "atN" = (/obj/structure/disposalpipe/segment,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/plating,/area/maintenance/dormitory)
 "atO" = (/turf/simulated/wall/r_wall,/area/crew_quarters/sleep)
 "atP" = (/obj/structure/sign/double/map/left,/turf/simulated/wall/r_wall,/area/maintenance/dormitory)
-"atQ" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/airlock/maintenance{req_access_txt = "0"; req_one_access_txt = "10;24"},/obj/effect/decal/cleanable/dirt,/turf/space,/area/crew_quarters/sleep)
+"atQ" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/airlock/maintenance{req_access_txt = "0"; req_one_access_txt = "10;24"},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/crew_quarters/sleep)
 "atR" = (/obj/structure/flora/pottedplant{tag = "icon-plant-22"; icon_state = "plant-22"},/turf/simulated/floor,/area/crew_quarters/sleep)
 "atS" = (/obj/effect/landmark{name = "JoinLateCryo"},/turf/simulated/floor,/area/crew_quarters/sleep)
 "atT" = (/obj/machinery/light{dir = 1},/turf/simulated/floor,/area/crew_quarters/sleep)
