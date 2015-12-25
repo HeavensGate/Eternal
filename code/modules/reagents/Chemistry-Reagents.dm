@@ -4367,7 +4367,7 @@ datum
 			color = "#00e1ff" // rgb: 0, 225, 255
 			boozepwr = 5 //This has five types of alcohol in it. You won't finish two drinks without suffering heavy consequences.
 			dizzy_adj =5
-			slurr_adj = 5
+			slurr_adj = 10
 			slur_start = 15
 			confused_start = 30
 
