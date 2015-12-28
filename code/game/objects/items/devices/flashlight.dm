@@ -129,7 +129,6 @@
 	brightness_on = 5
 	w_class = 4
 	flags = CONDUCT
-
 	on = 1
 
 

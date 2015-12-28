@@ -28,28 +28,27 @@
 		if("monkey")
 			monkeystart += loc
 			del(src)
+			
 		if("start")
 			newplayer_start += loc
 			del(src)
 
 		if("wizard")
 			wizardstart += loc
-			del(src)
 
 		if("JoinLate")
 			latejoin_cryo += loc
+			message_admins("/green A player has spawned .")
 			del(src)
-
-		if("JoinLateGateway")
-			latejoin_cryo += loc
-			del(src)
-
+		
 		if("JoinLateCryo")
 			latejoin_cryo += loc
+			message_admins("/green A player has spawned.")
 			del(src)
 
 		if("JoinLateCyborg")
 			latejoin_cyborg += loc
+			message_admins("/green A cyborg has spawned.")
 			del(src)
 
 		//prisoners
