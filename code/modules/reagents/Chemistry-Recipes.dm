@@ -1442,7 +1442,7 @@ datum
 			name = "Patron"
 			id = "patron"
 			result = "patron"
-			required_reagents = list("tequilla" = 10, "silver" = 1)
+			required_reagents = list("tequila" = 10, "silver" = 1)
 			result_amount = 10
 
 		bilk
@@ -1619,14 +1619,14 @@ datum
 			name = "Brave Bull"
 			id = "bravebull"
 			result = "bravebull"
-			required_reagents = list("tequilla" = 2, "kahlua" = 1)
+			required_reagents = list("tequila" = 2, "kahlua" = 1)
 			result_amount = 3
 
-		tequilla_sunrise
-			name = "Tequilla Sunrise"
-			id = "tequillasunrise"
-			result = "tequillasunrise"
-			required_reagents = list("tequilla" = 2, "orangejuice" = 1)
+		tequila_sunrise
+			name = "tequila Sunrise"
+			id = "tequilasunrise"
+			result = "tequilasunrise"
+			required_reagents = list("tequila" = 2, "orangejuice" = 1)
 			result_amount = 3
 
 		phoron_special
@@ -1696,21 +1696,21 @@ datum
 			name = "Margarita"
 			id = "margarita"
 			result = "margarita"
-			required_reagents = list("tequilla" = 2, "limejuice" = 1)
+			required_reagents = list("tequila" = 2, "limejuice" = 1)
 			result_amount = 3
 
 		longislandicedtea
 			name = "Long Island Iced Tea"
 			id = "longislandicedtea"
 			result = "longislandicedtea"
-			required_reagents = list("vodka" = 1, "gin" = 1, "tequilla" = 1, "cubalibre" = 1)
+			required_reagents = list("vodka" = 1, "gin" = 1, "tequila" = 1, "cubalibre" = 1)
 			result_amount = 4
 
 		icedtea
 			name = "Long Island Iced Tea"
 			id = "longislandicedtea"
 			result = "longislandicedtea"
-			required_reagents = list("vodka" = 1, "gin" = 1, "tequilla" = 1, "cubalibre" = 1)
+			required_reagents = list("vodka" = 1, "gin" = 1, "tequila" = 1, "cubalibre" = 1)
 			result_amount = 4
 
 		threemileisland
@@ -1817,8 +1817,13 @@ datum
 			result = "grapesoda"
 			required_reagents = list("grapejuice" = 2, "cola" = 1)
 			result_amount = 3
-
-
+		//Adios, motherfucker. :)
+		bluemotorcycle
+			name = "Blue Motorcycle A.M.F Cocktail"
+			id = "bluemotorcycle"
+			result = "bluemotorcycle"
+			required_reagents = list("vodka" = 1, "rum" = 1, "tequila" = 1, "gin" = 1, "space_up" = 2, "bluecuracao" = 1, "lemon_lime" = 2, "ice" = 1)
+			result_amount = 10
 
 ////DRINKS THAT REQUIRED IMPROVED SPRITES BELOW:: -Agouri/////
 
