@@ -4368,8 +4368,8 @@ datum
 			boozepwr = 5 //This has five types of alcohol in it. You won't finish two drinks without suffering heavy consequences.
 			dizzy_adj =5
 			slurr_adj = 10
-  			slur_start = 15
-  			confused_start = 30
+			slur_start = 15
+			confused_start = 30
 
 			glass_icon_state = "amfglass"
 			glass_name = "glass of Blue Motorcycle Cocktail"
