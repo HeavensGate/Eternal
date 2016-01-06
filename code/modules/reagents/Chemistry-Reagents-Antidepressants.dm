@@ -3,7 +3,11 @@
 /datum/reagent/antidepressant/methylphenidate
 	name = "Methylphenidate"
 	id = "methylphenidate"
+<<<<<<< HEAD
 	description = "Methylphenidate, commonly known as its brand name, Ritalin, is a central nervous system stimulant that is used to treat attention deficit hyperactivity disorder and narcolepsy."
+=======
+	description = "Methylphenidate, commonly referred as its brand name, Ritalin, is a central nervous system stimulant that is used to treat attention deficit hyperactivity disorder and narcolepsy."
+>>>>>>> 0d3a822943aa0c21ba874fddba64c966fb7e1d9d
 	reagent_state = LIQUID
 	color = "#BF80BF" // rgb: 191, 128, 191
 	custom_metabolism = 0.01
@@ -31,7 +35,11 @@
 /datum/reagent/antidepressant/citalopram
 	name = "Citalopram"
 	id = "citalopram"
+<<<<<<< HEAD
 	description = "Citalopram, commonly known as its brand name, Celexa, is an antidepressant drug of the selective serotonin reuptake inhibitor class. It is used to treat major depression and sometimes obsessive compulsive disorder."
+=======
+	description = "Citalopram, commonly referred as its brand name, Celexa, is an antidepressant drug of the selective serotonin reuptake inhibitor class. It is used to treat major depression and sometimes obsessive compulsive disorder."
+>>>>>>> 0d3a822943aa0c21ba874fddba64c966fb7e1d9d
 	reagent_state = LIQUID
 	color = "#FF80FF" // rgb: 255, 128, 255
 	custom_metabolism = 0.01

@@ -6,7 +6,11 @@ var/const/BLOOD_VOLUME_MINOR = 504 // 90% - new level. Patient feels thirsty.
 var/const/BLOOD_VOLUME_SAFE = 448 // 80%, changed from 90%
 var/const/BLOOD_VOLUME_OKAY = 364 // 65%, changed from 66.67%
 var/const/BLOOD_VOLUME_BAD = 224 // 40%, unchanged
+<<<<<<< HEAD
 var/const/BLOOD_VOLUME_SURVIVE = 122 // 21.79%, unchanged
+=======
+var/const/BLOOD_VOLUME_SURVIVE = 122 // 21.79%,
+>>>>>>> 0d3a822943aa0c21ba874fddba64c966fb7e1d9d
 
 /mob/living/carbon/human/var/datum/reagents/vessel	//Container for blood and BLOOD ONLY. Do not transfer other chems here.
 /mob/living/carbon/human/var/var/pale = 0			//Should affect how mob sprite is drawn, but currently doesn't.
@@ -87,19 +91,33 @@ var/const/BLOOD_VOLUME_SURVIVE = 122 // 21.79%, unchanged
 				if(pale)
 					pale = 0
 					update_body()
+<<<<<<< HEAD
 					var/word = pick("feel a bit thirsty","want something to drink")
 					src << "\black You [word]."
 				if(prob(1))
 					var/word = pick("feel a bit thirsty","want something to drink")
+=======
+					var/word = pick("feel a bit thirsty", "want something to drink")
+					src << "\black You [word]."
+				if(prob(1))
+					var/word = pick("feel a bit thirsty", "want something to drink")
+>>>>>>> 0d3a822943aa0c21ba874fddba64c966fb7e1d9d
 					src << "\black You [word]."
 			if(BLOOD_VOLUME_OKAY to BLOOD_VOLUME_SAFE)
 				if(!pale)
 					pale = 1
 					update_body()
+<<<<<<< HEAD
 					var/word = pick("a bit dizzy","somewhat woosey","a little lightheaded","dehydrated")
 					src << "\red You feel [word]."
 				if(prob(1))
 					var/word = pick("a bit dizzy","somewhat woosey","a little lightheaded","dehydrated")
+=======
+					var/word = pick("a bit dizzy", "somewhat woosey", "a little lightheaded", "dehydrated")
+					src << "\red You feel [word]."
+				if(prob(1))
+					var/word = pick("a bit dizzy","somewhat woosey", "a little lightheaded", "dehydrated")
+>>>>>>> 0d3a822943aa0c21ba874fddba64c966fb7e1d9d
 					src << "\red You feel [word]."
 				if(oxyloss < 20)
 					oxyloss += 3
@@ -113,13 +131,21 @@ var/const/BLOOD_VOLUME_SURVIVE = 122 // 21.79%, unchanged
 				oxyloss += 1
 				if(prob(15))
 					Paralyse(rand(1,3))
+<<<<<<< HEAD
 					var/word = pick("dizzy","faint","disoriented","dehydrated")
+=======
+					var/word = pick("dizzy", "faint", "disoriented", "dehydrated")
+>>>>>>> 0d3a822943aa0c21ba874fddba64c966fb7e1d9d
 					src << "\red You feel [word]."
 			if(BLOOD_VOLUME_SURVIVE to BLOOD_VOLUME_BAD)
 				oxyloss += 5
 				toxloss += 3
 				if(prob(15))
+<<<<<<< HEAD
 					var/word = pick("faint","disoriented")
+=======
+					var/word = pick("faint", "disoriented")
+>>>>>>> 0d3a822943aa0c21ba874fddba64c966fb7e1d9d
 					src << "\red You feel extremely [word]."
 			if(0 to BLOOD_VOLUME_SURVIVE)
 				// There currently is a strange bug here. If the mob is not below -100 health
