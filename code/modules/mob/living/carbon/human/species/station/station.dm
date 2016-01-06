@@ -70,12 +70,11 @@
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
 	darksight = 8
 	slowdown = -0.6 //Supercat nerf
-	brute_mod = 1.2
 
 	blurb = "The Tajaran race is a species of feline-like bipeds hailing from the planet of Ahdomai in the \
 	S'randarr system. They have been brought up into the space age by the Humans and Skrell, and have been \
 	influenced heavily by their long history of Slavemaster rule. They have a structured, clan-influenced way \
-	of family and politics. They prefer colder environments, and speak a variety of languages, mostly Siik'Maas, \
+	of family and politics. They prefer colder environments, and speak a variety of languages, mostly Siik'maas, \
 	using unique inflections their mouths form."
 
 	cold_level_1 = 200 //Default 260

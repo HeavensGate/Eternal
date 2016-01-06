@@ -106,20 +106,6 @@
 		new /obj/item/weapon/reagent_containers/glass/beaker( src )
 		new /obj/item/weapon/reagent_containers/glass/beaker( src )
 
-/obj/item/weapon/storage/box/emptybloodpacks
-	name = "box of empty blood packs"
-	icon_state = "emptybloodpacks"
-
-	New()
-		..()
-		new /obj/item/weapon/storage/box/bloodpacks( src )
-		new /obj/item/weapon/storage/box/bloodpacks( src )
-		new /obj/item/weapon/storage/box/bloodpacks( src )
-		new /obj/item/weapon/storage/box/bloodpacks( src )
-		new /obj/item/weapon/storage/box/bloodpacks( src )
-		new /obj/item/weapon/storage/box/bloodpacks( src )
-		new /obj/item/weapon/storage/box/bloodpacks( src )
-/obj/item/weapon/storage/box/injectors
 	name = "box of DNA injectors"
 	desc = "This box contains injectors it seems."
 
