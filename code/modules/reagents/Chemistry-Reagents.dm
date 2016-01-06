@@ -101,12 +101,13 @@ datum
 			data = new/list("donor"=null,"viruses"=null,"species"="Human","blood_DNA"=null,"blood_type"=null,"blood_colour"= "#A10808","resistances"=null,"trace_chem"=null, "antibodies" = null)
 			name = "Blood"
 			id = "blood"
+			description = "Blood is a constantly circulating fluid in the cardiovascular system of animals with proteins and cells providing the body with nutrition and waste removal."
 			reagent_state = LIQUID
 			color = "#C80000" // rgb: 200, 0, 0
 
 			glass_icon_state = "glass_red"
-			glass_name = "glass of tomato juice"
-			glass_desc = "Are you sure this is tomato juice?"
+			glass_name = "glass of blood"
+			glass_desc = "That's a glass of blood. It's viscous, brightly colored, and staining the glass."
 
 			reaction_mob(var/mob/M, var/method=TOUCH, var/volume)
 				var/datum/reagent/blood/self = src
@@ -196,7 +197,7 @@ datum
 		water
 			name = "Water"
 			id = "water"
-			description = "A ubiquitous chemical substance that is composed of hydrogen and oxygen."
+			description = "Water is a ubiquitous chemical substance that is composed of hydrogen and oxygen. It is a necessary component to all life."
 			reagent_state = LIQUID
 			color = "#0064C8" // rgb: 0, 100, 200
 			custom_metabolism = 0.01
@@ -266,7 +267,7 @@ datum
 		water/holywater
 			name = "Holy Water"
 			id = "holywater"
-			description = "An ashen-obsidian-water mix, this solution will alter certain sections of the brain's rationality."
+			description = "Holy water is an ashen-obsidian-water mix. This solution will alter certain sections of the brain's rationality."
 			color = "#E0E8EF" // rgb: 224, 232, 239
 
 			glass_icon_state = "glass_clear"
@@ -286,7 +287,7 @@ datum
 		lube
 			name = "Space Lube"
 			id = "lube"
-			description = "Lubricant is a substance introduced between two moving surfaces to reduce the friction and wear between them. giggity."
+			description = "Space Lubricant is a substance introduced between two moving surfaces to reduce the friction and wear between them."
 			reagent_state = LIQUID
 			color = "#009CA8" // rgb: 0, 156, 168
 			overdose = REAGENTS_OVERDOSE
@@ -308,7 +309,7 @@ datum
 		plasticide
 			name = "Plasticide"
 			id = "plasticide"
-			description = "Liquid plastic, do not eat."
+			description = "Plasticide is liquidized plastic previously exposed to temperatures beyond 373.15 Kelvin."
 			reagent_state = LIQUID
 			color = "#CF3600" // rgb: 207, 54, 0
 			custom_metabolism = 0.01
@@ -323,7 +324,7 @@ datum
 		slimetoxin
 			name = "Mutation Toxin"
 			id = "mutationtoxin"
-			description = "A corruptive toxin produced by slimes."
+			description = "Mutation Toxin is a corruptive toxin produced by slimes."
 			reagent_state = LIQUID
 			color = "#13BC5E" // rgb: 19, 188, 94
 			overdose = REAGENTS_OVERDOSE
@@ -341,7 +342,7 @@ datum
 		aslimetoxin
 			name = "Advanced Mutation Toxin"
 			id = "amutationtoxin"
-			description = "An advanced corruptive toxin produced by slimes."
+			description = "Advanced Mutation Toxin is an advanced corruptive toxin produced by slimes."
 			reagent_state = LIQUID
 			color = "#13BC5E" // rgb: 19, 188, 94
 			overdose = REAGENTS_OVERDOSE
@@ -377,7 +378,7 @@ datum
 		inaprovaline
 			name = "Inaprovaline"
 			id = "inaprovaline"
-			description = "Inaprovaline is a synaptic stimulant and cardiostimulant. Commonly used to stabilize patients."
+			description = "Inaprovaline is a synaptic stimulant and cardios stimulant. It is a mild painkiller and it is used to stabilize critical patients."
 			reagent_state = LIQUID
 			color = "#00BFFF" // rgb: 200, 165, 220
 			overdose = REAGENTS_OVERDOSE*2
@@ -398,7 +399,7 @@ datum
 		space_drugs
 			name = "Space drugs"
 			id = "space_drugs"
-			description = "An illegal chemical compound used as drug."
+			description = "This is an illegal chemical compound used as a drug for recreational purposes."
 			reagent_state = LIQUID
 			color = "#60A584" // rgb: 96, 165, 132
 			overdose = REAGENTS_OVERDOSE
@@ -416,7 +417,7 @@ datum
 		serotrotium
 			name = "Serotrotium"
 			id = "serotrotium"
-			description = "A chemical compound that promotes concentrated production of the serotonin neurotransmitter in humans."
+			description = "Serotrotium is a chemical compound that promotes concentrated production of the serotonin neurotransmitter in humans."
 			reagent_state = LIQUID
 			color = "#202040" // rgb: 20, 20, 40
 			overdose = REAGENTS_OVERDOSE
@@ -466,7 +467,7 @@ datum
 		oxygen
 			name = "Oxygen"
 			id = "oxygen"
-			description = "A colorless, odorless gas."
+			description = "Oxygen is a highly reactive chemical element and oxidizing agent in the form of a transparent, odorless, tasteless, combustible, diatomic gas at room temperature. Makes up 21 percent of breathable air."
 			reagent_state = GAS
 			color = "#808080" // rgb: 128, 128, 128
 
@@ -483,15 +484,15 @@ datum
 		copper
 			name = "Copper"
 			id = "copper"
-			description = "A highly ductile metal."
-			color = "#6E3B08" // rgb: 110, 59, 8
+			description = "Copper is a brown, metallic, lustrous, soft, malleable and ductile chemical element solid at room temperature with a very high thermal and electrical conductivity."
+			color = "#B97332" // rgb: 185, 115, 50 Brighter brown.
 
 			custom_metabolism = 0.01
 
 		nitrogen
 			name = "Nitrogen"
 			id = "nitrogen"
-			description = "A colorless, odorless, tasteless gas."
+			description = "Nitrogen is a transparent, odorless, tasteless, diatomic, chemical element in a gaseous state at room temperature. It can form many compounds and it makes up 78% of breathable air."
 			reagent_state = GAS
 			color = "#808080" // rgb: 128, 128, 128
 
@@ -508,7 +509,7 @@ datum
 		hydrogen
 			name = "Hydrogen"
 			id = "hydrogen"
-			description = "A colorless, odorless, nonmetallic, tasteless, highly combustible diatomic gas."
+			description = "Hydrogen is a colorless, odorless, nonmetallic, tasteless, highly combustible chemical element in the form of a diatomic gas at room temperature."
 			reagent_state = GAS
 			color = "#808080" // rgb: 128, 128, 128
 
@@ -517,7 +518,7 @@ datum
 		potassium
 			name = "Potassium"
 			id = "potassium"
-			description = "A soft, low-melting solid that can easily be cut with a knife. Reacts violently with water."
+			description = "Potassium is an alkaline chemical element and an easily soluble metal soft enough to cut with a knife. It is highly reactive with water."
 			reagent_state = SOLID
 			color = "#A0A0A0" // rgb: 160, 160, 160
 
@@ -526,9 +527,9 @@ datum
 		mercury
 			name = "Mercury"
 			id = "mercury"
-			description = "A chemical element."
+			description = "Mercury is a heavy, silvery, metallic chemical element unique to being a liquid at standard temperature and pressure."
 			reagent_state = LIQUID
-			color = "#484848" // rgb: 72, 72, 72
+			color = "#96A0AF" // rgb: 150, 160, 175
 			overdose = REAGENTS_OVERDOSE
 
 			on_mob_life(var/mob/living/M as mob)
@@ -543,16 +544,16 @@ datum
 		sulfur
 			name = "Sulfur"
 			id = "sulfur"
-			description = "A chemical element with a pungent smell."
+			description = "Sulfur is a yellow, nonmetallic, crystalline chemical element. It is solid at room temperature, crushed to a powder, reactive with nearly all elements, and it is notably odoriferous--responsible for the smell of rotting eggs."
 			reagent_state = SOLID
-			color = "#BF8C00" // rgb: 191, 140, 0
+			color = "#F0D3C7" // rgb: 240, 220, 55 Bright yellow.
 
 			custom_metabolism = 0.01
 
 		carbon
 			name = "Carbon"
 			id = "carbon"
-			description = "A chemical element, the builing block of life."
+			description = "Carbon is a black, nonmetallic, allotropic chemical element solid at room temperature, abundant in the universe, and found in all organic compounds. It is the chemical basis of all known life."
 			reagent_state = SOLID
 			color = "#1C1300" // rgb: 30, 20, 0
 
@@ -571,44 +572,44 @@ datum
 		chlorine
 			name = "Chlorine"
 			id = "chlorine"
-			description = "A chemical element with a characteristic odour."
+			description = "Chlorine is a yellow-green chemical element in the form of a diatomic gas at room temperature. It is a strong oxidizing agent and it has a characteristic odor."
 			reagent_state = GAS
-			color = "#808080" // rgb: 128, 128, 128
+			color = "#C8C864" // rgb: 200, 200, 100 Dull yellow-green.
 			overdose = REAGENTS_OVERDOSE
 
 			on_mob_life(var/mob/living/M as mob)
 				if(!M) M = holder.my_atom
-				M.take_organ_damage(1*REM, 0)
+				M.take_organ_damage(1*REM, 0) //Pucky wants to make this deal toxin damage, too.
 				..()
 				return
 
 		fluorine
 			name = "Fluorine"
 			id = "fluorine"
-			description = "A highly-reactive chemical element."
+			description = "Fluorine is a yellow-green, powerful chemical element in the form of a diatomic gas at room temperature. It is extremely reactive and it reacts with almost every other element.."
 			reagent_state = GAS
-			color = "#808080" // rgb: 128, 128, 128
+			color = "#C8E14B" // rgb: 200, 225, 75 Yellow-green.
 			overdose = REAGENTS_OVERDOSE
 
 			on_mob_life(var/mob/living/M as mob)
 				if(!M) M = holder.my_atom
-				M.adjustToxLoss(1*REM)
+				M.adjustToxLoss(1*REM) //Pucky wants to change this to make it cause more toxin damage and organ damage. This shit's toxic!
 				..()
 				return
 
 		sodium
 			name = "Sodium"
 			id = "sodium"
-			description = "A chemical element, readily reacts with water."
+			description = "Sodium is a soft, silver-white, metallic, highly reactive chemical element which is solid at room temperature. It readily reacts with water."
 			reagent_state = SOLID
-			color = "#808080" // rgb: 128, 128, 128
+			color = "#E1E1E1" // rgb: 225, 225, 225 More white.
 
 			custom_metabolism = 0.01
 
 		phosphorus
 			name = "Phosphorus"
 			id = "phosphorus"
-			description = "A chemical element, the backbone of biological energy carriers."
+			description = "Phosphorus is a maroon, highly reactive chemical element which is solid at room temperature. It is essential as a component of DNA, RNA, and ATP, biological blueprints and energy-carriers. "
 			reagent_state = SOLID
 			color = "#832828" // rgb: 131, 40, 40
 
@@ -617,9 +618,9 @@ datum
 		lithium
 			name = "Lithium"
 			id = "lithium"
-			description = "A chemical element, used as antidepressant."
+			description = "Lithium is a soft, alkaline, silver-white, metallic chemical element. It is the lightest and least dense solid element, no longer used as an antidepressant due to its side effects."
 			reagent_state = SOLID
-			color = "#808080" // rgb: 128, 128, 128
+			color = "#C8C8C8" // rgb: 200, 200, 200
 			overdose = REAGENTS_OVERDOSE
 
 			on_mob_life(var/mob/living/M as mob)
@@ -633,13 +634,13 @@ datum
 		sugar
 			name = "Sugar"
 			id = "sugar"
-			description = "The organic compound commonly known as table sugar and sometimes called saccharose. This white, odorless, crystalline powder has a pleasing, sweet taste."
+			description = "Sugar is an organic compound from the sugarcane plant commonly known as table sugar and sometimes called sucrose. This white, odorless, crystalline powder has a pleasing, sweet taste."
 			reagent_state = SOLID
 			color = "#FFFFFF" // rgb: 255, 255, 255
 
 			glass_icon_state = "iceglass"
 			glass_name = "glass of sugar"
-			glass_desc = "The organic compound commonly known as table sugar and sometimes called saccharose. This white, odorless, crystalline powder has a pleasing, sweet taste."
+			glass_desc = "The organic compound commonly known as table sugar and sometimes called sucrose. This white, odorless, crystalline powder has a pleasing, sweet taste."
 
 			on_mob_life(var/mob/living/M as mob)
 				M.nutrition += 1*REM
@@ -650,7 +651,7 @@ datum
 		glycerol
 			name = "Glycerol"
 			id = "glycerol"
-			description = "Glycerol is a simple polyol compound. Glycerol is sweet-tasting and of low toxicity."
+			description = "Glycerol is a simple polyol compound. It is a colorless, odorless, viscous, sweet-tasting liquid easily soluble in water."
 			reagent_state = LIQUID
 			color = "#808080" // rgb: 128, 128, 128
 
@@ -659,7 +660,7 @@ datum
 		nitroglycerin
 			name = "Nitroglycerin"
 			id = "nitroglycerin"
-			description = "Nitroglycerin is a heavy, colorless, oily, explosive liquid obtained by nitrating glycerol."
+			description = "Nitroglycerin is a nitrite compound. It is a heavy, colorless, oily, explosive liquid most commonly produced by nitrating glycerol with white fuming nitric acid."
 			reagent_state = LIQUID
 			color = "#808080" // rgb: 128, 128, 128
 
@@ -668,7 +669,7 @@ datum
 		radium
 			name = "Radium"
 			id = "radium"
-			description = "Radium is an alkaline earth metal. It is extremely radioactive."
+			description = "Radium is an alkaline earth metal. It is extremely radioactive and it is used to produce antibodies in patients with viruses."
 			reagent_state = SOLID
 			color = "#C7C7C7" // rgb: 199,199,199
 
@@ -709,9 +710,9 @@ datum
 		ryetalyn
 			name = "Ryetalyn"
 			id = "ryetalyn"
-			description = "Ryetalyn can cure all genetic abnomalities via a catalytic process."
+			description = "Ryetalyn can cure all genetic abnomalities via a catalytic process. Only one unit is needed."
 			reagent_state = SOLID
-			color = "#004000" // rgb: 200, 165, 220
+			color = "#96C800" // rgb: 150, 200, 0
 			overdose = REAGENTS_OVERDOSE
 
 			on_mob_life(var/mob/living/M as mob)
@@ -734,7 +735,7 @@ datum
 		thermite
 			name = "Thermite"
 			id = "thermite"
-			description = "Thermite produces an aluminothermic reaction known as a thermite reaction. Can be used to melt walls."
+			description = "Thermite is a flammable pyrotechnic composition of metal powder fuel oxidized metal. It undergoes an exothermic reduction-oxidation reaction-a thermite reaction."
 			reagent_state = SOLID
 			color = "#673910" // rgb: 103, 57, 16
 
@@ -756,7 +757,7 @@ datum
 		paracetamol
 			name = "Paracetamol"
 			id = "paracetamol"
-			description = "Most probably know this as Tylenol, but this chemical is a mild, simple painkiller."
+			description = "Paracetamol, commonly known as its brand name, Tylenol, is a simple, mild painkiller."
 			reagent_state = LIQUID
 			color = "#C8A5DC"
 			overdose = 60
@@ -772,9 +773,9 @@ datum
 		tramadol
 			name = "Tramadol"
 			id = "tramadol"
-			description = "A simple, yet effective painkiller."
+			description = "Tramadol, commonly known as its brand name, Ultram, is a simple, yet effective painkiller."
 			reagent_state = LIQUID
-			color = "#CB68FC"
+			color = "#CB68FC" // rgb: 203, 104, 252
 			overdose = 30
 			scannable = 1
 			custom_metabolism = 0.025 // Lasts 10 minutes for 15 units
@@ -788,9 +789,9 @@ datum
 		oxycodone
 			name = "Oxycodone"
 			id = "oxycodone"
-			description = "An effective and very addictive painkiller."
+			description = "Oxycodone, commonly known as its brand name, Oxycontin, is an effective and very addictive painkiller."
 			reagent_state = LIQUID
-			color = "#800080"
+			color = "#800080" // rgb: 128, 104, 128
 			overdose = 20
 			scannable = 1
 			custom_metabolism = 0.25 // Lasts 10 minutes for 15 units
@@ -806,7 +807,7 @@ datum
 		virus_food
 			name = "Virus Food"
 			id = "virusfood"
-			description = "A mixture of water, milk, and oxygen. Virus cells can use this mixture to reproduce."
+			description = "Virus food is a mixture of water, milk, and oxygen. Virus cells can use this mixture to reproduce."
 			reagent_state = LIQUID
 			nutriment_factor = 2 * REAGENTS_METABOLISM
 			color = "#899613" // rgb: 137, 150, 19
@@ -820,7 +821,7 @@ datum
 		sterilizine
 			name = "Sterilizine"
 			id = "sterilizine"
-			description = "Sterilizes wounds in preparation for surgery."
+			description = "Sterilizine is an antibacterial agent that sterilizes wounds in preparation for surgery."
 			reagent_state = LIQUID
 			color = "#C8A5DC" // rgb: 200, 165, 220
 
@@ -842,7 +843,7 @@ datum
 						if(M.health >= -100 && M.health <= 0)
 							M.crit_op_stage = 0.0
 				if (method==INGEST)
-					usr << "Well, that was stupid."
+					usr << "The liquid burns as it travels down your throat and esophagus. Do your insides feel squeaky clean, now?"
 					M.adjustToxLoss(3)
 				return
 			on_mob_life(var/mob/living/M as mob)
@@ -851,12 +852,13 @@ datum
 					..()
 					return
 	*/
+
 		iron
 			name = "Iron"
 			id = "iron"
-			description = "Pure iron is a metal."
+			description = "Iron is a lustrous, metallic, solid, and sturdy chemical element. It is abundant and used for a variety of purposes."
 			reagent_state = SOLID
-			color = "#353535"
+			color = "#7D7D7D" // rgb: 125, 125, 125
 			overdose = REAGENTS_OVERDOSE
 
 		gold
@@ -869,14 +871,14 @@ datum
 		silver
 			name = "Silver"
 			id = "silver"
-			description = "A soft, white, lustrous transition metal, it has the highest electrical conductivity of any element and the highest thermal conductivity of any metal."
+			description = "Silver is a soft, white, lustrous transition metal. It has the highest electrical conductivity of any element and the highest thermal conductivity of any metal."
 			reagent_state = SOLID
 			color = "#D0D0D0" // rgb: 208, 208, 208
 
 		uranium
 			name ="Uranium"
 			id = "uranium"
-			description = "A silvery-white metallic chemical element in the actinide series, weakly radioactive."
+			description = "Uranium is a silvery-white metallic chemical element in the actinide series. It is weakly radioactive."
 			reagent_state = SOLID
 			color = "#B8B8C0" // rgb: 184, 184, 192
 
@@ -898,21 +900,21 @@ datum
 		aluminum
 			name = "Aluminum"
 			id = "aluminum"
-			description = "A silvery white and ductile member of the boron group of chemical elements."
+			description = "Aluminum is a silvery-white and ductile member of the boron group of chemical elements."
 			reagent_state = SOLID
 			color = "#A8A8A8" // rgb: 168, 168, 168
 
 		silicon
 			name = "Silicon"
 			id = "silicon"
-			description = "A tetravalent metalloid, silicon is less reactive than its chemical analog carbon."
+			description = "Silicon is a tetravalent chemical element in the metalloid group. It is less reactive than carbon."
 			reagent_state = SOLID
 			color = "#A8A8A8" // rgb: 168, 168, 168
 
 		fuel
 			name = "Welding fuel"
 			id = "fuel"
-			description = "Required for welders. Flamable."
+			description = "Welding fuel is a flammable liquid used as a fuel for welders."
 			reagent_state = LIQUID
 			color = "#660000" // rgb: 102, 0, 0
 			overdose = REAGENTS_OVERDOSE
@@ -938,7 +940,7 @@ datum
 		space_cleaner
 			name = "Space cleaner"
 			id = "cleaner"
-			description = "A compound used to clean things. Now with 50% more sodium hypochlorite!"
+			description = "Space cleaner is a chemical compound reinforced with double the amount of sodium hypochloride than its original recipe. It is known for cleaning the most hardy of substances on almost any surface."
 			reagent_state = LIQUID
 			color = "#A5F0EE" // rgb: 165, 240, 238
 			overdose = REAGENTS_OVERDOSE
@@ -1013,9 +1015,9 @@ datum
 		cryptobiolin
 			name = "Cryptobiolin"
 			id = "cryptobiolin"
-			description = "Cryptobiolin causes confusion and dizzyness."
+			description = "Cryptobiolin is a reagent in the recipe to make Spaceacillin, but it is not a medicine on its own and has undesirable side effects when consumed."
 			reagent_state = LIQUID
-			color = "#000055" // rgb: 200, 165, 220
+			color = "#000055" // rgb: 0, 0, 85 More than of these medications had incorrect color rgb labels.
 			overdose = REAGENTS_OVERDOSE
 
 			on_mob_life(var/mob/living/M as mob)
@@ -1031,9 +1033,9 @@ datum
 		kelotane
 			name = "Kelotane"
 			id = "kelotane"
-			description = "Kelotane is a drug used to treat burns."
+			description = "Kelotane is a medication used to treat burns."
 			reagent_state = LIQUID
-			color = "#FFA800" // rgb: 200, 165, 220
+			color = "#FFA800" // rgb: 255, 168, 0
 			overdose = REAGENTS_OVERDOSE
 			scannable = 1
 
@@ -1049,9 +1051,9 @@ datum
 		dermaline
 			name = "Dermaline"
 			id = "dermaline"
-			description = "Dermaline is the next step in burn medication. Works twice as good as kelotane and enables the body to restore even the direst heat-damaged tissue."
+			description = "Dermaline is the next step in burn medication. Works twice as good as kelotane and enables the body to repair fourth degree burns deep into the hypodermis of the skin."
 			reagent_state = LIQUID
-			color = "#FF8000" // rgb: 200, 165, 220
+			color = "#FF8000" // rgb: 255, 128, 0
 			overdose = REAGENTS_OVERDOSE/2
 			scannable = 1
 
@@ -1069,7 +1071,7 @@ datum
 			id = "dexalin"
 			description = "Dexalin is used in the treatment of oxygen deprivation."
 			reagent_state = LIQUID
-			color = "#0080FF" // rgb: 200, 165, 220
+			color = "#0080FF" // rgb: 0, 128, 255
 			overdose = REAGENTS_OVERDOSE
 			scannable = 1
 
@@ -1090,9 +1092,9 @@ datum
 		dexalinp
 			name = "Dexalin Plus"
 			id = "dexalinp"
-			description = "Dexalin Plus is used in the treatment of oxygen deprivation. It is highly effective."
+			description = "Dexalin Plus is used in the treatment of oxygen deprivation. It is highly effective; one unit completely replenishes the lungs."
 			reagent_state = LIQUID
-			color = "#0040FF" // rgb: 200, 165, 220
+			color = "#0040FF" // rgb: 0, 64, 255
 			overdose = REAGENTS_OVERDOSE/2
 			scannable = 1
 
@@ -1113,9 +1115,9 @@ datum
 		tricordrazine
 			name = "Tricordrazine"
 			id = "tricordrazine"
-			description = "Tricordrazine is a highly potent stimulant, originally derived from cordrazine. Can be used to treat a wide range of injuries."
+			description = "Tricordrazine is a stimulant originally derived from cordrazine. It can be used to treat a wide range of injuries."
 			reagent_state = LIQUID
-			color = "#8040FF" // rgb: 200, 165, 220
+			color = "#8040FF" // rgb: 128, 64, 255
 			scannable = 1
 
 			on_mob_life(var/mob/living/M as mob, var/alien)
@@ -1133,9 +1135,9 @@ datum
 		anti_toxin
 			name = "Dylovene"
 			id = "anti_toxin"
-			description = "Dylovene is a broad-spectrum antitoxin."
+			description = "Dylovene is an effective broad-spectrum antitoxin."
 			reagent_state = LIQUID
-			color = "#00A000" // rgb: 200, 165, 220
+			color = "#00A000" // rgb: 0, 160, 0
 			scannable = 1
 
 			on_mob_life(var/mob/living/M as mob, var/alien)
@@ -1151,13 +1153,13 @@ datum
 		adminordrazine //An OP chemical for admins
 			name = "Adminordrazine"
 			id = "adminordrazine"
-			description = "It's magic. We don't have to explain it."
+			description = "Not much is known about this lavender elixir-like beverage except it has a taste guaranteed anyone will enjoy and one drop has magical properties beyond science's and logic's comprehension."
 			reagent_state = LIQUID
 			color = "#C8A5DC" // rgb: 200, 165, 220
 
 			glass_icon_state = "golden_cup"
 			glass_name = "golden cup"
-			glass_desc = "It's magic. We don't have to explain it."
+			glass_desc = "The lavender elixir sparkles, swirls and hums quietly; it looks magical beyond your comprehension."
 
 			on_mob_life(var/mob/living/carbon/M as mob)
 				if(!M) M = holder.my_atom ///This can even heal dead people.
@@ -1194,9 +1196,9 @@ datum
 
 			name = "Synaptizine"
 			id = "synaptizine"
-			description = "Synaptizine is used to treat various diseases."
+			description = "Synaptizine is used to treat patients suffering from drug addiction and radiation sickness. However, it is extremely slow-metabolizing and toxic."
 			reagent_state = LIQUID
-			color = "#99CCFF" // rgb: 200, 165, 220
+			color = "#99CCFF" // rgb: 153, 204, 255
 			custom_metabolism = 0.01
 			overdose = REAGENTS_OVERDOSE
 			scannable = 1
@@ -1216,9 +1218,9 @@ datum
 		impedrezene
 			name = "Impedrezene"
 			id = "impedrezene"
-			description = "Impedrezene is a narcotic that impedes one's ability by slowing down the higher brain cell functions."
+			description = "Impedrezene is a narcotic drug that slows mental processing by blocking neurotransmitters, severing neuron pathways, and liquefying brain tissue."
 			reagent_state = LIQUID
-			color = "#C8A5DC" // rgb: 200, 165, 220
+			color = "#7D4B64" // rgb: 125, 75, 100
 			overdose = REAGENTS_OVERDOSE
 
 			on_mob_life(var/mob/living/M as mob)
@@ -1226,16 +1228,16 @@ datum
 				M.jitteriness = max(M.jitteriness-5,0)
 				if(prob(80)) M.adjustBrainLoss(1*REM)
 				if(prob(50)) M.drowsyness = max(M.drowsyness, 3)
-				if(prob(10)) M.emote("drool")
+				if(prob(10)) M.emote("drool", "giggle")
 				..()
 				return
 
 		hyronalin
 			name = "Hyronalin"
 			id = "hyronalin"
-			description = "Hyronalin is a medicinal drug used to counter the effect of radiation poisoning."
+			description = "Hyronalin is a slow-metabolizing medicinal drug used to counter the effect of radiation poisoning."
 			reagent_state = LIQUID
-			color = "#408000" // rgb: 200, 165, 220
+			color = "#408000" // rgb: 64, 128, 0
 			custom_metabolism = 0.05
 			overdose = REAGENTS_OVERDOSE
 			scannable = 1
@@ -1249,9 +1251,9 @@ datum
 		arithrazine
 			name = "Arithrazine"
 			id = "arithrazine"
-			description = "Arithrazine is an unstable medication used for the most extreme cases of radiation poisoning."
+			description = "Arithrazine is an unstable medication used for the most extreme cases of radiation poisoning. Causes very minor damage to all organic and synthetic limbs."
 			reagent_state = LIQUID
-			color = "#008000" // rgb: 200, 165, 220
+			color = "#006000" // rgb: 0, 96, 0
 			custom_metabolism = 0.05
 			overdose = REAGENTS_OVERDOSE
 			scannable = 1
@@ -1272,7 +1274,7 @@ datum
 			id = "alkysine"
 			description = "Alkysine is a drug used to lessen the damage to neurological tissue after a catastrophic injury. Can heal brain tissue."
 			reagent_state = LIQUID
-			color = "#FFFF66" // rgb: 200, 165, 220
+			color = "#FFFF66" // rgb: 255, 255, 102
 			custom_metabolism = 0.05
 			overdose = REAGENTS_OVERDOSE
 			scannable = 1
@@ -1286,9 +1288,9 @@ datum
 		imidazoline
 			name = "Imidazoline"
 			id = "imidazoline"
-			description = "Heals eye damage"
+			description = "Imidazoline heals most types of eye damage. It works best when it is squirted into the eyes."
 			reagent_state = LIQUID
-			color = "#C8A5DC" // rgb: 200, 165, 220
+			color = "#C8C8DC" // rgb: 200, 200, 220
 			overdose = REAGENTS_OVERDOSE
 			scannable = 1
 
@@ -1308,9 +1310,9 @@ datum
 		peridaxon
 			name = "Peridaxon"
 			id = "peridaxon"
-			description = "Used to encourage recovery of internal organs and nervous systems. Medicate cautiously."
+			description = "Peridaxon is used to encourage recovery of internal organs and nervous systems. Medicate cautiously."
 			reagent_state = LIQUID
-			color = "#561EC3" // rgb: 200, 165, 220
+			color = "#561EC3" // rgb: 86, 30, 195
 			overdose = 10
 			scannable = 1
 
@@ -1329,9 +1331,9 @@ datum
 		bicaridine
 			name = "Bicaridine"
 			id = "bicaridine"
-			description = "Bicaridine is an analgesic medication and can be used to treat blunt trauma."
+			description = "Bicaridine is an analgesic medication, be used to treat blunt trauma."
 			reagent_state = LIQUID
-			color = "#BF0000" // rgb: 200, 165, 220
+			color = "#C80000" // rgb: 200, 000, 000
 			overdose = REAGENTS_OVERDOSE
 			scannable = 1
 
@@ -1347,9 +1349,9 @@ datum
 		hyperzine
 			name = "Hyperzine"
 			id = "hyperzine"
-			description = "Hyperzine is a highly effective, long lasting, muscle stimulant."
+			description = "Hyperzine is a highly effective, long-lasting muscle stimulant. Someone on this drug may appear to be on speed."
 			reagent_state = LIQUID
-			color = "#FF3300" // rgb: 200, 165, 220
+			color = "#FF3300" // rgb: 255, 51, 0
 			custom_metabolism = 0.03
 			overdose = REAGENTS_OVERDOSE/2
 
@@ -1364,7 +1366,7 @@ datum
 			id = "adrenaline"
 			description = "Adrenaline is a hormone used as a drug to treat cardiac arrest and other cardiac dysrhythmias resulting in diminished or absent cardiac output."
 			reagent_state = LIQUID
-			color = "#C8A5DC" // rgb: 200, 165, 220
+			color = "#808080" // rgb: 128, 128, 128
 
 			on_mob_life(var/mob/living/M as mob)
 				if(!M) M = holder.my_atom
@@ -1377,9 +1379,9 @@ datum
 		cryoxadone
 			name = "Cryoxadone"
 			id = "cryoxadone"
-			description = "A chemical mixture with almost magical healing powers. Its main limitation is that the targets body temperature must be under 170K for it to metabolise correctly."
+			description = "Cryoxadone is a chemical mixture with properties that heal all types of external damage. Its main limitation is that the target's body temperature must be under 170K for it to metabolize correctly."
 			reagent_state = LIQUID
-			color = "#8080FF" // rgb: 200, 165, 220
+			color = "#8080FF" // rgb: 128, 128, 255
 			scannable = 1
 
 			on_mob_life(var/mob/living/M as mob)
@@ -1395,9 +1397,9 @@ datum
 		clonexadone
 			name = "Clonexadone"
 			id = "clonexadone"
-			description = "A liquid compound similar to that used in the cloning process. Can be used to 'finish' the cloning process when used in conjunction with a cryo tube."
+			description = "Clonexadone is a chemical mixture with the exact properties of cryoxadone, but it is twice as potent. It can be used to 'finish' the cloning process when used in conjunction with a cryo tube, or rapidly heal many types of external damage."
 			reagent_state = LIQUID
-			color = "#80BFFF" // rgb: 200, 165, 220
+			color = "#80BFFF" // rgb: 128, 191, 255
 			scannable = 1
 
 			on_mob_life(var/mob/living/M as mob)
@@ -1413,7 +1415,7 @@ datum
 		rezadone
 			name = "Rezadone"
 			id = "rezadone"
-			description = "A powder derived from fish toxin, this substance can effectively treat genetic damage in humanoids, though excessive consumption has side effects."
+			description = "Rezadone is a powder derived from fish toxin. This substance can effectively treat genetic damage in humanoids, though excessive consumption has side effects."
 			reagent_state = SOLID
 			color = "#669900" // rgb: 102, 153, 0
 			overdose = REAGENTS_OVERDOSE
@@ -1442,9 +1444,9 @@ datum
 		spaceacillin
 			name = "Spaceacillin"
 			id = "spaceacillin"
-			description = "An all-purpose antiviral agent."
+			description = "Spaceacillin is a slow-metabolizing, beta-lactam antibiotic, and an all-purpose antiviral and antibiotic agent. It treats infections, slows down the progression of viruses and halts transmission of viruses"
 			reagent_state = LIQUID
-			color = "#C1C1C1" // rgb: 200, 165, 220
+			color = "#C1C1C1" // rgb: 193, 193, 193
 			custom_metabolism = 0.01
 			overdose = REAGENTS_OVERDOSE
 			scannable = 1
@@ -1459,7 +1461,7 @@ datum
 		nanites
 			name = "Nanomachines"
 			id = "nanites"
-			description = "Microscopic construction robots."
+			description = "Nanomachines are construction robots."
 			reagent_state = LIQUID
 			color = "#535E66" // rgb: 83, 94, 102
 
@@ -1471,7 +1473,7 @@ datum
 		xenomicrobes
 			name = "Xenomicrobes"
 			id = "xenomicrobes"
-			description = "Microbes with an entirely alien cellular structure."
+			description = "Xenomicrobes are microbes with an entirely alien cellular structure."
 			reagent_state = LIQUID
 			color = "#535E66" // rgb: 83, 94, 102
 
@@ -1483,52 +1485,52 @@ datum
 		fluorosurfactant//foam precursor
 			name = "Fluorosurfactant"
 			id = "fluorosurfactant"
-			description = "A perfluoronated sulfonic acid that forms a foam when mixed with water."
+			description = "Flurosurfactants are synthetic organofluroine chemical compounds with multiple fluorine atoms. They are surfactants and are effective at lowering surface tension by creating a thick foam."
 			reagent_state = LIQUID
 			color = "#9E6B38" // rgb: 158, 107, 56
 
 		foaming_agent// Metal foaming agent. This is lithium hydride. Add other recipes (e.g. LiH + H2O -> LiOH + H2) eventually.
 			name = "Foaming agent"
 			id = "foaming_agent"
-			description = "A agent that yields metallic foam when mixed with light metal and a strong acid."
+			description = "Foaming agent is an agent that yields metallic foam when mixed with light metal and a strong acid."
 			reagent_state = SOLID
 			color = "#664B63" // rgb: 102, 75, 99
 
 		nicotine
 			name = "Nicotine"
 			id = "nicotine"
-			description = "A highly addictive stimulant extracted from the tobacco plant."
+			description = "Nicotine is a potent parasympathomimetic alkaloid found in the roots and leaves in the nightshade family of plants. It is an addictive stimulant drug."
 			reagent_state = LIQUID
 			color = "#181818" // rgb: 24, 24, 24
 
 		ammonia
 			name = "Ammonia"
 			id = "ammonia"
-			description = "A caustic substance commonly used in fertilizer or household cleaners."
+			description = "Ammonia is a compound of nitrogen and hydrogen with the formula NH3. It is a colorless gas with a pungent chemical odor. It serves as a precursor to food and fertilizers for terrestrial organismms, or it can be used as a household cleaner."
 			reagent_state = GAS
 			color = "#404030" // rgb: 64, 64, 48
 
 		ultraglue
 			name = "Ultra Glue"
 			id = "glue"
-			description = "An extremely powerful bonding agent."
+			description = "Ultraglue is an extremely powerful bonding agent."
 			color = "#FFFFCC" // rgb: 255, 255, 204
 
 		diethylamine
 			name = "Diethylamine"
 			id = "diethylamine"
-			description = "A secondary amine, mildly corrosive."
+			description = "Diethylamine is a secondary amine with the molecular structure of C4H11N. It is a flammable, volatile, corrosive, weakly alkaline liquid, soluble in water and ethanol, and has unpleasant odor."
 			reagent_state = LIQUID
 			color = "#604030" // rgb: 96, 64, 48
 
 		ethylredoxrazine	// FUCK YOU, ALCOHOL
 			name = "Ethylredoxrazine"
 			id = "ethylredoxrazine"
-			description = "A powerful oxidizer that reacts with ethanol."
+			description = "A powerful oxidizer that reacts with ethanol to neutralize alcohol in the bloodstream. "
 			reagent_state = SOLID
 			color = "#605048" // rgb: 96, 80, 72
 			overdose = REAGENTS_OVERDOSE
-
+			scannable = 1
 			on_mob_life(var/mob/living/M as mob)
 				if(!M) M = holder.my_atom
 				M.dizziness = 0
@@ -1544,7 +1546,7 @@ datum
 		toxin
 			name = "Toxin"
 			id = "toxin"
-			description = "A toxic chemical."
+			description = "Originally classified as a poisonous substance produced by living cells and organism, synthetic toxicants created by artificial processes are included."
 			reagent_state = LIQUID
 			color = "#CF3600" // rgb: 207, 54, 0
 			var/toxpwr = 0.7 // Toxins are really weak, but without being treated, last very long.
@@ -1560,7 +1562,7 @@ datum
 		toxin/amatoxin
 			name = "Amatoxin"
 			id = "amatoxin"
-			description = "A powerful poison derived from certain species of mushroom."
+			description = "Amatoxins are a subgroup of eight toxic compounds found in several genera of poisonous mushrooms, one of them is notably of the genus Amanita."
 			reagent_state = LIQUID
 			color = "#792300" // rgb: 121, 35, 0
 			toxpwr = 1
@@ -1568,7 +1570,7 @@ datum
 		toxin/mutagen
 			name = "Unstable mutagen"
 			id = "mutagen"
-			description = "Might cause unpredictable mutations. Keep away from children."
+			description = "Unstable mutagen generates mutations by interrupting DNA-copying mechanisms and breaking down DNA to the point where cells do not repair DNA well enough to make an exact copy."
 			reagent_state = LIQUID
 			color = "#13BC5E" // rgb: 19, 188, 94
 			toxpwr = 0
@@ -1594,7 +1596,7 @@ datum
 		toxin/phoron
 			name = "Phoron"
 			id = "phoron"
-			description = "Phoron in its liquid form."
+			description = "Phoron is a highly-valuable, stable form of Tritiated Ethanol that exists both in the universe and Bluespace, simultaneously. It can utilize FTL travel, create scientifically-impossible catalyctic reactions, and it is highly reactive to a myriad of substances. It is currently in its liquid form, but as an ionized gas, it can burn and stay hot for remarkably extensive periods of time."
 			reagent_state = LIQUID
 			color = "#9D14DB"
 			toxpwr = 3
@@ -1621,7 +1623,7 @@ datum
 		toxin/lexorin
 			name = "Lexorin"
 			id = "lexorin"
-			description = "Lexorin temporarily stops respiration. Causes tissue damage."
+			description = "Lexorin is a narcotic that blocks neuron pathways' signals to the lungs to breathe. It stops respiration and causes tissue damage."
 			reagent_state = LIQUID
 			color = "#C8A5DC" // rgb: 200, 165, 220
 			toxpwr = 0
@@ -1641,7 +1643,7 @@ datum
 		toxin/slimejelly
 			name = "Slime Jelly"
 			id = "slimejelly"
-			description = "A gooey semi-liquid produced from one of the deadliest lifeforms in existence. SO REAL."
+			description = "Slime jelly is a gooey semi-liquid produced from one of the deadliest lifeforms in existence. Mixed with phoron, it can have a variety of reactions based on the type of slime the jelly came from."
 			reagent_state = LIQUID
 			color = "#801E28" // rgb: 128, 30, 40
 			toxpwr = 0
@@ -1658,8 +1660,7 @@ datum
 		toxin/cyanide //Fast and Lethal
 			name = "Cyanide"
 			id = "cyanide"
-			description = "A highly toxic chemical."
-			reagent_state = LIQUID
+			description = "Cyanide is a chemical compound from the monovalent cyano group. This organic nitrite is colorless, crystalline, similar to appearance to sugar, highly soluble in water, and one of the most toxic substances known. To some people, it smells like bitter almonds."
 			color = "#CF3600" // rgb: 207, 54, 0
 			toxpwr = 4
 			custom_metabolism = 0.4
@@ -1674,7 +1675,7 @@ datum
 		toxin/minttoxin
 			name = "Mint Toxin"
 			id = "minttoxin"
-			description = "Useful for dealing with undesirable customers."
+			description = "Mint toxin is an aggressive fat-busting toxin that derives from a certain kind of mint."
 			reagent_state = LIQUID
 			color = "#CF3600" // rgb: 207, 54, 0
 			toxpwr = 0
@@ -1689,7 +1690,7 @@ datum
 		toxin/carpotoxin
 			name = "Carpotoxin"
 			id = "carpotoxin"
-			description = "A deadly neurotoxin produced by the dreaded space carp."
+			description = "Carpotoxin is a deadly neurotoxin naturally found in the tissues of or Space Carp."
 			reagent_state = LIQUID
 			color = "#003333" // rgb: 0, 51, 51
 			toxpwr = 2
@@ -1697,7 +1698,7 @@ datum
 		toxin/zombiepowder
 			name = "Zombie Powder"
 			id = "zombiepowder"
-			description = "A strong neurotoxin that puts the subject into a death-like state."
+			description = "Stronger than Curare, Zombie Powder is a strong neurotoxin that completely paralyzes the patient; the patient will appear to be in a death-like state, visually and by scanners, but the patient will be aware of his or her surroundings."
 			reagent_state = SOLID
 			color = "#669900" // rgb: 102, 153, 0
 			toxpwr = 0.5
@@ -1721,10 +1722,10 @@ datum
 		toxin/mindbreaker
 			name = "Mindbreaker Toxin"
 			id = "mindbreaker"
-			description = "A powerful hallucinogen, it can cause fatal effects in users."
+			description = "A more powerful variant of LSD, Mindbreaker Toxin is a powerful hallucinogen that assaults and tricks the mind to generate frightening visual and auditory, and tactile hallucinations."
 			reagent_state = LIQUID
 			color = "#B31008" // rgb: 139, 166, 233
-			toxpwr = 0
+			toxpwr = 0.5 // Fuck you, chemists. You ingest this shit, you pay for it.
 			custom_metabolism = 0.05
 			overdose = REAGENTS_OVERDOSE
 
@@ -1738,7 +1739,7 @@ datum
 		toxin/fertilizer
 			name = "fertilizer"
 			id = "fertilizer"
-			description = "A chemical mix good for growing plants with."
+			description = "Fertilizer is a chemical mixture derived from decomposing plant and animal matter and animal dung. It provides nutrition to plants to help them grow."
 			reagent_state = LIQUID
 			toxpwr = 0.2 //It's not THAT poisonous.
 			color = "#664330" // rgb: 102, 67, 48
@@ -1746,19 +1747,25 @@ datum
 		toxin/fertilizer/eznutrient
 			name = "EZ Nutrient"
 			id = "eznutrient"
+			description = "Fertilizer is a standard chemical mixture for providing nutrients to plants. Around dead plants, there is a higher chance mushrooms will grow in their place."
+			color = "#7A3E1D" // rgb: 122, 62, 29
 
 		toxin/fertilizer/left4zed
 			name = "Left-4-Zed"
+			description = "Left-4-Zed is a chemical mixture that doubles the chance of a mutation of a plant at the cost of yield and potency chance. Around dead plants, there is a higher chance more deadly mushrooms will grow in their place."
 			id = "left4zed"
+			color = "#A346A3" // rgb: 163, 70, 163
 
 		toxin/fertilizer/robustharvest
 			name = "Robust Harvest"
 			id = "robustharvest"
+			description = "Robust Harvest is a chemical mixture that mutates a gene in the DNA pf plants responsible for the minimum amount of possible produce each harvest, resulting in double the amount of produce harvested. Around dead plants, there is a higher chance psychotropic mushrooms will take their place."
+			color = "#800040" // rgb: 128, 0, 64
 
 		toxin/plantbgone
 			name = "Plant-B-Gone"
 			id = "plantbgone"
-			description = "A harmful toxic mixture to kill plantlife. Do not ingest!"
+			description = "Plant-B-Gone is a brand of herbicide that is very toxic to plants."
 			reagent_state = LIQUID
 			color = "#49002E" // rgb: 73, 0, 46
 			toxpwr = 1
@@ -1811,7 +1818,7 @@ datum
 		toxin/stoxin
 			name = "Soporific"
 			id = "stoxin"
-			description = "An effective hypnotic used to treat insomnia."
+			description = "Soporific drugs, more commonly known as sleeping pills or hypnotics, are a class of psychoactive drugs primarily used to induce sleep and to be used to treat insomnia and to assist in surgical anesthesia."
 			reagent_state = LIQUID
 			color = "#009CA8" // rgb: 232, 149, 204
 			toxpwr = 0
@@ -1840,7 +1847,7 @@ datum
 		toxin/chloralhydrate
 			name = "Chloral Hydrate"
 			id = "chloralhydrate"
-			description = "A powerful, toxic sedative."
+			description = "Chloral hydrate is an organic, toxic compound with the chemical formula C2H3Cl3O2, used as a strong sedative and hypnotic pharmaceutical drug. Normally a colorless solid, it was pre-dyed blue and pre-liquified for easy identification."
 			reagent_state = SOLID
 			color = "#000067" // rgb: 0, 0, 103
 			toxpwr = 1
@@ -1867,7 +1874,7 @@ datum
 		toxin/potassium_chloride
 			name = "Potassium Chloride"
 			id = "potassium_chloride"
-			description = "A delicious salt that stops the heart when injected into cardiac muscle. Not safe to eat!"
+			description = "Potassium chloride is a white, odorless, water-soluble metal halide salt with a vitreous-crystal appearance and a taste very similar to sodium chloride. Upon ingestion, it will cause cardiac arrest."
 			reagent_state = SOLID
 			color = "#FFFFFF" // rgb: 255,255,255
 			toxpwr = 0
@@ -1884,10 +1891,10 @@ datum
 				..()
 				return
 
-		toxin/potassium_chlorophoride
+		toxin/potassium_chlorophoride //How is this different from potassium chloride?
 			name = "Potassium Chlorophoride"
 			id = "potassium_chlorophoride"
-			description = "A specific chemical based on Potassium Chloride to stop the heart for surgery. Not safe to eat!"
+			description = "Potassium chlorophoride is a a white, odorless, water-soluble metal halide salt with a vitreous-crystal appearance and a taste vaguely similar to sodium chloride. It is used to stop the heart during surgery." //There was absolutely no difference from this to potassium chloride, so I weakened it to make it 'seem' like a medicine.
 			reagent_state = SOLID
 			color = "#FFFFFF" // rgb: 255,255,255
 			toxpwr = 2
@@ -1897,17 +1904,17 @@ datum
 				if(ishuman(M))
 					var/mob/living/carbon/human/H = M
 					if(H.stat != 1)
-						if(H.losebreath >= 10)
-							H.losebreath = max(10, M.losebreath-10)
-						H.adjustOxyLoss(2)
-						H.Weaken(10)
+						if(H.losebreath >= 5)
+							H.losebreath = max(5, M.losebreath-5)
+						H.adjustOxyLoss(1)
+						H.Weaken(5)
 				..()
 				return
 
 		toxin/beer2	//disguised as normal beer for use by emagged brobots
 			name = "Beer"
 			id = "beer2"
-			description = "An alcoholic beverage made from malted grains, hops, yeast, and water. The fermentation appears to be incomplete." //If the players manage to analyze this, they deserve to know something is wrong.
+			description = "Beer is an alcoholic beverage made from malted grains, hops, yeast, and water. The fermentation appears to be incomplete in this batch." //If the players manage to analyze this, they deserve to know something is wrong.
 			reagent_state = LIQUID
 			color = "#664300" // rgb: 102, 67, 0
 			custom_metabolism = 0.15 // Sleep toxins should always be consumed pretty fast
@@ -1935,11 +1942,11 @@ datum
 				return
 
 		toxin/acid
-			name = "Sulphuric acid"
+			name = "Sulfuric acid"
 			id = "sacid"
-			description = "A very corrosive mineral acid with the molecular formula H2SO4."
+			description = "Sulfuric acid is a highly corrosive strong mineral acid with the molecular formula H2SO4. It is a pungent-ethereal, colorless to slightly yellow, viscous liquid which is soluble in water."
 			reagent_state = LIQUID
-			color = "#DB5008" // rgb: 219, 80, 8
+			color = "#DB5008" // rgb: 219, 80, 8  //This should be a white-yellow, but it's orange.
 			toxpwr = 1
 			var/meltprob = 10
 
@@ -2022,7 +2029,7 @@ datum
 		toxin/acid/polyacid
 			name = "Polytrinic acid"
 			id = "pacid"
-			description = "Polytrinic acid is a an extremely corrosive chemical substance."
+			description = "Polytrinic acid is a an extremely corrosive chemical substance which can melt almost anything completely to a grey mass of goo."
 			reagent_state = LIQUID
 			color = "#8E18A9" // rgb: 142, 24, 169
 			toxpwr = 2
@@ -2061,8 +2068,9 @@ datum
 
 		nutriment/protein // Bad for Skrell!
 			name = "animal protein"
+			description = "Animal protein is protein derived from the skin, flesh, and bones from animals."
 			id = "protein"
-			color = "#440000"
+			color = "#440000" // rgb: 68, 0, 0
 
 			on_mob_life(var/mob/living/M, var/alien)
 				if(alien && alien == IS_SKRELL)
@@ -2070,10 +2078,11 @@ datum
 					M.nutrition -= nutriment_factor
 				..()
 
-		nutriment/egg // Also bad for skrell. Not a child of protein because it might mess up, not sure.
+		nutriment/egg // Also bad for Skrell. Not a child of protein because it might mess up, not sure.
 			name = "egg yolk"
+			description = "Egg yolk is the nutritious part of the egg that feeds a developing embryo in some animals. This one came from a chicken."
 			id = "egg"
-			color = "#FFFFAA"
+			color = "#FF9600" // rgb: 255, 150, 0
 
 			on_mob_life(var/mob/living/M, var/alien)
 				if(alien && alien == IS_SKRELL)
@@ -2084,7 +2093,7 @@ datum
 		lipozine
 			name = "Lipozine" // The anti-nutriment.
 			id = "lipozine"
-			description = "A chemical compound that causes a powerful fat-burning reaction."
+			description = "Lipozine is a chemical compound derived from herbs that causes a powerful fat-burning reaction."
 			reagent_state = LIQUID
 			nutriment_factor = 10 * REAGENTS_METABOLISM
 			color = "#BBEDA4" // rgb: 187, 237, 164
@@ -2102,7 +2111,7 @@ datum
 		soysauce
 			name = "Soysauce"
 			id = "soysauce"
-			description = "A salty sauce made from the soy plant."
+			description = "Soysauce is a salty sauce made from the soy plant."
 			reagent_state = LIQUID
 			nutriment_factor = 2 * REAGENTS_METABOLISM
 			color = "#792300" // rgb: 121, 35, 0
@@ -2110,7 +2119,7 @@ datum
 		ketchup
 			name = "Ketchup"
 			id = "ketchup"
-			description = "Ketchup, catsup, whatever. It's tomato paste."
+			description = "Ketchup is a red, sweet, and tangy condiment made from tomato paste, commonly put on burgers, ketchup "
 			reagent_state = LIQUID
 			nutriment_factor = 5 * REAGENTS_METABOLISM
 			color = "#731008" // rgb: 115, 16, 8
@@ -2118,7 +2127,7 @@ datum
 		capsaicin
 			name = "Capsaicin Oil"
 			id = "capsaicin"
-			description = "This is what makes chilis hot."
+			description = "Capsaicin oil is a colorless oil and an active component of chili peppers which induces a sensation of burning on the tissues of most animals, with avian-like creatures as one of the exceptions."
 			reagent_state = LIQUID
 			color = "#B31008" // rgb: 179, 16, 8
 
@@ -2152,7 +2161,7 @@ datum
 		condensedcapsaicin
 			name = "Condensed Capsaicin"
 			id = "condensedcapsaicin"
-			description = "A chemical agent used for self-defense and in police work."
+			description = "This chemical compound is a more-condensed form of capsaicin as a chemical agent used for self-defense and in police work."
 			reagent_state = LIQUID
 			color = "#B31008" // rgb: 179, 16, 8
 
@@ -2239,7 +2248,7 @@ datum
 		frostoil
 			name = "Frost Oil"
 			id = "frostoil"
-			description = "A special oil that noticably chills the body. Extracted from Ice Peppers."
+			description = "Frost oil is a special oil extracted from ice peppers that noticeably chills the body."
 			reagent_state = LIQUID
 			color = "#B31008" // rgb: 139, 166, 233
 
@@ -2263,7 +2272,7 @@ datum
 		sodiumchloride
 			name = "Table Salt"
 			id = "sodiumchloride"
-			description = "A salt made of sodium chloride. Commonly used to season food."
+			description = "Table salt is a gritty, crystalline condiment, chemically known as sodium chloride. It is used to season food."
 			reagent_state = SOLID
 			color = "#FFFFFF" // rgb: 255,255,255
 			overdose = REAGENTS_OVERDOSE
@@ -2271,14 +2280,14 @@ datum
 		blackpepper
 			name = "Black Pepper"
 			id = "blackpepper"
-			description = "A powder ground from peppercorns. *AAAACHOOO*"
+			description = "Black pepper is a condiment derived from ground peppercorns. It is used to season food, but it makes people sneeze when inhaled."
 			reagent_state = SOLID
 			// no color (ie, black)
 
 		coco
 			name = "Coco Powder"
 			id = "coco"
-			description = "A fatty, bitter paste made from coco beans."
+			description = "Coco powder is a fatty, bitter paste made from ground coco beans."
 			reagent_state = SOLID
 			nutriment_factor = 5 * REAGENTS_METABOLISM
 			color = "#302000" // rgb: 48, 32, 0
@@ -2291,7 +2300,7 @@ datum
 		hot_coco // there's also drink/hot_coco for whatever reason
 			name = "Hot Chocolate"
 			id = "hot_coco"
-			description = "Made with love! And cocoa beans."
+			description = "Hot chocolate is a hot, sweet, chocolaty drink made from ground cocoa beans and sometimes milk."
 			reagent_state = LIQUID
 			nutriment_factor = 2 * REAGENTS_METABOLISM
 			color = "#403010" // rgb: 64, 48, 16
@@ -2310,7 +2319,7 @@ datum
 		psilocybin
 			name = "Psilocybin"
 			id = "psilocybin"
-			description = "A strong psycotropic derived from certain species of mushroom."
+			description = "Psilocybin strong psychotropic derived from certain species of mushroom."
 			color = "#E700E7" // rgb: 231, 0, 231
 			overdose = REAGENTS_OVERDOSE
 
@@ -2343,7 +2352,7 @@ datum
 		sprinkles
 			name = "Sprinkles"
 			id = "sprinkles"
-			description = "Multi-colored little bits of sugar, commonly found on donuts. Loved by cops."
+			description = "Sprinkles are multi-colored bits of sugary confections commonly sprinkled on pastries for aesthetics and taste."
 			nutriment_factor = 1 * REAGENTS_METABOLISM
 			color = "#FF00FF" // rgb: 255, 0, 255
 
@@ -2380,7 +2389,7 @@ datum
 		cornoil
 			name = "Corn Oil"
 			id = "cornoil"
-			description = "An oil derived from various types of corn."
+			description = "Corn oil is an oil extracted from various types of corn."
 			reagent_state = LIQUID
 			nutriment_factor = 20 * REAGENTS_METABOLISM
 			color = "#302000" // rgb: 48, 32, 0
@@ -2419,7 +2428,7 @@ datum
 		enzyme
 			name = "Universal Enzyme"
 			id = "enzyme"
-			description = "A universal enzyme used in the preperation of certain chemicals and foods."
+			description = "A universal enzyme used in the preparation of certain chemicals and foods."
 			reagent_state = LIQUID
 			color = "#365E30" // rgb: 54, 94, 48
 			overdose = REAGENTS_OVERDOSE
@@ -2427,7 +2436,7 @@ datum
 		dry_ramen
 			name = "Dry Ramen"
 			id = "dry_ramen"
-			description = "Space age food, since August 25, 1958. Contains dried noodles, vegetables, and chemicals that boil in contact with water."
+			description = "Dry ramen is an unprepared noodle soup dish made from a block of fried-dried noodles, dried broth, dried vegetables, and chemicals that boils in contact with water."
 			reagent_state = SOLID
 			nutriment_factor = 1 * REAGENTS_METABOLISM
 			color = "#302000" // rgb: 48, 32, 0
@@ -2440,7 +2449,7 @@ datum
 		hot_ramen
 			name = "Hot Ramen"
 			id = "hot_ramen"
-			description = "The noodles are boiled, the flavors are artificial, just like being back in school."
+			description = "Hot Ramen is a prepared noodle dish made from fried noodles, broth, and vegetables, heated up."
 			reagent_state = LIQUID
 			nutriment_factor = 5 * REAGENTS_METABOLISM
 			color = "#302000" // rgb: 48, 32, 0
@@ -2455,7 +2464,7 @@ datum
 		hell_ramen
 			name = "Hell Ramen"
 			id = "hell_ramen"
-			description = "They call it hell for a reason."
+			description = "Hell Ramen is a hot prepared noodle dish made from hot ramen and pure capsaicin oil."
 			reagent_state = LIQUID
 			nutriment_factor = 5 * REAGENTS_METABOLISM
 			color = "#302000" // rgb: 48, 32, 0
@@ -2489,7 +2498,7 @@ datum
 		rice
 			name = "Rice"
 			id = "rice"
-			description = "Enjoy the great taste of nothing."
+			description = "Rice is a cereal grain, a seed of the grass species oryza sativa. Chefs use rice in their main courses and side dishes, and rice can even be made into an alcohol called Sake."
 			reagent_state = SOLID
 			nutriment_factor = 1 * REAGENTS_METABOLISM
 			color = "#FFFFFF" // rgb: 0, 0, 0
@@ -2502,7 +2511,7 @@ datum
 		cherryjelly
 			name = "Cherry Jelly"
 			id = "cherryjelly"
-			description = "Totally the best. Only to be spread on foods with excellent lateral symmetry."
+			description = "Cherry Jelly is a sweet, translucent, viscous substance derived from the fruit preserves of cherries. It is commonly spread on or stuffed in pastries."
 			reagent_state = LIQUID
 			nutriment_factor = 1 * REAGENTS_METABOLISM
 			color = "#801E28" // rgb: 128, 30, 40
@@ -2519,7 +2528,7 @@ datum
 		drink
 			name = "Drink"
 			id = "drink"
-			description = "Uh, some kind of drink."
+			description = "A drink is a liquid substance imbibed to quench thirst."
 			reagent_state = LIQUID
 			nutriment_factor = 1 * REAGENTS_METABOLISM
 			color = "#E78108" // rgb: 231, 129, 8
@@ -2545,14 +2554,14 @@ datum
 				return
 
 		drink/orangejuice
-			name = "Orange juice"
+			name = "Orange Juice"
 			id = "orangejuice"
-			description = "Both delicious AND rich in Vitamin C, what more do you need?"
+			description = "Orange juice is a sweet, citrucy beverage made from fresh orange meat and pulp blended into a healthy juice.pulp blended into juice."
 			color = "#E78108" // rgb: 231, 129, 8
 
 			glass_icon_state = "glass_orange"
 			glass_name = "glass of orange juice"
-			glass_desc = "Vitamins! Yay!"
+			glass_desc = "It's a glass of orange juice. Delicious, pulpy, AND rich in Vitamin C, what more do you need?"
 
 			on_mob_life(var/mob/living/M as mob)
 				..()
@@ -2562,12 +2571,12 @@ datum
 		drink/tomatojuice
 			name = "Tomato Juice"
 			id = "tomatojuice"
-			description = "Tomatoes made into juice. What a waste of big, juicy tomatoes, huh?"
+			description = "Tomato juice is a fruity, savory beverage made from the blended meat of fresh tomatoes. It is not usually imbibed on its own."
 			color = "#731008" // rgb: 115, 16, 8
 
 			glass_icon_state = "glass_red"
 			glass_name = "glass of tomato juice"
-			glass_desc = "Are you sure this is tomato juice?"
+			glass_desc = "This looks kind of bland. Maybe the barkeep will make something with it."
 
 			on_mob_life(var/mob/living/M as mob)
 				..()
@@ -2577,12 +2586,12 @@ datum
 		drink/limejuice
 			name = "Lime Juice"
 			id = "limejuice"
-			description = "The sweet-sour juice of limes."
+			description = "Lime juice is a sour, citrusy beverage made from the blended meat and pulp from fresh limes. It is not usually imbibed on its own."
 			color = "#365E30" // rgb: 54, 94, 48
 
 			glass_icon_state = "glass_green"
 			glass_name = "glass of lime juice"
-			glass_desc = "A glass of sweet-sour lime juice"
+			glass_desc = "It's a glass of sour lime juice. Note the first thing you think of is sour."
 
 			on_mob_life(var/mob/living/M as mob)
 				..()
@@ -2590,14 +2599,14 @@ datum
 				return
 
 		drink/carrotjuice
-			name = "Carrot juice"
+			name = "Carrot Juice"
 			id = "carrotjuice"
-			description = "It is just like a carrot but without crunching."
+			description = "Carrot juice is a slightly sweet and savory beverage made from thoroughly blended carrots."
 			color = "#FF8C00" // rgb: 255, 140, 0
 
 			glass_icon_state = "carrotjuice"
 			glass_name = "glass of carrot juice"
-			glass_desc = "It is just like a carrot but without crunching."
+			glass_desc = "It's a glass of carrot juice. It looks refreshing, without the crunchy goodness of a carrot."
 
 			on_mob_life(var/mob/living/M as mob)
 				..()
@@ -2616,43 +2625,43 @@ datum
 		drink/berryjuice
 			name = "Berry Juice"
 			id = "berryjuice"
-			description = "A delicious blend of several different kinds of berries."
+			description = "Berry juice is a sweet, fruity beverage made from a blend of red and blue raspberries, blueberries, and strawberries."
 			color = "#990066" // rgb: 153, 0, 102
 
 			glass_icon_state = "berryjuice"
 			glass_name = "glass of berry juice"
-			glass_desc = "Berry juice. Or maybe it's jam. Who cares?"
+			glass_desc = "It's a glass of sweet berry juice. It looks delicious."
 
 		drink/grapejuice
 			name = "Grape Juice"
 			id = "grapejuice"
-			description = "It's grrrrrape!"
+			description = "Grape juice is a fruity beverage made from bunches of grapes blended into a juice which has not yet fermented."
 			color = "#863333" // rgb: 134, 51, 51
 
 			glass_icon_state = "grapejuice"
 			glass_name = "glass of grape juice"
-			glass_desc = "It's grrrrrape!"
+			glass_desc = "It's a glass of grape juice. Tastes way better than cough syrup."
 
 		drink/grapesoda
 			name = "Grape Soda"
 			id = "grapesoda"
-			description = "Grapes made into a fine drank."
+			description = "Grape soda is a sweet beverage made from grape juice mixed with carbonated water."
 			color = "#421C52" // rgb: 98, 57, 53
 			adj_drowsy 	= 	-3
 
 			glass_icon_state = "gsodaglass"
 			glass_name = "glass of grape soda"
-			glass_desc = "Looks like a delicious drink!"
+			glass_desc = "Looks like a delicious drank!"
 
 		drink/poisonberryjuice
 			name = "Poison Berry Juice"
 			id = "poisonberryjuice"
-			description = "A tasty juice blended from various kinds of very deadly and toxic berries."
+			description = "Poison berry juice is a fruity, toxic, and ironically very tasty beverage made from a blend of different types of poisonous berries. It is darker than its non-poisonous variant, but it mimics its taste and smell just the same."
 			color = "#863353" // rgb: 134, 51, 83
 
 			glass_icon_state = "poisonberryjuice"
-			glass_name = "glass of poison berry juice"
-			glass_desc = "A glass of deadly juice."
+			glass_name = "glass of berry juice"
+			glass_desc = "It's a glass of sweet berry juice. It looks delicious."
 
 			on_mob_life(var/mob/living/M as mob)
 				..()
@@ -2662,37 +2671,37 @@ datum
 		drink/watermelonjuice
 			name = "Watermelon Juice"
 			id = "watermelonjuice"
-			description = "Delicious juice made from watermelon."
+			description = "Watermelon juice is a very refreshing, mild-flavored beverage made from the meat of fresh, juicy watermelons."
 			color = "#B83333" // rgb: 184, 51, 51
 
 			glass_icon_state = "glass_red"
 			glass_name = "glass of watermelon juice"
-			glass_desc = "Delicious juice made from watermelon."
+			glass_desc = "It's a glass of delicious, refreshing watermelon juice. Low in sugar, mostly water, a perfect diet drink."
 
 		drink/lemonjuice
 			name = "Lemon Juice"
 			id = "lemonjuice"
-			description = "This juice is VERY sour."
+			description = "Lemon juice is a very sour, citrusy beverage made from the meat and pulp of lemons. It is not usually imbibed on its own."
 			color = "#AFAF00" // rgb: 175, 175, 0
 
 			glass_icon_state = "lemonjuice"
 			glass_name = "glass of lemon juice"
-			glass_desc = "Sour..."
+			glass_desc = "It's a glass of lemon juice. Your lips pucker just from looking at it."
 
 		drink/banana
 			name = "Banana Juice"
 			id = "banana"
-			description = "The raw essence of a banana."
-			color = "#C3AF00" // rgb: 195, 175, 0
+			description = "Banana juice is a fruity, creamy beverage made from fresh-peeled bananas."
+			color = "#FAFAC8" // rgb: 250, 250, 200
 
 			glass_icon_state = "banana"
 			glass_name = "glass of banana juice"
-			glass_desc = "The raw essence of a banana. HONK!"
+			glass_desc = "It's a glass of creamy banana juice. You wonder how a liquid banana is even possible."
 
 		drink/nothing
 			name = "Nothing"
 			id = "nothing"
-			description = "Absolutely nothing."
+			description = "There is no available description for this reagent."
 
 			glass_icon_state = "nothing"
 			glass_name = "glass of nothing"
@@ -2701,23 +2710,23 @@ datum
 		drink/potato_juice
 			name = "Potato Juice"
 			id = "potato"
-			description = "Juice of the potato. Bleh."
+			description = "Potato juice is a starchy vegetable beverage made from fresh-peeled potatoes. It is not usually imbibed on its own."
 			nutriment_factor = 2 * FOOD_METABOLISM
-			color = "#302000" // rgb: 48, 32, 0
+			color = "#FAFAAF" // rgb: 250, 250, 175
 
 			glass_icon_state = "glass_brown"
 			glass_name = "glass of potato juice"
-			glass_desc = "Juice from a potato. Bleh."
+			glass_desc = "It's a glass of starchy potato juice. What a waste of good potatos."
 
 		drink/milk
 			name = "Milk"
 			id = "milk"
-			description = "An opaque white liquid produced by the mammary glands of mammals."
+			description = "Milk is a slightly sweet, opaque, nutritious white liquid produced by the mammary glands of mammals. Some people are allergic to milk."
 			color = "#DFDFDF" // rgb: 223, 223, 223
 
 			glass_icon_state = "glass_white"
 			glass_name = "glass of milk"
-			glass_desc = "White and nutritious goodness!"
+			glass_desc = "It's a glass of milk. White and nutritious goodness, it keeps your bones strong!"
 
 			on_mob_life(var/mob/living/M as mob)
 				if(M.getBruteLoss() && prob(20)) M.heal_organ_damage(1,0)
@@ -2728,50 +2737,50 @@ datum
 		drink/milk/soymilk
 			name = "Soy Milk"
 			id = "soymilk"
-			description = "An opaque white liquid made from soybeans."
+			description = "Soy milk is a slightly sweet, opaque, opaque, white, plant milk made with soybeans, water, and added nutrients as an imitation of milk for those with milk allergies."
 			color = "#DFDFC7" // rgb: 223, 223, 199
 
 			glass_icon_state = "glass_white"
 			glass_name = "glass of soy milk"
-			glass_desc = "White and nutritious soy goodness!"
+			glass_desc = "It's a glass of soy milk. White and nutritious soy goodness."
 
 		drink/milk/cream
 			name = "Cream"
 			id = "cream"
-			description = "The fatty, still liquid part of milk. Why don't you mix this with sum scotch, eh?"
+			description = "Cream is a dairy product made from the processed butterfat layer of milk. It  for a variety of recipes. Some people are allergic to this."
 			color = "#DFD7AF" // rgb: 223, 215, 175
 
 			glass_icon_state = "glass_white"
 			glass_name = "glass of cream"
-			glass_desc = "Ewwww..."
+			glass_desc = "It's a glass of cream. Mmm... Creamy..."
 
 		drink/grenadine
 			name = "Grenadine Syrup"
 			id = "grenadine"
-			description = "Made in the modern day with proper pomegranate substitute. Who uses real fruit, anyways?"
+			description = "Grenadine syrup is a sweet, tangy syrup in made in the modern day with proper pomegranate substitute."
 			color = "#FF004F" // rgb: 255, 0, 79
 
 			glass_icon_state = "grenadineglass"
 			glass_name = "glass of grenadine syrup"
-			glass_desc = "Sweet and tangy, a bar syrup used to add color or flavor to drinks."
+			glass_desc = "It's a glass of grenadine syrup. It's sweet and tangy; what drink will the barkeep use it for?"
 			glass_center_of_mass = list("x"=17, "y"=6)
 
 		drink/hot_coco
 			name = "Hot Chocolate"
 			id = "hot_coco"
-			description = "Made with love! And cocoa beans."
+			description = "Hot chocolate is a hot, sweet, chocolaty beverage made from ground cocoa beans and sometimes milk."
 			nutriment_factor = 2 * FOOD_METABOLISM
 			color = "#403010" // rgb: 64, 48, 16
 			adj_temp = 5
 
 			glass_icon_state = "chocolateglass"
 			glass_name = "glass of hot chocolate"
-			glass_desc = "Made with love! And cocoa beans."
+			glass_desc = "It's a cup of hot cocoa, made with love... and cocoa beans."
 
 		drink/coffee
 			name = "Coffee"
 			id = "coffee"
-			description = "Coffee is a brewed drink prepared from roasted seeds, commonly called coffee beans, of the coffee plant."
+			description = "Coffee is a slightly bitter, caffeinated, brewed beverage prepared from roasted coffee beans of the coffee plant."
 			color = "#482000" // rgb: 72, 32, 0
 			adj_dizzy = -5
 			adj_drowsy = -3
@@ -2780,7 +2789,7 @@ datum
 
 			glass_icon_state = "hot_coffee"
 			glass_name = "cup of coffee"
-			glass_desc = "Don't drop it, or you'll send scalding liquid and glass shards everywhere."
+			glass_desc = "It's a hot cup of coffee. Don't drop it, or you'll send scalding liquid and glass shards everywhere."
 
 			on_mob_life(var/mob/living/M as mob)
 				..()
@@ -2793,25 +2802,25 @@ datum
 		drink/coffee/icecoffee
 			name = "Iced Coffee"
 			id = "icecoffee"
-			description = "Coffee and ice, refreshing and cool."
+			description = "Iced coffee is a slightly bitter, caffeinated, brewed beverage made with coffee chilled with a few ice cubes."
 			color = "#102838" // rgb: 16, 40, 56
 			adj_temp = -5
 
 			glass_icon_state = "icedcoffeeglass"
 			glass_name = "glass of iced coffee"
-			glass_desc = "A drink to perk you up and refresh you!"
+			glass_desc = "It's a glass of iced coffee, a drink to perk you up and refresh you!"
 
 		drink/coffee/soy_latte
 			name = "Soy Latte"
 			id = "soy_latte"
-			description = "A nice and tasty beverage while you are reading your hippie books."
+			description = "A soy latte is a warm, sweet, caffeinated beverage made from soy milk and coffee."
 			color = "#664300" // rgb: 102, 67, 0
 			adj_sleepy = 0
 			adj_temp = 5
 
 			glass_icon_state = "soy_latte"
 			glass_name = "glass of soy latte"
-			glass_desc = "A nice and refrshing beverage while you are reading."
+			glass_desc = "It's a cup of soy lattee. A nice, refreshing lactose-intolerant-friendly beverage while you are reading."
 			glass_center_of_mass = list("x"=15, "y"=9)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -2823,14 +2832,14 @@ datum
 		drink/coffee/cafe_latte
 			name = "Cafe Latte"
 			id = "cafe_latte"
-			description = "A nice, strong and tasty beverage while you are reading."
+			description = "A cafe latte is a warm, sweet, caffeinated beverage made from steamed milk and coffee."
 			color = "#664300" // rgb: 102, 67, 0
 			adj_sleepy = 0
 			adj_temp = 5
 
 			glass_icon_state = "cafe_latte"
 			glass_name = "glass of cafe latte"
-			glass_desc = "A nice, strong and refreshing beverage while you are reading."
+			glass_desc = "It's a cup of Cafe Latte. A nice, strong and refreshing beverage while you are reading."
 			glass_center_of_mass = list("x"=15, "y"=9)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -2842,7 +2851,7 @@ datum
 		drink/tea
 			name = "Tea"
 			id = "tea"
-			description = "Tasty black tea, it has antioxidants, it's good for you!"
+			description = "Tea is an aromatic, caffeinated beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis. It has antioxidants."
 			color = "#101000" // rgb: 16, 16, 0
 			adj_dizzy = -2
 			adj_drowsy = -1
@@ -2851,7 +2860,7 @@ datum
 
 			glass_icon_state = "bigteacup"
 			glass_name = "cup of tea"
-			glass_desc = "Tasty black tea, it has antioxidants, it's good for you!"
+			glass_desc = "Tasty black tea. It has antioxidants, it's good for you!"
 
 			on_mob_life(var/mob/living/M as mob)
 				..()
@@ -2862,7 +2871,7 @@ datum
 		drink/tea/icetea
 			name = "Iced Tea"
 			id = "icetea"
-			description = "No relation to a certain rap artist/ actor."
+			description = "Iced tea is tea chilled with a few ice cubes."
 			color = "#104038" // rgb: 16, 64, 56
 			adj_temp = -5
 
@@ -2878,7 +2887,7 @@ datum
 		drink/cold/tonic
 			name = "Tonic Water"
 			id = "tonic"
-			description = "It tastes strange but at least the quinine keeps the Space Malaria at bay."
+			description = "Tonic water is a beverage made from water, added-citrus flavorings, and added quinine sulfate as an antimalarial." //Can this act as a mild spaceacillin?
 			color = "#664300" // rgb: 102, 67, 0
 			adj_dizzy = -5
 			adj_drowsy = -3
@@ -2886,24 +2895,24 @@ datum
 
 			glass_icon_state = "glass_clear"
 			glass_name = "glass of tonic water"
-			glass_desc = "Quinine tastes funny, but at least it'll keep that Space Malaria away."
+			glass_desc = "It's a glass of fizzy tonic water. The Quinine tastes funny, but at least it'll keep that Space Malaria away."
 
 		drink/cold/sodawater
 			name = "Soda Water"
 			id = "sodawater"
-			description = "A can of club soda. Why not make a scotch and soda?"
+			description = "Soda water is carbon dioxide dissolved in water under high pressure."
 			color = "#619494" // rgb: 97, 148, 148
 			adj_dizzy = -5
 			adj_drowsy = -3
 
 			glass_icon_state = "glass_clear"
 			glass_name = "glass of soda water"
-			glass_desc = "Soda water. Why not make a scotch and soda?"
+			glass_desc = "It's a glass of soda water. Bubbly."
 
 		drink/cold/ice
 			name = "Ice"
 			id = "ice"
-			description = "Frozen water, your dentist wouldn't like you chewing this."
+			description = "Ice is water frozen to a solid state under temperatures of 273.15 K."
 			reagent_state = SOLID
 			color = "#619494" // rgb: 97, 148, 148
 
@@ -2914,7 +2923,7 @@ datum
 		drink/cold/space_cola
 			name = "Space Cola"
 			id = "cola"
-			description = "A refreshing beverage."
+			description = "Space cola is a sweetened, carbonated, caffeinated brand of soft drink."
 			reagent_state = LIQUID
 			color = "#100800" // rgb: 16, 8, 0
 			adj_drowsy 	= 	-3
@@ -2926,13 +2935,13 @@ datum
 		drink/cold/nuka_cola
 			name = "Nuka Cola"
 			id = "nuka_cola"
-			description = "Cola, cola never changes."
+			description = "Nuka Cola is a caffeinated, non-alcoholic beverage made with cola and uranium."
 			color = "#100800" // rgb: 16, 8, 0
-			adj_sleepy = -2
+			adj_sleepy = -4
 
 			glass_icon_state = "nuka_colaglass"
 			glass_name = "glass of Nuka-Cola"
-			glass_desc = "Don't cry, Don't raise your eye, It's only nuclear wasteland"
+			glass_desc = "Don't cry, Don't raise your eye, It's only nuclear wasteland."
 			glass_center_of_mass = list("x"=16, "y"=6)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -2946,7 +2955,7 @@ datum
 		drink/cold/spacemountainwind
 			name = "Mountain Wind"
 			id = "spacemountainwind"
-			description = "Blows right through you like a space wind."
+			description = "Mountain Wind is a clear, sweet, carbonated soft drink."
 			color = "#102000" // rgb: 16, 32, 0
 			adj_drowsy = -7
 			adj_sleepy = -1
@@ -2958,78 +2967,79 @@ datum
 		drink/cold/dr_gibb
 			name = "Dr. Gibb"
 			id = "dr_gibb"
-			description = "A delicious blend of 42 different flavours"
+			description = "Dr. Gibb is a sweet brand of a caffeinated soft drink beverage. It is a variant of cola with a blend of 42 different flavors."
 			color = "#102000" // rgb: 16, 32, 0
 			adj_drowsy = -6
 
 			glass_icon_state = "dr_gibb_glass"
 			glass_name = "glass of Dr. Gibb"
-			glass_desc = "Dr. Gibb. Not as dangerous as the name might imply."
+			glass_desc = "It's a glass of Dr. Gibb. Not as dangerous as the name might imply."
 
 		drink/cold/space_up
 			name = "Space-Up"
 			id = "space_up"
-			description = "Tastes like a hull breach in your mouth."
+			description = "Space-Up is a translucent, sweet brand of soft drink flavored with lemon-lime and 100% natural ingredients."
 			color = "#202800" // rgb: 32, 40, 0
 			adj_temp = -8
 
 			glass_icon_state = "space-up_glass"
 			glass_name = "glass of Space-up"
-			glass_desc = "Space-up. It helps keep your cool."
+			glass_desc = "It's a glass of Space-up. It helps keep your cool."
 
 		drink/cold/lemon_lime
 			name = "Lemon Lime"
-			description = "A tangy substance made of 0.5% natural citrus!"
+			description = "Lemon lime, known as 'Sour mix' is a sour, tangy bar mixture of lemon and lime juice, sugar, and carbonated water added to flavor beverages."
 			id = "lemon_lime"
 			color = "#878F00" // rgb: 135, 40, 0
 			adj_temp = -8
 
 			glass_icon_state = "lemonlime"
 			glass_name = "glass of lemon lime soda"
-			glass_desc = "A tangy substance made of 0.5% natural citrus!"
+			glass_desc = "It's a glass of lemon-lime mix, still sour with a hint of sweetness."
 
 		drink/cold/lemonade
 			name = "Lemonade"
-			description = "Oh the nostalgia..."
+			description = "Lemonade is a sweet, citrus-flavored beverage made from the sugar, water, and the juice from lemons."
 			id = "lemonade"
 			color = "#FFFF00" // rgb: 255, 255, 0
 
 			glass_icon_state = "lemonadeglass"
 			glass_name = "glass of lemonade"
-			glass_desc = "Oh the nostalgia..."
+			glass_desc = "It's a glass of lemonade. You feel nostalgic."
 
 		drink/cold/kiraspecial
 			name = "Kira Special"
-			description = "Long live the guy who everyone had mistaken for a girl. Baka!"
+			description = "Kira Special is a sweet, citrus-flavored, carbonated, non-alcoholic beverage made with orange juice, lime juice, and soda water."
 			id = "kiraspecial"
 			color = "#CCCC99" // rgb: 204, 204, 153
 
 			glass_icon_state = "kiraspecial"
 			glass_name = "glass of Kira Special"
-			glass_desc = "Long live the guy who everyone had mistaken for a girl. Baka!"
+			glass_desc = "It's a fizzy beverage. Long live the guy who everyone had mistaken for a girl. Baka!"
 			glass_center_of_mass = list("x"=16, "y"=12)
 
 		drink/cold/brownstar
 			name = "Brown Star"
-			description = "It's not what it sounds like..."
+			description = "Brown Star is a citrus-flavored, caffeinated, carbonated, non-alcoholic drink made with orange juice and cola."
 			id = "brownstar"
 			color = "#9F3400" // rgb: 159, 052, 000
 			adj_temp = - 2
+			adj_sleepy = - 2
 
 			glass_icon_state = "brownstar"
 			glass_name = "glass of Brown Star"
-			glass_desc = "It's not what it sounds like..."
+			glass_desc = "It's brown, but it's not what it sounds like..."
 
 		drink/cold/milkshake
 			name = "Milkshake"
-			description = "Glorious brainfreezing mixture."
+			description = "A milkshake is a sweet, creamy, slush beverage made with milk, cream, and ice. Too much of this beverage at once will chill the body."
 			id = "milkshake"
 			color = "#AEE5E4" // rgb" 174, 229, 228
 			adj_temp = -9
 
 			glass_icon_state = "milkshake"
 			glass_name = "glass of milkshake"
-			glass_desc = "Glorious brainfreezing mixture."
+			glass_desc = "Ahh, a cold milkshake, a glorious brainfreezing mixture."
 			glass_center_of_mass = list("x"=16, "y"=7)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -3047,13 +3057,13 @@ datum
 
 		drink/cold/rewriter
 			name = "Rewriter"
-			description = "The secret of the sanctuary of the Libarian..."
+			description = "Rewriter is a sweet, carbonated, caffeinated soft-drink designed to keep people awake. It is a non-alcoholic beverage made with space mountain wind and coffee."
 			id = "rewriter"
 			color = "#485000" // rgb:72, 080, 0
-
+			adj_sleepy = -4
 			glass_icon_state = "rewriter"
 			glass_name = "glass of Rewriter"
-			glass_desc = "The secret of the sanctuary of the Libarian..."
+			glass_desc = "It's a glass of Rewriter, the secret of the sanctuary of the Libarian..."
 			glass_center_of_mass = list("x"=16, "y"=9)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -3065,24 +3075,24 @@ datum
 		doctor_delight
 			name = "The Doctor's Delight"
 			id = "doctorsdelight"
-			description = "A gulp a day keeps the MediBot away. That's probably for the best."
+			description = "The Doctor's Delight is a pink, bubbly, extremely delicious non-alcoholic health drink designed to revitalize the body and have a sweet, tangy, creamy taste to appeal to adults and children. It is made from orange juice, lime juice, tomato juice, cream, and tricordrazine."
 			reagent_state = LIQUID
 			color = "#FF8CFF" // rgb: 255, 140, 255
 			nutriment_factor = 1 * FOOD_METABOLISM
 			scannable = 1
 			glass_icon_state = "doctorsdelightglass"
 			glass_name = "glass of The Doctor's Delight"
-			glass_desc = "A healthy mixture of juices, guaranteed to keep you healthy until the next toolboxing takes place."
+			glass_desc = "The Doctor's Delight--the healthiest drink around. Doctors love it, kids love it, and adults love it, too."
 			glass_center_of_mass = list("x"=16, "y"=8)
 
 			on_mob_life(var/mob/living/M as mob)
 				M:nutrition += nutriment_factor
 				holder.remove_reagent(src.id, FOOD_METABOLISM)
 				if(!M) M = holder.my_atom
-				if(M:getOxyLoss() && prob(50)) M:adjustOxyLoss(-2)
+				if(M:getOxyLoss() && prob(60)) M:adjustOxyLoss(-2)
 				if(M:getBruteLoss() && prob(60)) M:heal_organ_damage(2,0)
-				if(M:getFireLoss() && prob(50)) M:heal_organ_damage(0,2)
-				if(M:getToxLoss() && prob(50)) M:adjustToxLoss(-2)
+				if(M:getFireLoss() && prob(60)) M:heal_organ_damage(0,2)
+				if(M:getToxLoss() && prob(60)) M:adjustToxLoss(-2)
 				if(M.dizziness !=0) M.dizziness = max(0,M.dizziness-15)
 				if(M.confused !=0) M.confused = max(0,M.confused - 5)
 				..()
@@ -3093,13 +3103,13 @@ datum
 		atomicbomb
 			name = "Atomic Bomb"
 			id = "atomicbomb"
-			description = "Nuclear proliferation never tasted so good."
+			description = "Atomic Bomb is a highly potent alcoholic beverage unique to making one drunk immediately after imbibing. It is made from a B52 mixed with uranium."
 			reagent_state = LIQUID
 			color = "#666300" // rgb: 102, 99, 0
 
 			glass_icon_state = "atomicbombglass"
 			glass_name = "glass of Atomic Bomb"
-			glass_desc = "Nanotrasen cannot take legal responsibility for your actions after imbibing."
+			glass_desc = "The Atomic Bomb. Nanotrasen cannot take legal responsibility for your actions after imbibing."
 			glass_center_of_mass = list("x"=15, "y"=7)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -3122,7 +3132,7 @@ datum
 		gargle_blaster
 			name = "Pan-Galactic Gargle Blaster"
 			id = "gargleblaster"
-			description = "Whoah, this stuff looks volatile!"
+			description = "A Pan-Galactic Gargle Blaster is a strong, psychedelic beverage made from vodka, gin, whiskey, cognac, and lime juice."
 			reagent_state = LIQUID
 			color = "#664300" // rgb: 102, 67, 0
 
@@ -3143,20 +3153,20 @@ datum
 							M.confused = max(M.confused+3,0)
 					if(55 to 200)
 						M.druggy = max(M.druggy, 55)
-					if(200 to INFINITY)
+					if(201 to INFINITY)
 						M.adjustToxLoss(2)
 				..()
 
 		neurotoxin
 			name = "Neurotoxin"
 			id = "neurotoxin"
-			description = "A strong neurotoxin that puts the subject into a death-like state."
+			description = "Neurotoxin is a strong alcoholic beverage made from soporific mixed with a Gargle Blaster. It temporarily incapacitates those who drink it."
 			reagent_state = LIQUID
 			color = "#2E2E61" // rgb: 46, 46, 97
 
 			glass_icon_state = "neurotoxinglass"
 			glass_name = "glass of Neurotoxin"
-			glass_desc = "A drink that is guaranteed to knock you silly."
+			glass_desc = "The name says it all--a drink that is guaranteed to knock you silly."
 			glass_center_of_mass = list("x"=16, "y"=8)
 
 			on_mob_life(var/mob/living/carbon/M as mob)
@@ -3173,20 +3183,20 @@ datum
 							M.confused = max(M.confused+3,0)
 					if(55 to 200)
 						M.druggy = max(M.druggy, 55)
-					if(200 to INFINITY)
+					if(201 to INFINITY)
 						M.adjustToxLoss(2)
 				..()
 
 		hippies_delight
 			name = "Hippies' Delight"
 			id = "hippiesdelight"
-			description = "You just don't get it maaaan."
+			description = "Hippies' Delight is a strong, psychedelic alcoholic beverage made from psilocybin mixed with a gargleblaster."
 			reagent_state = LIQUID
 			color = "#664300" // rgb: 102, 67, 0
 
 			glass_icon_state = "hippiesdelightglass"
 			glass_name = "glass of Hippie's Delight"
-			glass_desc = "A drink enjoyed by people during the 1960's."
+			glass_desc = "A drink enjoyed by people during the 1960's. Now, with more delight!"
 			glass_center_of_mass = list("x"=16, "y"=8)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -3211,7 +3221,7 @@ datum
 						M.make_dizzy(40)
 						M.druggy = max(M.druggy, 60)
 						if(prob(30)) M.emote(pick("twitch","giggle"))
-					if(200 to INFINITY)
+					if(201 to INFINITY)
 						if (!M.stuttering) M.stuttering = 1
 						M.make_jittery(60)
 						M.make_dizzy(60)
@@ -3233,10 +3243,10 @@ datum
 		ethanol
 			name = "Ethanol" //Parent class for all alcoholic reagents.
 			id = "ethanol"
-			description = "A well-known alcohol with a variety of applications."
+			description = "Ethanol is neurotoxic, psychoactive drug and it is the type of alcohol found in alcoholic beverages produced by the fermentation of sugars by yeasts. It is a volatile, flammable, colorless liquid with a slight chemical odor."
 			reagent_state = LIQUID
 			nutriment_factor = 0 //So alcohol can fill you up! If they want to.
-			color = "#404030" // rgb: 64, 64, 48
+			color = "#808080" // rgb: 128, 128, 128
 			var/boozepwr = 5 //higher numbers mean the booze will have an effect faster.
 			var/dizzy_adj = 3
 			var/adj_drowsy = 0
@@ -3250,7 +3260,7 @@ datum
 
 			glass_icon_state = "glass_clear"
 			glass_name = "glass of ethanol"
-			glass_desc = "A well-known alcohol with a variety of applications."
+			glass_desc = "This is the type of alcohol found in alcoholic beverages in its pure form."
 
 			on_mob_life(var/mob/living/M as mob, var/alien)
 				M:nutrition += nutriment_factor
@@ -3315,14 +3325,14 @@ datum
 		ethanol/beer
 			name = "Beer"
 			id = "beer"
-			description = "An alcoholic beverage made from malted grains, hops, yeast, and water."
+			description = "Beer is a mildly alcoholic beverage made from brewing malted grains, hops, yeast, and water."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 1
 			nutriment_factor = 1 * FOOD_METABOLISM
 
 			glass_icon_state = "beerglass"
 			glass_name = "glass of beer"
-			glass_desc = "A freezing pint of beer"
+			glass_desc = "It's a freezing pint of beer."
 			glass_center_of_mass = list("x"=16, "y"=8)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -3333,7 +3343,7 @@ datum
 		ethanol/kahlua
 			name = "Kahlua"
 			id = "kahlua"
-			description = "A widely known, Mexican coffee-flavoured liqueur. In production since 1936!"
+			description = "Kahlua is a coffee-flavored sugar-based liqueur from Mexico, flavored with rum, corn syrup, and vanilla beans."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 1.5
 			dizzy_adj = -5
@@ -3342,7 +3352,7 @@ datum
 
 			glass_icon_state = "kahluaglass"
 			glass_name = "glass of RR coffee liquor"
-			glass_desc = "DAMN, THIS THING LOOKS ROBUST"
+			glass_desc = "DAMN, THIS THING LOOKS ROBUST!"
 			glass_center_of_mass = list("x"=15, "y"=7)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -3353,7 +3363,7 @@ datum
 		ethanol/whiskey
 			name = "Whiskey"
 			id = "whiskey"
-			description = "A superb and well-aged single-malt whiskey. Damn."
+			description = "Whiskey is a distilled mild-moderately-alcoholic beverage made from fermented grain mash."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 2
 			dizzy_adj = 4
@@ -3366,8 +3376,8 @@ datum
 		ethanol/specialwhiskey
 			name = "Special Blend Whiskey"
 			id = "specialwhiskey"
-			description = "Just when you thought regular station whiskey was good... This silky, amber goodness has to come along and ruin everything."
-			color = "#664300" // rgb: 102, 67, 0
+			description = "This is a highly-prized, rich, special blend of whiskey with a deeper amber color, a more bold, sweet flavor, and an extra luxuriously silky-smooth finish."
+			color = "#4B2300" // rgb: 75, 35, 0
 			boozepwr = 2
 			dizzy_adj = 4
 			slur_start = 30		//amount absorbed after which mob starts slurring
@@ -3380,7 +3390,7 @@ datum
 		ethanol/thirteenloko
 			name = "Thirteen Loko"
 			id = "thirteenloko"
-			description = "A potent mixture of caffeine and alcohol."
+			description = "Thirteen Loko is a potent, mild-moderate alcoholic, caffeinated beverage made from coffee and alcohol."
 			color = "#102000" // rgb: 16, 32, 0
 			boozepwr = 2
 			nutriment_factor = 1 * FOOD_METABOLISM
@@ -3400,7 +3410,7 @@ datum
 		ethanol/vodka
 			name = "Vodka"
 			id = "vodka"
-			description = "Number one drink AND fueling choice for Russians worldwide."
+			description = "Vodka is a distilled mild-moderately-alcoholic beverage primarily orignating from Russia, made from fermented cereal grains, potatoes, and sometimes fruits and sugar."
 			color = "#0064C8" // rgb: 0, 100, 200
 			boozepwr = 2
 
@@ -3417,19 +3427,19 @@ datum
 		ethanol/bilk
 			name = "Bilk"
 			id = "bilk"
-			description = "This appears to be beer mixed with milk. Disgusting."
+			description = "Bilk is a mild alcoholic beverage made from beer and milk."
 			color = "#895C4C" // rgb: 137, 92, 76
 			boozepwr = 1
 			nutriment_factor = 2 * FOOD_METABOLISM
 
 			glass_icon_state = "glass_brown"
 			glass_name = "glass of bilk"
-			glass_desc = "A brew of milk and beer. For those alcoholics who fear osteoporosis."
+			glass_desc = "A brew of milk and beer, for those alcoholics who fear osteoporosis."
 
 		ethanol/threemileisland
 			name = "Three Mile Island Iced Tea"
 			id = "threemileisland"
-			description = "Made for a woman, strong enough for a man."
+			description = "Three Mile Island Iced Tea is a potent, psychedelic, alcoholic beverage made from Long Island Iced Tea and uranium."
 			color = "#666340" // rgb: 102, 99, 64
 			boozepwr = 5
 
@@ -3446,7 +3456,7 @@ datum
 		ethanol/gin
 			name = "Gin"
 			id = "gin"
-			description = "It's gin. In space. I say, good sir."
+			description = "Gin is a mild alcoholic beverage. It is a distilled spirit whose flavor derives from juniper berries."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 1
 			dizzy_adj = 3
@@ -3456,22 +3466,22 @@ datum
 			glass_desc = "A crystal clear glass of Griffeater gin."
 			glass_center_of_mass = list("x"=16, "y"=12)
 
-		ethanol/tequilla
+		ethanol/Tequila
 			name = "Tequila"
-			id = "tequilla"
-			description = "A strong and mildly flavoured, mexican produced spirit. Feeling thirsty hombre?"
+			id = "tequila"
+			description = "Tequila is mild-moderately-alcoholic beverage originally from Mexico, from the blue agave plant."
 			color = "#FFFF91" // rgb: 255, 255, 145
 			boozepwr = 2
 
-			glass_icon_state = "tequillaglass"
-			glass_name = "glass of Tequilla"
+			glass_icon_state = "Tequilaglass"
+			glass_name = "glass of Tequila"
 			glass_desc = "Now all that's missing is the weird colored shades!"
 			glass_center_of_mass = list("x"=16, "y"=12)
 
 		ethanol/vermouth
 			name = "Vermouth"
 			id = "vermouth"
-			description = "You suddenly feel a craving for a martini..."
+			description = "Vermouth is a mild alcoholic beverage. It is an aromatized, fortified wine flavored with botanicals."
 			color = "#91FF91" // rgb: 145, 255, 145
 			boozepwr = 1.5
 
@@ -3483,7 +3493,7 @@ datum
 		ethanol/wine
 			name = "Wine"
 			id = "wine"
-			description = "An premium alchoholic beverage made from distilled grape juice."
+			description = "Wine is a mild alcoholic beverage made from distilled grape juice."
 			color = "#7E4043" // rgb: 126, 64, 67
 			boozepwr = 1.5
 			dizzy_adj = 2
@@ -3498,7 +3508,7 @@ datum
 		ethanol/cognac
 			name = "Cognac"
 			id = "cognac"
-			description = "A sweet and strongly alchoholic drink, made after numerous distillations and years of maturing. Classy as fornication."
+			description = "Cognac is a moderately-alcoholic variety of brandy named after the city of Cognac in France."
 			color = "#AB3C05" // rgb: 171, 60, 5
 			boozepwr = 1.5
 			dizzy_adj = 4
@@ -3512,7 +3522,7 @@ datum
 		ethanol/hooch
 			name = "Hooch"
 			id = "hooch"
-			description = "Either someone's failure at cocktail making or attempt in alchohol production. In any case, do you really want to drink that?"
+			description = "Named after the slang word for illicit whiskey, Hooch is a toxic, mild-moderately-alcoholic beverage made from sugar, pure ethanol and welder fuel."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 2
 			dizzy_adj = 6
@@ -3527,19 +3537,19 @@ datum
 		ethanol/ale
 			name = "Ale"
 			id = "ale"
-			description = "A dark alchoholic beverage made by malted barley and yeast."
+			description = "Ale is a type of beer brewed using a warm fermentation method resulting in a sweet, full-bodied and fruity taste. It is mildly-alcoholic."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 1
 
 			glass_icon_state = "aleglass"
 			glass_name = "glass of ale"
-			glass_desc = "A freezing pint of delicious ale"
+			glass_desc = "A freezing pint of delicious ale."
 			glass_center_of_mass = list("x"=16, "y"=8)
 
 		ethanol/absinthe
 			name = "Absinthe"
 			id = "absinthe"
-			description = "Watch out that the Green Fairy doesn't come for you!"
+			description = "Absinthe is a green, distilled, highly alcoholic beverage. It is an anise-flavored spirit derived from botanicals, including the flowers and leaves of Artemisia absinthium, green anise, sweet fennel, and other medicinal and culinary herbs."
 			color = "#33EE00" // rgb: 51, 238, 0
 			boozepwr = 4
 			dizzy_adj = 5
@@ -3548,13 +3558,13 @@ datum
 
 			glass_icon_state = "absintheglass"
 			glass_name = "glass of absinthe"
-			glass_desc = "Wormwood, anise, oh my."
+			glass_desc = "Wormwood, anise, and sweet fennel, oh my."
 			glass_center_of_mass = list("x"=16, "y"=5)
 
 		ethanol/pwine
 			name = "Poison Wine"
 			id = "pwine"
-			description = "Is this even wine? Toxic! Hallucinogenic! Probably consumed in boatloads by your superiors!"
+			description = "Poison wine is a jet black, mild alcoholic beverage. It has a fluid akin to blood's consistency with an oily, viscous, purple, toxic substance that mimics the taste of wine."
 			color = "#000000" // rgb: 0, 0, 0 SHOCKER
 			boozepwr = 1
 			dizzy_adj = 1
@@ -3563,7 +3573,7 @@ datum
 
 			glass_icon_state = "pwineglass"
 			glass_name = "glass of ???"
-			glass_desc = "A black ichor with an oily purple sheer on top. Are you sure you should drink this?"
+			glass_desc = "A black ichor with an oily purple sheen on top."
 			glass_center_of_mass = list("x"=16, "y"=5)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -3613,28 +3623,16 @@ datum
 								L.take_damage(100, 0)
 				holder.remove_reagent(src.id, FOOD_METABOLISM)
 
-		ethanol/rum
+		ethanol/rum //No more deadrum.
 			name = "Rum"
 			id = "rum"
-			description = "Yohoho and all that."
+			description = "Rum is a sweet, smooth, mild distilled alcoholic beverage made from molasses or sugarcane juice by fermentation and distillation, then aged in oak barrels."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 1.5
 
 			glass_icon_state = "rumglass"
 			glass_name = "glass of rum"
-			glass_desc = "Now you want to Pray for a pirate suit, don't you?"
-			glass_center_of_mass = list("x"=16, "y"=12)
-
-		ethanol/deadrum
-			name = "Deadrum"
-			id = "rum" // duplicate ids?
-			description = "Popular with the sailors. Not very popular with everyone else."
-			color = "#664300" // rgb: 102, 67, 0
-			boozepwr = 1
-
-			glass_icon_state = "rumglass"
-			glass_name = "glass of rum"
-			glass_desc = "Now you want to Pray for a pirate suit, don't you?"
+			glass_desc = "Fifteen men in a dead man's chest. Yo, ho, ho, and a bottle o' rum!"
 			glass_center_of_mass = list("x"=16, "y"=12)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -3645,13 +3643,13 @@ datum
 		ethanol/sake
 			name = "Sake"
 			id = "sake"
-			description = "Anime's favorite drink."
+			description = "Sake is a Japanese rice wine, a mild-moderate alcoholic beverage made by fermenting polished rice that had bran removed."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 2
 
 			glass_icon_state = "ginvodkaglass"
 			glass_name = "glass of sake"
-			glass_desc = "A glass of sake."
+			glass_desc = "It's a glass of sake."
 			glass_center_of_mass = list("x"=16, "y"=12)
 
 /////////////////////////////////////////////////////////////////cocktail entities//////////////////////////////////////////////
@@ -3660,43 +3658,43 @@ datum
 		ethanol/goldschlager
 			name = "Goldschlager"
 			id = "goldschlager"
-			description = "100 proof cinnamon schnapps, made for alcoholic teen girls on spring break."
+			description = "Goldschlager is a moderately-alcoholic beverage. It is a Swiss cinnamon schnapps with very thin flakes of gold floating inside."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 3
 
 			glass_icon_state = "ginvodkaglass"
 			glass_name = "glass of Goldschlager"
-			glass_desc = "100 proof that teen girls will drink anything with gold in it."
+			glass_desc = "A glass of 100 proof that teen girls will drink anything with gold in it."
 			glass_center_of_mass = list("x"=16, "y"=12)
 
 		ethanol/patron
 			name = "Patron"
 			id = "patron"
-			description = "Tequila with silver in it, a favorite of alcoholic women in the club scene."
+			description = "Patron is a mild-moderately-alcoholic beverage. It is a brand of Tequila with very thin flakes of silver floating inside."
 			color = "#585840" // rgb: 88, 88, 64
-			boozepwr = 1.5
+			boozepwr = 2
 
 			glass_icon_state = "patronglass"
 			glass_name = "glass of Patron"
-			glass_desc = "Drinking patron in the bar, with all the subpar ladies."
+			glass_desc = "Drinking patron in the bar with all the subpar ladies."
 			glass_center_of_mass = list("x"=7, "y"=8)
 
 		ethanol/gintonic
 			name = "Gin and Tonic"
 			id = "gintonic"
-			description = "An all time classic, mild cocktail."
+			description = "Gin and Tonic is a mild alcoholic beverage made from gin mixed in a glass of tonic water."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 1
 
 			glass_icon_state = "gintonicglass"
 			glass_name = "glass of gin and tonic"
-			glass_desc = "A mild but still great cocktail. Drink up, like a true Englishman."
+			glass_desc = "A mild but still great cocktail. Drink up, like a true Englishman, and bid the Space Malaria goodbye!"
 			glass_center_of_mass = list("x"=16, "y"=7)
 
 		ethanol/cuba_libre
 			name = "Cuba Libre"
 			id = "cubalibre"
-			description = "Rum, mixed with cola. Viva la revolucion."
+			description = "Cuba Libre is a mild alcoholic beverage made from cola mixed in a glass of rum."
 			color = "#3E1B00" // rgb: 62, 27, 0
 			boozepwr = 1.5
 
@@ -3708,7 +3706,7 @@ datum
 		ethanol/whiskey_cola
 			name = "Whiskey Cola"
 			id = "whiskeycola"
-			description = "Whiskey, mixed with cola. Surprisingly refreshing."
+			description = "Whiskey Cola is a mild-moderately-alcoholic beverage made from cola mixed in a glass of whiskey."
 			color = "#3E1B00" // rgb: 62, 27, 0
 			boozepwr = 2
 
@@ -3720,19 +3718,19 @@ datum
 		ethanol/martini
 			name = "Classic Martini"
 			id = "martini"
-			description = "Vermouth with Gin. Not quite how 007 enjoyed it, but still delicious."
+			description = "A Martini is a mild-moderately-alcoholic beverage made from vermouth mixed in a glass of gin."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 2
 
 			glass_icon_state = "martiniglass"
 			glass_name = "glass of classic martini"
-			glass_desc = "Damn, the bartender even stirred it, not shook it."
+			glass_desc = "Damn, the bartender even stirred it, not shook it. Hey, where's the olive?"
 			glass_center_of_mass = list("x"=17, "y"=8)
 
 		ethanol/vodkamartini
 			name = "Vodka Martini"
 			id = "vodkamartini"
-			description = "Vodka with Gin. Not quite how 007 enjoyed it, but still delicious."
+			description = "Vodka Martini is a strong alcoholic beverage made from vodka mixed in a glass of martini."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 4
 
@@ -3744,7 +3742,7 @@ datum
 		ethanol/white_russian
 			name = "White Russian"
 			id = "whiterussian"
-			description = "That's just, like, your opinion, man..."
+			description = "White Russian is a moderately-alcoholic beverage made from cream mixed in a Black Russian."
 			color = "#A68340" // rgb: 166, 131, 64
 			boozepwr = 3
 
@@ -3756,7 +3754,7 @@ datum
 		ethanol/screwdrivercocktail
 			name = "Screwdriver"
 			id = "screwdrivercocktail"
-			description = "Vodka, mixed with plain ol' orange juice. The result is surprisingly delicious."
+			description = "A Screwdriver Cocktail is a moderately-alcoholic beverage made from orange juice mixed in a glass of vodka."
 			color = "#A68310" // rgb: 166, 131, 16
 			boozepwr = 3
 
@@ -3768,59 +3766,59 @@ datum
 		ethanol/booger
 			name = "Booger"
 			id = "booger"
-			description = "Ewww..."
+			description = "Booger is a green, slimy, and mild alcoholic beverage made from cream, a banana, rum, and watermelon juice."
 			color = "#8CFF8C" // rgb: 140, 255, 140
 			boozepwr = 1.5
 
 			glass_icon_state = "booger"
 			glass_name = "glass of Booger"
-			glass_desc = "Ewww..."
+			glass_desc = "Eww, it's all slimy..."
 
 		ethanol/bloody_mary
 			name = "Bloody Mary"
 			id = "bloodymary"
-			description = "A strange yet pleasurable mixture made of vodka, tomato and lime juice. Or at least you THINK the red stuff is tomato juice."
+			description = "A Bloody Mary is a red, vegetable-based, moderately-alcoholic beverage made from vodka and lime juice mixed in a glass of tomato juice."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 3
 
 			glass_icon_state = "bloodymaryglass"
 			glass_name = "glass of Bloody Mary"
-			glass_desc = "Tomato juice, mixed with Vodka and a lil' bit of lime. Tastes like liquid murder."
+			glass_desc = "Tomato juice, mixed with Vodka and a lil' bit of lime. It's even garnished with a celery stick."
 
 		ethanol/brave_bull
 			name = "Brave Bull"
 			id = "bravebull"
-			description = "It's just as effective as Dutch-Courage!"
+			description = "Brave Bull is a moderately-alcoholic beverage made from kahula mixed in a glass of tequila."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 3
 
 			glass_icon_state = "bravebullglass"
 			glass_name = "glass of Brave Bull"
-			glass_desc = "Tequilla and coffee liquor, brought together in a mouthwatering mixture. Drink up."
+			glass_desc = "Tequila and coffee liquor, brought together in a mouthwatering mixture. Drink up."
 			glass_center_of_mass = list("x"=15, "y"=8)
 
-		ethanol/tequilla_sunrise
+		ethanol/Tequila_sunrise
 			name = "Tequila Sunrise"
-			id = "tequillasunrise"
-			description = "Tequila and orange juice. Much like a Screwdriver, only Mexican~"
+			id = "tequilasunrise"
+			description = "Tequila Sunrise is fruity, mild-moderately alcoholic beverage made from orange juice mixed in a glass of tequila."
 			color = "#FFE48C" // rgb: 255, 228, 140
 			boozepwr = 2
 
-			glass_icon_state = "tequillasunriseglass"
-			glass_name = "glass of Tequilla Sunrise"
+			glass_icon_state = "tequilasunriseglass"
+			glass_name = "glass of Tequila Sunrise"
 			glass_desc = "Oh great, now you feel nostalgic about sunrises back on Terra..."
 
 		ethanol/toxins_special
 			name = "Toxins Special"
 			id = "phoronspecial"
-			description = "This thing is ON FIRE! CALL THE DAMN SHUTTLE!"
+			description = "Toxins Special is a potent, spicy, hot alcoholic beverage made from vermouth, rum, and phoron. Despite its name, the phoron neutralized in the drink and it only heats up body temperatures."
 			reagent_state = LIQUID
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 5
 
 			glass_icon_state = "toxinsspecialglass"
 			glass_name = "glass of Toxins Special"
-			glass_desc = "Whoah, this thing is on FIRE"
+			glass_desc = "Whoa, this thing is on FIRE!"
 
 			on_mob_life(var/mob/living/M as mob)
 				if (M.bodytemperature < 330)
@@ -3831,14 +3829,14 @@ datum
 		ethanol/beepsky_smash
 			name = "Beepsky Smash"
 			id = "beepskysmash"
-			description = "Deny drinking this and prepare for THE LAW."
+			description = "Beepsky Smash is a strong alcoholic beverage made from lime juice, whiskey and iron. It stuns the drinker."
 			reagent_state = LIQUID
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 4
 
 			glass_icon_state = "beepskysmashglass"
 			glass_name = "Beepsky Smash"
-			glass_desc = "Heavy, hot and strong. Just like the Iron fist of the LAW."
+			glass_desc = "Heavy, hot and strong, just like the iron fist of the LAW."
 			glass_center_of_mass = list("x"=18, "y"=10)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -3849,7 +3847,7 @@ datum
 		ethanol/irish_cream
 			name = "Irish Cream"
 			id = "irishcream"
-			description = "Whiskey-imbued cream, what else would you expect from the Irish."
+			description = "Irish Cream is an alcoholic beverage made from cream mixed in a glass of whiskey."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 2
 
@@ -3861,41 +3859,41 @@ datum
 		ethanol/manly_dorf
 			name = "The Manly Dorf"
 			id = "manlydorf"
-			description = "Beer and Ale, brought together in a delicious mix. Intended for true men only."
+			description = "The Manly Dorf is an alcoholic beverage made from beer mixed in a glass of ale."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 2
 
 			glass_icon_state = "manlydorfglass"
 			glass_name = "glass of The Manly Dorf"
-			glass_desc = "A manly concotion made from Ale and Beer. Intended for true men only."
+			glass_desc = "A manly concoction made from ale and beer. Intended for true men only."
 
 		ethanol/longislandicedtea
 			name = "Long Island Iced Tea"
 			id = "longislandicedtea"
-			description = "The liquor cabinet, brought together in a delicious mix. Intended for middle-aged alcoholic women only."
+			description = "Long Island Iced Tea is a strong alcoholic beverage made from vodka, gin, tequila and Cuba Libre."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 4
 
 			glass_icon_state = "longislandicedteaglass"
 			glass_name = "glass of Long Island iced tea"
-			glass_desc = "The liquor cabinet, brought together in a delicious mix. Intended for middle-aged alcoholic women only."
+			glass_desc = "The liquor cabinet brought together in a delicious mix. Intended for middle-aged alcoholic women only."
 			glass_center_of_mass = list("x"=16, "y"=8)
 
 		ethanol/moonshine
 			name = "Moonshine"
 			id = "moonshine"
-			description = "You've really hit rock bottom now... your liver packed its bags and left last night."
+			description = "Moonshine is a strong, high-proof distilled spirit free of imperfections and toxins that made this drink illegal in the past."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 4
 
 			glass_icon_state = "glass_clear"
 			glass_name = "glass of moonshine"
-			glass_desc = "You've really hit rock bottom now... your liver packed its bags and left last night."
+			glass_desc = "The good stuff. What was it made from, this time?"
 
 		ethanol/b52
 			name = "B-52"
 			id = "b52"
-			description = "Coffee, Irish Cream, and cognac. You will get bombed."
+			description = "A B-52 is a strong alcoholic beverage made from Irish cream, cognac, and Kahlua."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 4
 
@@ -3906,7 +3904,7 @@ datum
 		ethanol/irishcoffee
 			name = "Irish Coffee"
 			id = "irishcoffee"
-			description = "Coffee, and alcohol. More fun than a Mimosa to drink in the morning."
+			description = "Irish Coffee is a moderately-alcoholic beverage made from Irish cream and coffee."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 3
 
@@ -3918,7 +3916,7 @@ datum
 		ethanol/margarita
 			name = "Margarita"
 			id = "margarita"
-			description = "On the rocks with salt on the rim. Arriba~!"
+			description = "A Margarita is a moderately-alcoholic beverage made from lime juice mixed in a glass of tequila."
 			color = "#8CFF8C" // rgb: 140, 255, 140
 			boozepwr = 3
 
@@ -3930,7 +3928,7 @@ datum
 		ethanol/black_russian
 			name = "Black Russian"
 			id = "blackrussian"
-			description = "For the lactose-intolerant. Still as classy as a White Russian."
+			description = "A Black Russian is a moderately-alcoholic beverage made from Kahlua mixed in a glass of vodka."
 			color = "#360000" // rgb: 54, 0, 0
 			boozepwr = 3
 
@@ -3942,7 +3940,7 @@ datum
 		ethanol/manhattan
 			name = "Manhattan"
 			id = "manhattan"
-			description = "The Detective's undercover drink of choice. He never could stomach gin..."
+			description = "A Manhattan is a moderately-alcoholic beverage made from vermouth mixed in a glass of whiskey."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 3
 
@@ -3954,7 +3952,7 @@ datum
 		ethanol/manhattan_proj
 			name = "Manhattan Project"
 			id = "manhattan_proj"
-			description = "A scientist's drink of choice, for pondering ways to blow up the station."
+			description = "A Manhattan Project is a potent, psychedelic, alcoholic beverage. It is a Manhattan infused with uranium."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 5
 
@@ -3971,7 +3969,7 @@ datum
 		ethanol/whiskeysoda
 			name = "Whiskey Soda"
 			id = "whiskeysoda"
-			description = "For the more refined griffon."
+			description = "Whiskey Soda is a moderately-alcoholic beverage made from soda water mixed in a glass of whiskey."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 3
 
@@ -3983,7 +3981,7 @@ datum
 		ethanol/antifreeze
 			name = "Anti-freeze"
 			id = "antifreeze"
-			description = "Ultimate refreshment."
+			description = "An Anti-freeze is a strong alcoholic beverage designed to raise body temperatures. It is made from ice and cream mixed in a glass of vodka."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 4
 
@@ -4001,31 +3999,31 @@ datum
 		ethanol/barefoot
 			name = "Barefoot"
 			id = "barefoot"
-			description = "Barefoot and pregnant"
+			description = "Barefoot is a fruity, mild alcoholic beverage made from berry juice, cream, and vermouth. "
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 1.5
 
 			glass_icon_state = "b&p"
 			glass_name = "glass of Barefoot"
-			glass_desc = "Barefoot and pregnant"
+			glass_desc = "Barefoot and pregnant."
 			glass_center_of_mass = list("x"=17, "y"=8)
 
 		ethanol/snowwhite
 			name = "Snow White"
 			id = "snowwhite"
-			description = "A cold refreshment"
+			description = "Snow White is a mild alcoholic beverage made from beer mixed with lime juice."
 			color = "#FFFFFF" // rgb: 255, 255, 255
 			boozepwr = 1.5
 
 			glass_icon_state = "snowwhite"
 			glass_name = "glass of Snow White"
-			glass_desc = "A cold refreshment."
+			glass_desc = "A cold refreshment, white as its name."
 			glass_center_of_mass = list("x"=16, "y"=8)
 
 		ethanol/melonliquor
 			name = "Melon Liquor"
 			id = "melonliquor"
-			description = "A relatively sweet and fruity 46 proof liquor."
+			description = "Melon Liquor is a mild, green, relatively sweet and fruity 46 proof liquor."
 			color = "#138808" // rgb: 19, 136, 8
 			boozepwr = 1
 
@@ -4037,19 +4035,19 @@ datum
 		ethanol/bluecuracao
 			name = "Blue Curacao"
 			id = "bluecuracao"
-			description = "Exotically blue, fruity drink, distilled from oranges."
+			description = "Blue Curacao is an exotically blue, fruity, mild liquor, distilled from oranges."
 			color = "#0000CD" // rgb: 0, 0, 205
 			boozepwr = 1.5
 
 			glass_icon_state = "curacaoglass"
 			glass_name = "glass of blue curacao"
-			glass_desc = "Exotically blue, fruity drink, distilled from oranges."
+			glass_desc = "An exotically blue, fruity drink, distilled from oranges. It's beautiful to look at."
 			glass_center_of_mass = list("x"=16, "y"=5)
 
 		ethanol/suidream
 			name = "Sui Dream"
 			id = "suidream"
-			description = "Comprised of: White soda, blue curacao, melon liquor."
+			description = "Sui Dream is a fruity, very mild alcoholic beverage made from Space-Up, Melon Liquor, and Blue Curacao."
 			color = "#00A86B" // rgb: 0, 168, 107
 			boozepwr = 0.5
 
@@ -4061,7 +4059,7 @@ datum
 		ethanol/demonsblood
 			name = "Demons Blood"
 			id = "demonsblood"
-			description = "AHHHH!!!!"
+			description = "Demons' Blood is a dark red, blood-based, moderately-alcoholic beverage made from rum, Mountain Wind, blood, and Dr. Gibb."
 			color = "#820000" // rgb: 130, 0, 0
 			boozepwr = 3
 
@@ -4073,7 +4071,7 @@ datum
 		ethanol/vodkatonic
 			name = "Vodka and Tonic"
 			id = "vodkatonic"
-			description = "For when a gin and tonic isn't russian enough."
+			description = "Vodka and Tonic is a moderately-alcoholic beverage made from tonic water mixed in a glass of vodka."
 			color = "#0064C8" // rgb: 0, 100, 200
 			boozepwr = 3
 			dizzy_adj = 4
@@ -4087,7 +4085,7 @@ datum
 		ethanol/ginfizz
 			name = "Gin Fizz"
 			id = "ginfizz"
-			description = "Refreshingly lemony, deliciously dry."
+			description = "Gin Fizz is a dry-tasting, carbondated, mild alcoholic beverage made from lime juice and soda water mixed in a glass of gin."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 1.5
 			dizzy_adj = 4
@@ -4099,9 +4097,9 @@ datum
 			glass_center_of_mass = list("x"=16, "y"=7)
 
 		ethanol/bahama_mama
-			name = "Bahama mama"
+			name = "Bahama Mama"
 			id = "bahama_mama"
-			description = "Tropical cocktail."
+			description = "Bahama Mama is a tropical cocktail made from rum, orange juice, lime juice and ice."
 			color = "#FF7F3B" // rgb: 255, 127, 59
 			boozepwr = 2
 
@@ -4113,7 +4111,7 @@ datum
 		ethanol/singulo
 			name = "Singulo"
 			id = "singulo"
-			description = "A blue-space beverage!"
+			description = "Singulo, nicknamed the 'blue-space beverage', is a potent alcoholic beverage mimicking the Gravitational Singularity. It is made from vodka, wine, and radium."
 			color = "#2E6671" // rgb: 46, 102, 113
 			boozepwr = 5
 			dizzy_adj = 15
@@ -4121,13 +4119,13 @@ datum
 
 			glass_icon_state = "singulo"
 			glass_name = "glass of Singulo"
-			glass_desc = "A blue-space beverage."
+			glass_desc = "A blue-space beverage. Looks like Lord Singuloth."
 			glass_center_of_mass = list("x"=17, "y"=4)
 
 		ethanol/sbiten
 			name = "Sbiten"
 			id = "sbiten"
-			description = "A spicy Vodka! Might be a little hot for the little guys!"
+			description = "Sbiten is a very pungent, spicy, moderately-alcoholic beverage made from capsaicin oil mixed in a glass of vodka."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 3
 
@@ -4145,7 +4143,7 @@ datum
 		ethanol/devilskiss
 			name = "Devils Kiss"
 			id = "devilskiss"
-			description = "Creepy time!"
+			description = "Devil's Kiss is a red, blood-based, moderately-alcoholic beverage made from blood, Kahlua, and rum."
 			color = "#A68310" // rgb: 166, 131, 16
 			boozepwr = 3
 
@@ -4157,7 +4155,7 @@ datum
 		ethanol/red_mead
 			name = "Red Mead"
 			id = "red_mead"
-			description = "The true Viking's drink! Even though it has a strange red color."
+			description = "Red Mead is a red, blood-based, mild alcoholic beverage made from blood and mead."
 			color = "#C73C00" // rgb: 199, 60, 0
 			boozepwr = 1.5
 
@@ -4169,9 +4167,9 @@ datum
 		ethanol/mead
 			name = "Mead"
 			id = "mead"
-			description = "A Viking's drink, though a cheap one."
+			description = "Mead is a sweet, golden, mild alcoholic beverage made with fermented honey and water, flavored with various fruit, spices, grains, or hops. "
 			reagent_state = LIQUID
-			color = "#664300" // rgb: 102, 67, 0
+			color = "#FFC800" // rgb: 255, 200, 0
 			boozepwr = 1.5
 			nutriment_factor = 1 * FOOD_METABOLISM
 
@@ -4183,7 +4181,7 @@ datum
 		ethanol/iced_beer
 			name = "Iced Beer"
 			id = "iced_beer"
-			description = "A beer which is so cold the air around it freezes."
+			description = "Iced Beer is a mild alcoholic beverage made from a beer chilled with ice."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 1
 
@@ -4201,7 +4199,7 @@ datum
 		ethanol/grog
 			name = "Grog"
 			id = "grog"
-			description = "Watered down rum, NanoTrasen approves!"
+			description = "Grog is a very mild alcoholic beverage made from watered-down rum."
 			reagent_state = LIQUID
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 0.5
@@ -4213,7 +4211,7 @@ datum
 		ethanol/aloe
 			name = "Aloe"
 			id = "aloe"
-			description = "So very, very, very good."
+			description = "Aloe is a green, creamy, moderately-alcoholic beverage made from cream, watermelon juice, and whiskey."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 3
 
@@ -4225,7 +4223,7 @@ datum
 		ethanol/andalusia
 			name = "Andalusia"
 			id = "andalusia"
-			description = "A nice, strangely named drink."
+			description = "Andalusia is a moderately-alcoholic beverage made from rum, whiskey, and lemon juice."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 3
 
@@ -4237,7 +4235,7 @@ datum
 		ethanol/alliescocktail
 			name = "Allies Cocktail"
 			id = "alliescocktail"
-			description = "A drink made from your allies, not as sweet as when made from your enemies."
+			description = "Allies Cocktail is a mild-moderately-alcoholic beverage made from vodka mixed in a martini."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 2
 
@@ -4249,20 +4247,20 @@ datum
 		ethanol/acid_spit
 			name = "Acid Spit"
 			id = "acidspit"
-			description = "A drink for the daring, can be deadly if incorrectly prepared!"
+			description = "Acid Spit is an acidic, mild alcoholic beverage made from sulphuric acid mixed with wine."
 			reagent_state = LIQUID
 			color = "#365000" // rgb: 54, 80, 0
 			boozepwr = 1.5
 
 			glass_icon_state = "acidspitglass"
 			glass_name = "glass of Acid Spit"
-			glass_desc = "A drink from Nanotrasen. Made from live aliens."
+			glass_desc = "Did somebody spit acid in this?"
 			glass_center_of_mass = list("x"=16, "y"=7)
 
 		ethanol/amasec
 			name = "Amasec"
 			id = "amasec"
-			description = "Official drink of the NanoTrasen Gun-Club!"
+			description = "Amasec is the official drink of the NanoTrasen Gun-Club. It is a mild-moderately alcoholic beverage made from iron, wine, and vodka."
 			reagent_state = LIQUID
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 2
@@ -4275,18 +4273,18 @@ datum
 		ethanol/changelingsting
 			name = "Changeling Sting"
 			id = "changelingsting"
-			description = "You take a tiny sip and feel a burning sensation..."
+			description = "Changeling Sting is an acidic, potent alcoholic beverage made from lime juice and lemon juice mixed in a Screwdriver."
 			color = "#2E6671" // rgb: 46, 102, 113
 			boozepwr = 5
 
 			glass_icon_state = "changelingsting"
 			glass_name = "glass of Changeling Sting"
-			glass_desc = "A stingy drink."
+			glass_desc = "Note the word 'sting' in the name."
 
 		ethanol/irishcarbomb
 			name = "Irish Car Bomb"
 			id = "irishcarbomb"
-			description = "Mmm, tastes like chocolate cake..."
+			description = "An Irish Car Bomb is a moderately-alcoholic beverage made from coffee and cream."
 			color = "#2E6671" // rgb: 46, 102, 113
 			boozepwr = 3
 			dizzy_adj = 5
@@ -4299,19 +4297,19 @@ datum
 		ethanol/syndicatebomb
 			name = "Syndicate Bomb"
 			id = "syndicatebomb"
-			description = "Tastes like terrorism!"
+			description = "Syndicate Bomb is a highly-alcoholic beverage made from cola, beer, and whiskey."
 			color = "#2E6671" // rgb: 46, 102, 113
 			boozepwr = 5
 
 			glass_icon_state = "syndicatebomb"
 			glass_name = "glass of Syndicate Bomb"
-			glass_desc = "Tastes like terrorism!"
+			glass_desc = "You feel a sudden sense of danger while looking at this drink."
 			glass_center_of_mass = list("x"=16, "y"=4)
 
 		ethanol/erikasurprise
 			name = "Erika Surprise"
 			id = "erikasurprise"
-			description = "The surprise is it's green!"
+			description = "A green, moderately-alcoholic beverage made from ale, lime juice, whiskey, a banana, and ice."
 			color = "#2E6671" // rgb: 46, 102, 113
 			boozepwr = 3
 
@@ -4323,7 +4321,7 @@ datum
 		ethanol/driestmartini
 			name = "Driest Martini"
 			id = "driestmartini"
-			description = "Only for the experienced. You think you see sand floating in the glass."
+			description = "A Driest Martini is a very dry-tasting alcoholic beverage made from a martini without vermouth."
 			nutriment_factor = 1 * FOOD_METABOLISM
 			color = "#2E6671" // rgb: 46, 102, 113
 			boozepwr = 4
@@ -4336,7 +4334,7 @@ datum
 		ethanol/bananahonk
 			name = "Banana Mama"
 			id = "bananahonk"
-			description = "A drink from Clown Heaven."
+			description = "Banana Mama is a sweet, creamy, strong alcoholic beverage made from cream, sugar, and a banana."
 			nutriment_factor = 1 * REAGENTS_METABOLISM
 			color = "#FFFF91" // rgb: 255, 255, 140
 			boozepwr = 4
@@ -4349,7 +4347,7 @@ datum
 		ethanol/silencer
 			name = "Silencer"
 			id = "silencer"
-			description = "A drink from Mime Heaven."
+			description = "A Silencer is a strong alcoholic drink made from cream, sugar, and another unknown reagent."
 			nutriment_factor = 1 * FOOD_METABOLISM
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 4
@@ -4370,6 +4368,24 @@ datum
 					M.confused = max(M.confused+15,15)
 				..()
 				return
+
+		ethanol/bluemotorcycle
+			name = "Blue Motorcycle A.M.F Cocktail"
+			id = "bluemotorcycle"
+			description = "Blue Motorcycle is a very potent blue cocktail. It is a concoction of a mixture of vodka, tequila, rum, gin, Blue Curacao, Space-up, and Lemon-Lime, then chilled with ice."
+			nutriment_factor = 2 * FOOD_METABOLISM //Lots of alcohol, lots of calories.
+			color = "#00E1FF" // rgb: 0, 225, 255
+			boozepwr = 5 //This has five types of alcohol in it. You won't finish two drinks without suffering heavy consequences.
+			dizzy_adj =5
+			slurr_adj = 5
+			slur_start = 15
+			confused_start = 30
+
+			glass_icon_state = "amfglass"
+			glass_name = "glass of Blue Motorcycle A.M.F Cocktail"
+			glass_desc = "Adios, my friend."
+			glass_center_of_mass = list("x"=16, "y"=7)
+
 
 // Undefine the alias for REAGENTS_EFFECT_MULTIPLER
 #undef REM
