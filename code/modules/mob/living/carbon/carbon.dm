@@ -182,14 +182,17 @@
 				else if(burndamage > 0)
 					status += "numb"
 				if(org.status & ORGAN_DESTROYED)
-					status = "MISSING!"
+					status = "missing!"
 				if(org.status & ORGAN_MUTATED)
-					status = "weirdly shapen."
+					status = "weirdly shapen"
+				if(org.status & ORGAN_BROKEN)
+					status = "very painful to move"
 				if(status == "")
-					status = "OK"
-				src.show_message(text("\t []My [] is [].",status=="OK"?"\blue ":"\red ",org.display_name,status),1)
+					status = "normal"
+				src.show_message(text("\t []My [] is [].",status=="normal"?"\blue ":"\red ",org.display_name,status),1)
 			if((SKELETON in H.mutations) && (!H.w_uniform) && (!H.wear_suit))
 				H.play_xylophone()
+
 		else
 			var/t_him = "it"
 			if (src.gender == MALE)
