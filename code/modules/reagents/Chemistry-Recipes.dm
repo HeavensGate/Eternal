@@ -1623,7 +1623,7 @@ datum
 			result_amount = 3
 
 		tequila_sunrise
-			name = "tequila Sunrise"
+			name = "Tequila Sunrise"
 			id = "tequilasunrise"
 			result = "tequilasunrise"
 			required_reagents = list("tequila" = 2, "orangejuice" = 1)
