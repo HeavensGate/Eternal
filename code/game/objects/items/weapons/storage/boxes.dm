@@ -5,7 +5,7 @@
  *	Contains:
  *		Empty box, starter boxes (survival/engineer),
  *		Latex glove and sterile mask boxes,
- *		Syringe, beaker, dna injector boxes,
+ *		Syringe, beaker, empty blood bags, dna injector boxes,
  *		Blanks, flashbangs, and EMP grenade boxes,
  *		Tracking and chemical implant boxes,
  *		Prescription glasses and drinking glass boxes,
@@ -23,7 +23,7 @@
 	name = "box"
 	desc = "It's just an ordinary box."
 	icon_state = "box"
-	item_state = "syringe_kit"
+	item_state = "syringe_kit" //why was an empty box labeled as a syringe?
 	foldable = /obj/item/stack/sheet/cardboard	//BubbleWrap
 
 /obj/item/weapon/storage/box/survival/
@@ -106,6 +106,19 @@
 		new /obj/item/weapon/reagent_containers/glass/beaker( src )
 		new /obj/item/weapon/reagent_containers/glass/beaker( src )
 
+/obj/item/weapon/storage/box/emptybloodpacks
+	name = "box of empty blood packs"
+	icon_state = "emptybloodpacks"
+
+	New()
+		..()
+		new /obj/item/weapon/storage/box/bloodpacks( src )
+		new /obj/item/weapon/storage/box/bloodpacks( src )
+		new /obj/item/weapon/storage/box/bloodpacks( src )
+		new /obj/item/weapon/storage/box/bloodpacks( src )
+		new /obj/item/weapon/storage/box/bloodpacks( src )
+		new /obj/item/weapon/storage/box/bloodpacks( src )
+		new /obj/item/weapon/storage/box/bloodpacks( src )
 /obj/item/weapon/storage/box/injectors
 	name = "box of DNA injectors"
 	desc = "This box contains injectors it seems."
