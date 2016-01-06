@@ -19,6 +19,9 @@
 /mob/proc/update_inv_back()
 	return
 
+/mob/proc/update_inv_wear_pda()
+	return
+
 /mob/proc/update_inv_l_hand()
 	return
 

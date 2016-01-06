@@ -35,6 +35,7 @@
 #define ui_swaphand2 "8:16,2:5"
 #define ui_storage1 "9:18,1:5"
 #define ui_storage2 "10:20,1:5"
+#define ui_pda "11:22,1:5" //put that PDA up
 
 #define ui_alien_head "4:12,1:5"	//aliens
 #define ui_alien_oclothing "5:14,1:5"	//aliens
