@@ -10,8 +10,9 @@
 	permeability_coefficient = 0.50
 
 	sprite_sheets = list(
-		"Vox" = 'icons/mob/species/vox/masks.dmi'
-		)
+		"Vox" = 'icons/mob/species/vox/masks.dmi',
+		"Tajara" = 'icons/mob/species/tajaran/masks.dmi',
+		"Unathi" = 'icons/mob/species/unathi/masks.dmi')
 
 	var/hanging = 0
 
