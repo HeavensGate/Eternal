@@ -2,7 +2,6 @@
 				BLOOD SYSTEM
 ****************************************************/
 //Blood levels
-var/const/BLOOD_VOLUME_MINOR = 504 // 90% - new level. Patient feels thirsty.
 var/const/BLOOD_VOLUME_SAFE = 448 // 80%, changed from 90%
 var/const/BLOOD_VOLUME_OKAY = 364 // 65%, changed from 66.67%
 var/const/BLOOD_VOLUME_BAD = 224 // 40%, unchanged
@@ -79,19 +78,10 @@ var/const/BLOOD_VOLUME_SURVIVE = 122 // 21.79%, unchanged
 
 		//Effects of bloodloss
 		switch(blood_volume)
-			if(BLOOD_VOLUME_MINOR to 10000)
+			if(BLOOD_VOLUME_SAFE to 10000)
 				if(pale)
 					pale = 0
 					update_body()
-			if(BLOOD_VOLUME_SAFE to BLOOD_VOLUME_MINOR)
-				if(pale)
-					pale = 0
-					update_body()
-					var/word = pick("feel a bit thirsty","want something to drink")
-					src << "\black You [word]."
-				if(prob(1))
-					var/word = pick("feel a bit thirsty","want something to drink")
-					src << "\black You [word]."
 			if(BLOOD_VOLUME_OKAY to BLOOD_VOLUME_SAFE)
 				if(!pale)
 					pale = 1
