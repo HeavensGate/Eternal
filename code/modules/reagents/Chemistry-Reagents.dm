@@ -1526,7 +1526,7 @@ datum
 		ethylredoxrazine	// FUCK YOU, ALCOHOL
 			name = "Ethylredoxrazine"
 			id = "ethylredoxrazine"
-			description = "A powerful oxidizer that reacts with ethanol to neutralize alcohol in the bloodstream. "
+			description = "Ethylredoxrazine is a powerful oxidizer that reacts with ethanol to neutralize alcohol in the bloodstream."
 			reagent_state = SOLID
 			color = "#605048" // rgb: 96, 80, 72
 			overdose = REAGENTS_OVERDOSE
@@ -1660,7 +1660,7 @@ datum
 		toxin/cyanide //Fast and Lethal
 			name = "Cyanide"
 			id = "cyanide"
-			description = "Cyanide is a chemical compound from the monovalent cyano group. This organic nitrite is colorless, crystalline, similar to appearance to sugar, highly soluble in water, and one of the most toxic substances known. To some people, it smells like bitter almonds."
+			description = "Cyanide is a chemical compound from the monovalent cyano group. This organic nitrite is colorless, crystalline, similar in appearance to sugar, highly soluble in water, and one of the most toxic substances known. To some people, it smells like bitter almonds."
 			color = "#CF3600" // rgb: 207, 54, 0
 			toxpwr = 4
 			custom_metabolism = 0.4
@@ -1675,7 +1675,7 @@ datum
 		toxin/minttoxin
 			name = "Mint Toxin"
 			id = "minttoxin"
-			description = "Mint toxin is an aggressive fat-busting toxin that derives from a certain kind of mint."
+			description = "Mint toxin is an aggressive fat-busting toxin that derives from an unknown species of mint leaf."
 			reagent_state = LIQUID
 			color = "#CF3600" // rgb: 207, 54, 0
 			toxpwr = 0
@@ -1690,7 +1690,7 @@ datum
 		toxin/carpotoxin
 			name = "Carpotoxin"
 			id = "carpotoxin"
-			description = "Carpotoxin is a deadly neurotoxin naturally found in the tissues of or Space Carp."
+			description = "Carpotoxin is a deadly neurotoxin naturally found in the tissues of Space Carp."
 			reagent_state = LIQUID
 			color = "#003333" // rgb: 0, 51, 51
 			toxpwr = 2
@@ -1698,7 +1698,7 @@ datum
 		toxin/zombiepowder
 			name = "Zombie Powder"
 			id = "zombiepowder"
-			description = "Stronger than Curare, Zombie Powder is a strong neurotoxin that completely paralyzes the patient; the patient will appear to be in a death-like state, visually and by scanners, but the patient will be aware of his or her surroundings."
+			description = "Zombie Powder is a strong neurotoxin that completely paralyzes the patient; the patient will appear to be in a death-like state, visually and by scanners, but the patient will be aware of his or her surroundings."
 			reagent_state = SOLID
 			color = "#669900" // rgb: 102, 153, 0
 			toxpwr = 0.5
@@ -1722,7 +1722,7 @@ datum
 		toxin/mindbreaker
 			name = "Mindbreaker Toxin"
 			id = "mindbreaker"
-			description = "A more powerful variant of LSD, Mindbreaker Toxin is a powerful hallucinogen that assaults and tricks the mind to generate frightening visual and auditory, and tactile hallucinations."
+			description = "A more powerful variant of LSD, Mindbreaker Toxin is a powerful hallucinogenic narcotic that assaults and tricks the mind to generate frightening visual, auditory, and tactile hallucinations."
 			reagent_state = LIQUID
 			color = "#B31008" // rgb: 139, 166, 233
 			toxpwr = 0.5 // Fuck you, chemists. You ingest this shit, you pay for it.
@@ -1747,7 +1747,7 @@ datum
 		toxin/fertilizer/eznutrient
 			name = "EZ Nutrient"
 			id = "eznutrient"
-			description = "Fertilizer is a standard chemical mixture for providing nutrients to plants. Around dead plants, there is a higher chance mushrooms will grow in their place."
+			description = "EZ Nutrient is a standard chemical mixture for providing nutrients to plants. Around dead plants, there is a higher chance mushrooms will grow in their place."
 			color = "#7A3E1D" // rgb: 122, 62, 29
 
 		toxin/fertilizer/left4zed
@@ -1765,7 +1765,7 @@ datum
 		toxin/plantbgone
 			name = "Plant-B-Gone"
 			id = "plantbgone"
-			description = "Plant-B-Gone is a brand of herbicide that is very toxic to plants."
+			description = "Plant-B-Gone is a brand of herbicide that is very toxic to plants, fungi, and algae."
 			reagent_state = LIQUID
 			color = "#49002E" // rgb: 73, 0, 46
 			toxpwr = 1
@@ -1944,7 +1944,7 @@ datum
 		toxin/acid
 			name = "Sulfuric acid"
 			id = "sacid"
-			description = "Sulfuric acid is a highly corrosive strong mineral acid with the molecular formula H2SO4. It is a pungent-ethereal, colorless to slightly yellow, viscous liquid which is soluble in water."
+			description = "Sulfuric acid is a highly-corrosive, strong mineral acid with the molecular formula H2SO4. It is a pungent-ethereal, colorless to slightly yellow, viscous liquid which is soluble in water."
 			reagent_state = LIQUID
 			color = "#DB5008" // rgb: 219, 80, 8  //This should be a white-yellow, but it's orange.
 			toxpwr = 1
@@ -2080,7 +2080,7 @@ datum
 
 		nutriment/egg // Also bad for Skrell. Not a child of protein because it might mess up, not sure.
 			name = "egg yolk"
-			description = "Egg yolk is the nutritious part of the egg that feeds a developing embryo in some animals. This one came from a chicken."
+			description = "Egg yolk is the nutritious part of an egg that feeds a developing embryo in some animals."
 			id = "egg"
 			color = "#FF9600" // rgb: 255, 150, 0
 
@@ -2093,7 +2093,7 @@ datum
 		lipozine
 			name = "Lipozine" // The anti-nutriment.
 			id = "lipozine"
-			description = "Lipozine is a chemical compound derived from herbs that causes a powerful fat-burning reaction."
+			description = "Lipozine is a brand name for the chemical compound glucomannan, a water-soluble, fermentable dietary fiber extracted from the root of the elephant yam. It is an appetite suppressant and causes a powerful fat-burning reaction and reduces hunger."
 			reagent_state = LIQUID
 			nutriment_factor = 10 * REAGENTS_METABOLISM
 			color = "#BBEDA4" // rgb: 187, 237, 164
@@ -2111,7 +2111,7 @@ datum
 		soysauce
 			name = "Soysauce"
 			id = "soysauce"
-			description = "Soysauce is a salty sauce made from the soy plant."
+			description = "Soysauce is a Chinese condiment made from a fermented paste of boiled soybeans, roasted grain, brine, and Asperigillus molds."
 			reagent_state = LIQUID
 			nutriment_factor = 2 * REAGENTS_METABOLISM
 			color = "#792300" // rgb: 121, 35, 0
@@ -2119,7 +2119,7 @@ datum
 		ketchup
 			name = "Ketchup"
 			id = "ketchup"
-			description = "Ketchup is a red, sweet, and tangy condiment made from tomato paste, commonly put on burgers, ketchup "
+			description = "Ketchup is a red, sweet, and tangy condiment made from tomato paste, commonly put on burgers, french fries, and other foods."
 			reagent_state = LIQUID
 			nutriment_factor = 5 * REAGENTS_METABOLISM
 			color = "#731008" // rgb: 115, 16, 8
@@ -2319,7 +2319,7 @@ datum
 		psilocybin
 			name = "Psilocybin"
 			id = "psilocybin"
-			description = "Psilocybin strong psychotropic derived from certain species of mushroom."
+			description = "Psilocybin is a strong psychedelic derived from over 200 species of psilocybin mushrooms."
 			color = "#E700E7" // rgb: 231, 0, 231
 			overdose = REAGENTS_OVERDOSE
 
@@ -3351,8 +3351,8 @@ datum
 			adj_sleepy = -2
 
 			glass_icon_state = "kahluaglass"
-			glass_name = "glass of RR coffee liquor"
-			glass_desc = "DAMN, THIS THING LOOKS ROBUST!"
+			glass_name = "glass of coffee liquor"
+			glass_desc = "It's coffee, and liquor. Mmm..."
 			glass_center_of_mass = list("x"=15, "y"=7)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -3532,7 +3532,7 @@ datum
 
 			glass_icon_state = "glass_brown2"
 			glass_name = "glass of Hooch"
-			glass_desc = "You've really hit rock bottom now... your liver packed its bags and left last night."
+			glass_desc = "It's bootleg whiskey--but not bootleg whiskey."
 
 		ethanol/ale
 			name = "Ale"
@@ -3573,7 +3573,7 @@ datum
 
 			glass_icon_state = "pwineglass"
 			glass_name = "glass of ???"
-			glass_desc = "A black ichor with an oily purple sheen on top."
+			glass_desc = "A black ichor with an oily, bubbly, purple sheen on top. Looks like liquid tar."
 			glass_center_of_mass = list("x"=16, "y"=5)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -3658,7 +3658,7 @@ datum
 		ethanol/goldschlager
 			name = "Goldschlager"
 			id = "goldschlager"
-			description = "Goldschlager is a moderately-alcoholic beverage. It is a Swiss cinnamon schnapps with very thin flakes of gold floating inside."
+			description = "Goldschlager is a moderately-alcoholic beverage. It is Swiss cinnamon schnapps with very thin flakes of gold floating inside."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 3
 
@@ -3688,7 +3688,7 @@ datum
 
 			glass_icon_state = "gintonicglass"
 			glass_name = "glass of gin and tonic"
-			glass_desc = "A mild but still great cocktail. Drink up, like a true Englishman, and bid the Space Malaria goodbye!"
+			glass_desc = "A mild but still great cocktail. Drink up, like a true Englishman, and bid Space Malaria goodbye!"
 			glass_center_of_mass = list("x"=16, "y"=7)
 
 		ethanol/cuba_libre
@@ -4372,7 +4372,7 @@ datum
 		ethanol/bluemotorcycle
 			name = "Blue Motorcycle A.M.F Cocktail"
 			id = "bluemotorcycle"
-			description = "Blue Motorcycle is a potent blue cocktail. It is a concoction of a mixture of vodka, tequila, rum, gin, Blue Curacao, Space-up, and Lemon-Lime, then chilled with ice."
+			description = "Blue Motorcycle is a potent alcoholic beverage. It is a concoction of a mixture of vodka, tequila, rum, gin, Blue Curacao, Space-up, and Lemon-Lime, then chilled with ice."
 			nutriment_factor = 2 * FOOD_METABOLISM //Lots of alcohol, lots of calories.
 			color = "#00E1FF" // rgb: 0, 225, 255
 			boozepwr = 5 //This has five types of alcohol in it. You won't finish two drinks without suffering heavy consequences.
