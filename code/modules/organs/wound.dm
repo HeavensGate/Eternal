@@ -269,7 +269,7 @@
 
 /datum/wound/cut/gaping_big
 	max_bleeding_stage = 2
-	stages = list("large gaping wound" = 60, "healing gaping wound" = 40, "larg, healing clot" = 10, "large keloiding scar" = 0)
+	stages = list("large gaping wound" = 60, "healing gaping wound" = 40, "large healing clot" = 10, "large keloiding scar" = 0)
 	damage_type = CUT
 
 datum/wound/cut/massive
@@ -287,19 +287,19 @@ datum/wound/cut/massive
 
 /** BURNS **/
 /datum/wound/burn/moderate
-	stages = list("ripped, blistering burn" = 10, "moderate burn" = 5, "healing, moderate burn" = 2, "fresh skin" = 0)
+	stages = list("ripped blistering burn" = 10, "moderate burn" = 5, "healing, moderate burn" = 2, "tiny fresh skin" = 0)
 	damage_type = BURN
 
 /datum/wound/burn/large
-	stages = list("ripped, blistering large burn" = 20, "blistering large burn" = 15, "healing, large burn" = 5, "fresh skin" = 0)
+	stages = list("ripped blistering large burn" = 20, "blistering large burn" = 15, "healing, large burn" = 5, "fresh skin" = 0)
 	damage_type = BURN
 
 /datum/wound/burn/severe
-	stages = list("ripped, peeling severe burn" = 35, "peeling severe burn" = 30, "healing severe burn" = 10, "burn scar" = 0)
+	stages = list("ripped peeling severe burn" = 35, "peeling severe burn" = 30, "healing severe burn" = 10, "burn scar" = 0)
 	damage_type = BURN
 
 /datum/wound/burn/deep
-	stages = list("ripped, peeling, deep burn" = 45, "peeling deep burn" = 40, "healing deep burn" = 15,  "large burn scar" = 0)
+	stages = list("ripped peeling deep burn" = 45, "peeling deep burn" = 40, "healing deep burn" = 15,  "large burn scar" = 0)
 	damage_type = BURN
 
 /datum/wound/burn/carbonised
