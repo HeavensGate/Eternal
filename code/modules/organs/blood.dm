@@ -89,7 +89,7 @@ var/const/BLOOD_VOLUME_SURVIVE = 122 // 21.79%, unchanged
 					var/word = pick("a bit dizzy", "somewhat woosey","a little lightheaded","dehydrated")
 					src << "\red You feel [word]."
 				if(prob(1))
-					var/word = pick("a bit dizzy","somewhat woosey","a little lightheaded","dehydrated")
+					var/word = pick("a bit dizzy", "somewhat woosey","a little lightheaded","dehydrated")
 					src << "\red You feel [word]."
 				if(oxyloss < 20)
 					oxyloss += 3

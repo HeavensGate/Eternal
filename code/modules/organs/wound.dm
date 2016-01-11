@@ -209,9 +209,9 @@
 
 /** WOUND DEFINITIONS **/
 
-//Note that the MINIMUM damage before a wound can be applied should correspond to 
+//Note that the MINIMUM damage before a wound can be applied should correspond to
 //the damage amount for the stage with the same name as the wound.
-//e.g. /datum/wound/cut/deep should only be applied for 15 damage and up, 
+//e.g. /datum/wound/cut/deep should only be applied for 15 damage and up,
 //because in it's stages list, "deep cut" = 15.
 /proc/get_wound_type(var/type = CUT, var/damage)
 	switch(type)
@@ -249,32 +249,32 @@
 /datum/wound/cut/small
 	// link wound descriptions to amounts of damage
 	max_bleeding_stage = 2
-	stages = list("ugly ripped cut" = 20, "ripped cut" = 10, "cut" = 5, "healing cut" = 2, "small scab" = 0)
+	stages = list("ugly ripped cut" = 20, "ripped cut" = 10, "cut" = 5, "scabbing cut" = 2, "tiny scar" = 0)
 	damage_type = CUT
 
 /datum/wound/cut/deep
 	max_bleeding_stage = 3
-	stages = list("ugly deep ripped cut" = 25, "deep ripped cut" = 20, "deep cut" = 15, "clotted cut" = 8, "scab" = 2, "fresh skin" = 0)
+	stages = list("ugly deep, ripped cut" = 25, "deep ripped cut" = 20, "deep cut" = 15, "clotted cut" = 8, "scab" = 2, "small scar" = 0)
 	damage_type = CUT
 
 /datum/wound/cut/flesh
 	max_bleeding_stage = 4
-	stages = list("ugly ripped flesh wound" = 35, "ugly flesh wound" = 30, "flesh wound" = 25, "blood soaked clot" = 15, "large scab" = 5, "fresh skin" = 0)
+	stages = list("ugly ripped flesh wound" = 40, "ugly flesh wound" = 30, "flesh wound" = 25, "blood-soaked clot" = 15, "large scab" = 5, "scar" = 0)
 	damage_type = CUT
 
 /datum/wound/cut/gaping
 	max_bleeding_stage = 2
-	stages = list("gaping wound" = 50, "large blood soaked clot" = 25, "large clot" = 15, "small angry scar" = 5, "small straight scar" = 0)
+	stages = list("gaping wound" = 50, "large blood-soaked clot" = 25, "large clot" = 15, "round scab" = 5, "small raised scar" = 0)
 	damage_type = CUT
 
 /datum/wound/cut/gaping_big
 	max_bleeding_stage = 2
-	stages = list("big gaping wound" = 60, "healing gaping wound" = 40, "large angry scar" = 10, "large straight scar" = 0)
+	stages = list("large gaping wound" = 60, "healing gaping wound" = 40, "larg, healing clot" = 10, "large keloiding scar" = 0)
 	damage_type = CUT
 
 datum/wound/cut/massive
 	max_bleeding_stage = 2
-	stages = list("massive wound" = 70, "massive healing wound" = 50, "massive angry scar" = 10,  "massive jagged scar" = 0)
+	stages = list("massive bone-exposing wound" = 70, "massive healing wound" = 50, "massive healing clot" = 10,  "massive, jagged, keloiding scar" = 0)
 	damage_type = CUT
 
 /** BRUISES **/
@@ -287,19 +287,19 @@ datum/wound/cut/massive
 
 /** BURNS **/
 /datum/wound/burn/moderate
-	stages = list("ripped burn" = 10, "moderate burn" = 5, "healing moderate burn" = 2, "fresh skin" = 0)
+	stages = list("ripped, blistering burn" = 10, "moderate burn" = 5, "healing, moderate burn" = 2, "fresh skin" = 0)
 	damage_type = BURN
 
 /datum/wound/burn/large
-	stages = list("ripped large burn" = 20, "large burn" = 15, "healing large burn" = 5, "fresh skin" = 0)
+	stages = list("ripped, blistering large burn" = 20, "blistering large burn" = 15, "healing, large burn" = 5, "fresh skin" = 0)
 	damage_type = BURN
 
 /datum/wound/burn/severe
-	stages = list("ripped severe burn" = 35, "severe burn" = 30, "healing severe burn" = 10, "burn scar" = 0)
+	stages = list("ripped, peeling severe burn" = 35, "peeling severe burn" = 30, "healing severe burn" = 10, "burn scar" = 0)
 	damage_type = BURN
 
 /datum/wound/burn/deep
-	stages = list("ripped deep burn" = 45, "deep burn" = 40, "healing deep burn" = 15,  "large burn scar" = 0)
+	stages = list("ripped, peeling, deep burn" = 45, "peeling deep burn" = 40, "healing deep burn" = 15,  "large burn scar" = 0)
 	damage_type = BURN
 
 /datum/wound/burn/carbonised
