@@ -911,6 +911,10 @@ proc/get_damage_icon_part(damage_state, body_part)
 
 	if(update_icons)   update_icons()
 
+/mob/living/carbon/human/update_inv_wear_pda(var/update_icons=1)
+	if(wear_pda)		wear_pda.screen_loc = ui_pda
+	if(update_icons)	update_icons()
+
 
 // Used mostly for creating head items
 /mob/living/carbon/human/proc/generate_head_icon()
