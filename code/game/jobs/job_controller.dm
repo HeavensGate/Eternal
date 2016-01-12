@@ -499,7 +499,7 @@ var/global/datum/controller/occupations/job_master
 		//TODO: Generalize this by-species
 		if(H.species)
 			if(H.species.name == "Tajara" || H.species.name == "Unathi")
-				H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes,1)
+				H.equip_to_slot_or_del(new /obj/item/clothing/shoes/clothboots(H),slot_shoes,1)
 			else if(H.species.name == "Vox")
 				H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
 				if(!H.r_hand)

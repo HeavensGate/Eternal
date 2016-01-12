@@ -140,7 +140,7 @@
 	return (copytext(message, length(message)) == "!") ? 4 : 2
 
 /datum/language/unathi
-	name = "Sinta'unathi"
+	name = "Sinta'Unathi"
 	desc = "The common language of Moghes, composed of sibilant hisses and rattles. Spoken natively by Unathi."
 	speech_verb = "hisses"
 	ask_verb = "hisses"
@@ -158,7 +158,7 @@
 	return capitalize(new_name)
 
 /datum/language/tajaran
-	name = "Siik'mas"
+	name = "Siik'Maas"
 	desc = "The traditionally employed tongue of Ahdomai, composed of expressive yowls and chirps. Native to the Tajaran."
 	speech_verb = "mrowls"
 	ask_verb = "mrowls"
