@@ -1,14 +1,16 @@
-<i><strong>... You've entered the Heaven's Gate Anomalous Zone.</i></strong><br>
+Now signing in to Station.Canus.edIN-SIM...
+Received response, starting handshake.
+Sending credentials...
+Sign-in complete! Running motd.sh
 
-Welcome to Heaven's Gate - an evolving, high-level roleplaying community aiming to create the perfect SS13 experience. Please read our server <a href=http://www.heavensgatestation.com/post/briefing-7045067?pid=1283979725#post1283979725>introduction and character briefing</a> before entering play.
+<i><strong>Welcome to Eden Outpost 13!</i></strong><br>
 
-A compelling and consistent roleplaying atmosphere is our highest priority - metagaming, powergaming and out-of-character behaviours during play will not be tolerated. We do believe, however, that action, excitement, combat and chaos have their place in the ideal SS13 round - in simple terms, we aim to provide the ideal balance between immersive simulation, deep roleplay, and fun.
+You are now awakening aboard the Eden Outpost 13, located in the Canus Nebula.
+If you are a new transfer, please familiarize yourself with the various <a href="">regulations</a> aboard the station.
+Recognize that Meta, "Griefing", and Out-of-Character activities or other immersion damaging actions are not permitted, and will be dealt with strictly.
 
-Please familiarise yourself with <a href=http://www.heavensgatestation.com/post/rules-6985308?pid=1283527477>our rules</a> before you jump in.
+<b>Warning: Lore files currently unavailable. Reverting to 'Bay' lore. Displaying notice</b>
 
-Type 'adminhelp' to contact our friendly crew if you need any help, or have an OOC dispute or complaint.
+We are currently undergoing a lore rewrite! For now, assume that Baystation-standard lore is in use, with the exception that you are not employed by Nanotrasen, but the mysterious non-human races entity "Eden" Tenatively, they allow humans on their station, though that may soon change. <i>Again, humans, especially those of poor character, or without description may be subject to additional scrutiny.</i>
 
-Thanks for reading - we hope you enjoy.
-
-
-<strong><a href=http://www.heavensgatestation.com/post/rules-6985308?pid=1283527477>Rules</a> - <a href=http://www.heavensgatestation.com/post/briefing-7045067?pid=1283979725#post1283979725>Briefing</a> - <a href="http://www.heavensgatestation.com/?forum=387240">Bug Reporting</a>
+<strong>Should you require assistance, simply enter the command 'adminhelp' to recieve aid from one of the station administrators. We are not unfriendly.</strong>
