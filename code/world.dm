@@ -297,9 +297,9 @@ var/world_topic_spam_protect_time = world.timeofday
 		s += "<b>[config.server_name]</b> &#8212; "
 
 	s += "[station_name()]";
-	s += "<b>[Fantasy Sci-Fi]  "
-	s += "[High RP] "
-	s += "[Mature Content]</b>"
+	s += "<b>{Fantasy Sci-Fi}  "
+	s += "{High RP} "
+	s += "{Mature Content}</b>"
 	s += " ("
 	s += "<a href=\"http://forums.tacowolf.net/\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
