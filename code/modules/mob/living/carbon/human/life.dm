@@ -1334,7 +1334,9 @@
 					if(350 to 450)					nutrition_icon.icon_state = "nutrition1"
 					if(250 to 350)					nutrition_icon.icon_state = "nutrition2"
 					if(150 to 250)					nutrition_icon.icon_state = "nutrition3"
-					else							nutrition_icon.icon_state = "nutrition4"
+					if(50 to 150)					nutrition_icon.icon_state = "nutrition4"
+					else							nutrition_icon.icon_state = "nutrition5"
+
 
 			if(pressure)
 				pressure.icon_state = "pressure[pressure_alert]"

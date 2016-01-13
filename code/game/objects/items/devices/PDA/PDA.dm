@@ -116,7 +116,12 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/heads
 	default_cartridge = /obj/item/weapon/cartridge/head
-	icon_state = "pda-h"
+	icon_state = "pda-cc"
+	news_silent = 1
+
+/obj/item/device/pda/rogue
+	default_cartridge = /obj/item/weapon/cartridge/head
+	icon_state = "pda-rogue"
 	news_silent = 1
 
 /obj/item/device/pda/heads/hop

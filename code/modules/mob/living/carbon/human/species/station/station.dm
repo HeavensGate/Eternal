@@ -17,16 +17,16 @@
 	name_plural = "Unathi"
 	icobase = 'icons/mob/human_races/r_lizard.dmi'
 	deform = 'icons/mob/human_races/r_def_lizard.dmi'
-	language = "Sinta'unathi"
+	language = "Sinta'Unathi"
 	tail = "sogtail"
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
 	primitive = /mob/living/carbon/monkey/unathi
 	darksight = 3
 	gluttonous = 1
 
-	blurb = "A heavily reptillian species, Unathi (or 'Sinta as they call themselves) hail from the \
+	blurb = "A heavily, carnivorous, reptillian species, Unathi (or 'Sinta as they call themselves) hail from the \
 	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Coming from a harsh, radioactive \
-	desert planet, they mostly hold ideals of honesty, virtue, martial combat and bravery above all \
+	desert planet, Moghes, they mostly hold ideals of honesty, virtue, property, martial combat and bravery above all \
 	else, frequently even their own lives. They prefer warmer temperatures than most species and \
 	their native tongue is a heavy hissing laungage called Sinta'Unathi."
 
@@ -64,13 +64,12 @@
 	name_plural = "Tajaran"
 	icobase = 'icons/mob/human_races/r_tajaran.dmi'
 	deform = 'icons/mob/human_races/r_def_tajaran.dmi'
-	language = "Siik'mas"
+	language = "Siik'Maas"
 	tail = "tajtail"
 	ears = "tajears"
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
 	darksight = 8
 	slowdown = -0.6 //Supercat nerf
-	brute_mod = 1.2
 
 	blurb = "The Tajaran race is a species of feline-like bipeds hailing from the planet of Ahdomai in the \
 	S'randarr system. They have been brought up into the space age by the Humans and Skrell, and have been \
@@ -110,7 +109,7 @@
 	language = "Skrellian"
 	primitive = /mob/living/carbon/monkey/skrell
 	unarmed_types = list(/datum/unarmed_attack/punch)
-	blurb = "An amphibious species, Skrell come from the star system known as Qerr'Vallis, which translates to 'Star of \
+	blurb = "An amphibious vegetarian species, Skrell come from the star system known as Qerr'Vallis, which translates to 'Star of \
 	the royals' or 'Light of the Crown'.<br/><br/>Skrell are a highly advanced and logical race who live under the rule \
 	of the Qerr'Katish, a caste within their society which keeps the empire of the Skrell running smoothly. Skrell are \
 	herbivores on the whole and tend to be co-operative with the other species of the galaxy, although they rarely reveal \
