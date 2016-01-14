@@ -2,13 +2,13 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-CREATE SCHEMA IF NOT EXISTS `hgstation` DEFAULT CHARACTER SET latin1 ;
-USE `hgstation` ;
+CREATE SCHEMA IF NOT EXISTS `canus_statistics` DEFAULT CHARACTER SET latin1 ;
+USE `canus_statistics` ;
 
 -- -----------------------------------------------------
--- Table `hgstation`.`death`
+-- Table `canus_statistics`.`death`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `hgstation`.`death` (
+CREATE  TABLE IF NOT EXISTS `canus_statistics`.`death` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `pod` TEXT NOT NULL COMMENT 'Place of death' ,
   `coord` TEXT NOT NULL COMMENT 'X, Y, Z POD' ,
@@ -31,9 +31,9 @@ DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
--- Table `hgstation`.`karma`
+-- Table `canus_statistics`.`karma`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `hgstation`.`karma` (
+CREATE  TABLE IF NOT EXISTS `canus_statistics`.`karma` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `spendername` TEXT NOT NULL ,
   `spenderkey` TEXT NOT NULL ,
@@ -51,9 +51,9 @@ DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
--- Table `hgstation`.`karmatotals`
+-- Table `canus_statistics`.`karmatotals`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `hgstation`.`karmatotals` (
+CREATE  TABLE IF NOT EXISTS `canus_statistics`.`karmatotals` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `byondkey` TEXT NOT NULL ,
   `karma` INT(11) NOT NULL ,
@@ -64,9 +64,9 @@ DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
--- Table `hgstation`.`library`
+-- Table `canus_statistics`.`library`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `hgstation`.`library` (
+CREATE  TABLE IF NOT EXISTS `canus_statistics`.`library` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `author` TEXT NOT NULL ,
   `title` TEXT NOT NULL ,
@@ -79,9 +79,9 @@ DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
--- Table `hgstation`.`population`
+-- Table `canus_statistics`.`population`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `hgstation`.`population` (
+CREATE  TABLE IF NOT EXISTS `canus_statistics`.`population` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `playercount` INT(11) NULL DEFAULT NULL ,
   `admincount` INT(11) NULL DEFAULT NULL ,
