@@ -12,9 +12,9 @@ Canus Station is the Official TacoWolf SS13 server. This is its' source code.
 
 ###Helpful Links
 
-- [Installation](wiki/installation)
-- [Setup](wiki/setup)
-- [Updating](wiki/updating)
-- [License](wiki/license)
+- [Installation](https://github.com/TacoWolf/Canus/wiki/installation)
+- [Setup](https://github.com/TacoWolf/Canus/wiki/setup)
+- [Updating](https://github.com/TacoWolf/Canus/wiki/updating)
+- [License](https://github.com/TacoWolf/Canus/wiki/license)
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/gluten-free.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-badges.svg)](http://forthebadge.com)
