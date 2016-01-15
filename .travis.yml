@@ -19,4 +19,4 @@ install:
 script:
   - shopt -s globstar
   - (! grep 'step_[xy]' maps/**/*.dmm)
-  - DreamMaker Eternal.dme
+  - DreamMaker canus.dme
