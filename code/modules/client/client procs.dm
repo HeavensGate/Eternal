@@ -174,7 +174,7 @@
 		src << "\green<b> New changelog available!<br></b>"
 	if(prefs.readrules != read_the_rules)
 		winset(src, "rpane.rulesb", "background-color=#FC1501;font-style=bold")
-		src << "\blue<b>Welcome [ckey], to Heavens Gate Station! If this is your first time playing with us please read our rules!<br>If not, the rules may have been updated or preferences reset.<br>Please click the red rules button in the top right of your screen to disable this message.</b>"
+		src << "\blue<b>Welcome [ckey], to Canus Station! If this is your first time playing with us please read our rules!<br>If not, the rules may have been updated or preferences reset.<br>Please click the red rules button in the top right of your screen to disable this message.</b>"
 
 	//////////////
 	//DISCONNECT//
