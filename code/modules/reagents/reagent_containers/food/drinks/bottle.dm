@@ -137,9 +137,9 @@
 		..()
 		reagents.add_reagent("vodka", 100)
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla
-	name = "Caccavo Guaranteed Quality Tequilla"
-	desc = "Made from premium petroleum distillates, pure thalidomide and other fine quality ingredients!"
+/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla //People need to learn how to spell. Can't change this because it won't change existing bottles on the map.
+	name = "Caccavo Guaranteed Quality Tequila"
+	desc = "Made from the finest blue agave plant not from your local hydroponics!"
 	icon_state = "tequillabottle"
 	center_of_mass = list("x"=16, "y"=3)
 	New()
@@ -148,7 +148,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing
 	name = "Bottle of Nothing"
-	desc = "A bottle filled with nothing"
+	desc = "A bottle filled with nothing."
 	icon_state = "bottleofnothing"
 	center_of_mass = list("x"=17, "y"=5)
 	New()
@@ -157,7 +157,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/patron
 	name = "Wrapp Artiste Patron"
-	desc = "Silver laced tequilla, served in space night clubs across the galaxy."
+	desc = "Silver-laced tequila, served in space night clubs across the galaxy."
 	icon_state = "patronbottle"
 	center_of_mass = list("x"=16, "y"=6)
 	New()
@@ -193,7 +193,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua
 	name = "Robert Robust's Coffee Liqueur"
-	desc = "A widely known, Mexican coffee-flavoured liqueur. In production since 1936, HONK"
+	desc = "A widely known, Mexican coffee-flavoured liqueur. In production since 1936."
 	icon_state = "kahluabottle"
 	center_of_mass = list("x"=17, "y"=3)
 	New()
@@ -276,7 +276,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice
 	name = "Orange Juice"
-	desc = "Full of vitamins and deliciousness!"
+	desc = "Full of vitamins and deliciousness--with extra pulp!"
 	icon_state = "orangejuice"
 	item_state = "carton"
 	center_of_mass = list("x"=16, "y"=7)
@@ -298,7 +298,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/tomatojuice
 	name = "Tomato Juice"
-	desc = "Well, at least it LOOKS like tomato juice. You can't tell with all that redness."
+	desc = "The barkeep could make a fine drink with this."
 	icon_state = "tomatojuice"
 	item_state = "carton"
 	center_of_mass = list("x"=16, "y"=8)
@@ -309,7 +309,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/limejuice
 	name = "Lime Juice"
-	desc = "Sweet-sour goodness."
+	desc = "Sour goodness."
 	icon_state = "limejuice"
 	item_state = "carton"
 	center_of_mass = list("x"=16, "y"=8)

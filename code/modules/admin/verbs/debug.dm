@@ -715,12 +715,12 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			sec_briefcase.contents += new /obj/item/weapon/plastique
 			M.equip_to_slot_or_del(sec_briefcase, slot_l_hand)
 
-			var/obj/item/device/pda/heads/pda = new(M)
+			var/obj/item/device/pda/heads/rogue/pda = new(M)
 			pda.owner = M.real_name
 			pda.ownjob = "Reaper"
 			pda.name = "PDA-[M.real_name] ([pda.ownjob])"
 
-			M.equip_to_slot_or_del(pda, slot_belt)
+			M.equip_to_slot_or_del(pda, slot_wear_pda)
 
 			var/obj/item/weapon/card/id/syndicate/W = new(M)
 			W.name = "[M.real_name]'s ID Card"
@@ -741,12 +741,12 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			M.equip_if_possible(new /obj/item/clothing/gloves/white(M), slot_gloves)
 			M.equip_if_possible(new /obj/item/device/radio/headset/heads/hop(M), slot_l_ear)
 
-			var/obj/item/device/pda/heads/pda = new(M)
+			var/obj/item/device/pda/heads/ntc/pda = new(M)
 			pda.owner = M.real_name
 			pda.ownjob = "NanoTrasen Navy Representative"
 			pda.name = "PDA-[M.real_name] ([pda.ownjob])"
 
-			M.equip_if_possible(pda, slot_r_store)
+			M.equip_to_slot_or_del(pda, slot_wear_pda)
 			M.equip_if_possible(new /obj/item/clothing/glasses/sunglasses(M), slot_l_store)
 			M.equip_if_possible(new /obj/item/weapon/clipboard(M), slot_belt)
 
@@ -767,12 +767,12 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			M.equip_if_possible(new /obj/item/device/radio/headset/heads/captain(M), slot_l_ear)
 			M.equip_if_possible(new /obj/item/clothing/head/beret/centcom/officer(M), slot_head)
 
-			var/obj/item/device/pda/heads/pda = new(M)
+			var/obj/item/device/pda/heads/ntc/pda = new(M)
 			pda.owner = M.real_name
 			pda.ownjob = "NanoTrasen Navy Officer"
 			pda.name = "PDA-[M.real_name] ([pda.ownjob])"
 
-			M.equip_if_possible(pda, slot_r_store)
+			M.equip_to_slot_or_del(pda, slot_wear_pda)
 			M.equip_if_possible(new /obj/item/clothing/glasses/sunglasses(M), slot_l_store)
 			M.equip_if_possible(new /obj/item/weapon/gun/energy(M), slot_belt)
 
@@ -792,12 +792,12 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			M.equip_if_possible(new /obj/item/device/radio/headset/heads/captain(M), slot_l_ear)
 			M.equip_if_possible(new /obj/item/clothing/head/beret/centcom/captain(M), slot_head)
 
-			var/obj/item/device/pda/heads/pda = new(M)
+			var/obj/item/device/pda/heads/ntc/pda = new(M)
 			pda.owner = M.real_name
 			pda.ownjob = "NanoTrasen Navy Captain"
 			pda.name = "PDA-[M.real_name] ([pda.ownjob])"
 
-			M.equip_if_possible(pda, slot_r_store)
+			M.equip_to_slot_or_del(pda, slot_wear_pda)
 			M.equip_if_possible(new /obj/item/clothing/glasses/sunglasses(M), slot_l_store)
 			M.equip_if_possible(new /obj/item/weapon/gun/energy(M), slot_belt)
 
