@@ -695,8 +695,8 @@
 	if(translator_on)
 		translator_on = 0
 
-		remove_language("Sinta'unathi")
-		remove_language("Siik'tajr")
+		remove_language("Sinta'Unathi")
+		remove_language("Siik'Maas")
 		remove_language("Skrellian")
 
 		src << "\blue Translator Module toggled OFF."
@@ -704,8 +704,8 @@
 	else
 		translator_on = 1
 
-		add_language("Sinta'unathi")
-		add_language("Siik'tajr")
+		add_language("Sinta'Unathi")
+		add_language("Siik'Maas")
 		add_language("Skrellian")
 
 		src << "\blue Translator Module toggled ON."

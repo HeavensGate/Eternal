@@ -293,11 +293,12 @@
 			W.equipped(src, slot)
 			update_inv_shoes(redraw_mob)
 		if(slot_wear_suit)
+			if(istype(W, /obj/item/clothing/suit/straight_jacket))
+				src << "\blue You will need someone else's help to put [W] on."
+				return
 			src.wear_suit = W
 			if(wear_suit.flags_inv & HIDESHOES)
 				update_inv_shoes(0)
-			W.equipped(src, slot)
-			update_inv_wear_suit(redraw_mob)
 		if(slot_w_uniform)
 			src.w_uniform = W
 			W.equipped(src, slot)

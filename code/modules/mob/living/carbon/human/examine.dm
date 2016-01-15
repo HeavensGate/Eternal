@@ -291,7 +291,7 @@
 				if(wound_descriptors.len)
 					var/list/flavor_text = list()
 					var/list/no_exclude = list("gaping wound", "big gaping wound", "massive wound", "large bruise",\
-					"huge bruise", "massive bruise", "severe burn", "large burn", "deep burn", "carbonised area")
+					"huge bruise", "massive bruise", "peeling severe burn", "blistering large burn", "peeling deep burn", "carbonised area")
 					for(var/wound in wound_descriptors)
 						switch(wound_descriptors[wound])
 							if(1)
