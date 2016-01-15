@@ -11,7 +11,7 @@
 	opacity = 0
 
 turf/unsimulated/wall/splashscreen
-	name = "Heaven's Gate Station"
+	name = "Canus Station"
 	icon = 'icons/misc/fullscreen.dmi'
 	icon_state = "title"
 	layer = FLY_LAYER
