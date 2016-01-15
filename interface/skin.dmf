@@ -861,6 +861,8 @@ window "chemdispenser"
 		keep-aspect = false
 		align = center
 		text-wrap = false
+		allow-html = false
+		letterbox = true
 	elem "eject"
 		type = BUTTON
 		pos = 264,4
@@ -1027,6 +1029,8 @@ window "chemdispenser"
 		keep-aspect = false
 		align = center
 		text-wrap = false
+		allow-html = false
+		letterbox = true
 	elem "child1"
 		type = CHILD
 		pos = 0,40
@@ -1148,11 +1152,13 @@ window "chemdispenser_reagents"
 		keep-aspect = false
 		align = center
 		text-wrap = false
+		allow-html = false
+		letterbox = true
 
 window "mainwindow"
 	elem "mainwindow"
 		type = MAIN
-		pos = 281,0
+		pos = 657,172
 		size = 640x440
 		anchor1 = none
 		anchor2 = none
@@ -1170,7 +1176,7 @@ window "mainwindow"
 		right-click = false
 		saved-params = "pos;size;is-minimized;is-maximized"
 		on-size = ""
-		title = "Heavens Gate Station: NSS Eternal"
+		title = "Canus Station: High Tech Sci-fantasy"
 		titlebar = true
 		statusbar = true
 		can-close = true
@@ -1178,7 +1184,7 @@ window "mainwindow"
 		can-resize = true
 		is-pane = false
 		is-minimized = false
-		is-maximized = true
+		is-maximized = false
 		can-scroll = none
 		icon = 'icons\\ss13_64.png'
 		image = ""
@@ -1191,7 +1197,7 @@ window "mainwindow"
 		on-close = ""
 	elem "hotkey_toggle"
 		type = BUTTON
-		pos = 560,420
+		pos = -338,22
 		size = 80x20
 		anchor1 = 100,100
 		anchor2 = none
@@ -1220,7 +1226,7 @@ window "mainwindow"
 	elem "mainvsplit"
 		type = CHILD
 		pos = 3,0
-		size = 634x416
+		size = 0x18
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = ""
@@ -1245,8 +1251,8 @@ window "mainwindow"
 		lock = none
 	elem "input"
 		type = INPUT
-		pos = 3,420
-		size = 517x20
+		pos = 3,22
+		size = 0x20
 		anchor1 = 0,100
 		anchor2 = 100,100
 		font-family = ""
@@ -1269,7 +1275,7 @@ window "mainwindow"
 		no-command = false
 	elem "saybutton"
 		type = BUTTON
-		pos = 520,420
+		pos = -378,22
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = none
