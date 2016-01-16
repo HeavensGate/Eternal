@@ -1170,7 +1170,7 @@
 
 /obj/item/clothing/tie/fluff/altair_locket
 	name = "small locket"
-	desc = "A small golden locket attached to an Ii'rka-reed string. Inside the locket is a holo-picture of a female Tajaran, and an inscription writtin in Siik'mas."
+	desc = "A small golden locket attached to an Ii'rka-reed string. Inside the locket is a holo-picture of a female Tajaran, and an inscription writtin in Siik'Maas."
 	icon = 'icons/obj/custom_items.dmi'
 	icon_state = "altair_locket"
 	item_state = "altair_locket"

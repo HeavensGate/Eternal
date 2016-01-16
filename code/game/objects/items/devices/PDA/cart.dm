@@ -196,6 +196,33 @@
 	access_status_display = 1
 	access_atmos = 1
 
+obj/item/weapon/cartridge/ert
+	name = "\improper E,M.R.G.N.C cartridge"
+	desc = "You don't have an all-access ID, but this cartridge nearly acts like one."
+	icon_state = "cart-ert"
+	access_quartermaster = 1
+	access_janitor = 1
+	access_engine = 1
+	access_security = 1
+	access_medical = 1
+	access_reagent_scanner = 1
+	access_status_display = 1
+	access_atmos = 1
+
+/obj/item/weapon/cartridge/nt
+	name = "\improper Value-PAK DELUXE cartidge"
+	desc = "Now with 400% more value!"
+	icon_state = "cart-cc"
+	access_quartermaster = 1
+	access_janitor = 1
+	access_engine = 1
+	access_security = 1
+	access_medical = 1
+	access_reagent_scanner = 1
+	access_status_display = 1
+	access_atmos = 1
+	access_hydroponics = 1
+
 /obj/item/weapon/cartridge/syndicate
 	name = "\improper Detomatix cartridge"
 	icon_state = "cart"

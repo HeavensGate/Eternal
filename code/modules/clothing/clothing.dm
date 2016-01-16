@@ -352,7 +352,7 @@ BLIND     // can't see anything
 	name = "shoes"
 	icon = 'icons/obj/clothing/shoes.dmi'
 	desc = "Comfortable-looking shoes."
-	gender = PLURAL //Carn: for grammarically correct text-parsing
+	gender = PLURAL //Carn: for grammatically correct text-parsing
 	siemens_coefficient = 0.9
 	body_parts_covered = FEET
 	slot_flags = SLOT_FEET
@@ -361,7 +361,10 @@ BLIND     // can't see anything
 	slowdown = SHOES_SLOWDOWN
 	force = 2
 	species_restricted = list("exclude","Unathi","Tajara")
-	sprite_sheets = list("Vox" = 'icons/mob/species/vox/shoes.dmi')
+	sprite_sheets = list(
+	"Vox" = 'icons/mob/species/vox/shoes.dmi',
+	"Tajara" = 'icons/mob/species/tajaran/shoes.dmi',
+	"Unathi" = 'icons/mob/species/unathi/shoes.dmi' )
 
 /obj/item/clothing/shoes/update_clothing_icon()
 	if (ismob(src.loc))
