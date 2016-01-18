@@ -299,6 +299,8 @@
 			src.wear_suit = W
 			if(wear_suit.flags_inv & HIDESHOES)
 				update_inv_shoes(0)
+			W.equipped(src, slot)
+			update_inv_wear_suit(redraw_mob)
 		if(slot_w_uniform)
 			src.w_uniform = W
 			W.equipped(src, slot)
