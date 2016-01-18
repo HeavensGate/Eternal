@@ -271,7 +271,7 @@ var/global/list/gear_datums = list()
 	slot = slot_glasses
 	allowed_roles = list("Security Officer","Head of Security","Warden")
 
-/datum/gear/security
+/datum/gear/medical
 	display_name = "Medical HUD"
 	path = /obj/item/clothing/glasses/hud/health
 	cost = 1
