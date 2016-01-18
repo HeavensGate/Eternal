@@ -137,14 +137,14 @@
 		..()
 		reagents.add_reagent("vodka", 100)
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla //People need to learn how to spell. Can't change this because it won't change existing bottles on the map.
+/obj/item/weapon/reagent_containers/food/drinks/bottle/tequila //People need to learn how to spell. Can't change this because it won't change existing bottles on the map.
 	name = "Caccavo Guaranteed Quality Tequila"
 	desc = "Made from the finest blue agave plant not from your local hydroponics!"
-	icon_state = "tequillabottle"
+	icon_state = "tequilabottle"
 	center_of_mass = list("x"=16, "y"=3)
 	New()
 		..()
-		reagents.add_reagent("tequilla", 100)
+		reagents.add_reagent("tequila", 100)
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing
 	name = "Bottle of Nothing"
