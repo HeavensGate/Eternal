@@ -1093,7 +1093,7 @@ datum
 		dexalinp
 			name = "Dexalin Plus"
 			id = "dexalinp"
-			description = "Dexalin Plus is used in the treatment of oxygen deprivation and removing Lexorin from the body. It is highly effective; one unit completely replenishes the lungs."
+			description = "Dexalin Plus is used in the treatment of oxygen deprivation and removing Lexorin from the body. It is highly effective at replenishing the lungs with oxygen."
 			reagent_state = LIQUID
 			color = "#0040FF" // rgb: 0, 64, 255
 			overdose = REAGENTS_OVERDOSE/2
@@ -1160,7 +1160,7 @@ datum
 
 			glass_icon_state = "golden_cup"
 			glass_name = "golden cup"
-			glass_desc = "The lavender elixir sparkles, swirls and hums quietly; it looks magical beyond your comprehension."
+			glass_desc = "The lavender elixir sparkles, swirls and hums quietly. It looks magical beyond your comprehension."
 
 			on_mob_life(var/mob/living/carbon/M as mob)
 				if(!M) M = holder.my_atom ///This can even heal dead people.
@@ -1699,7 +1699,7 @@ datum
 		toxin/zombiepowder
 			name = "Zombie Powder"
 			id = "zombiepowder"
-			description = "Zombie Powder is a strong neurotoxin that completely paralyzes the patient; the patient will appear to be in a death-like state, visually and by scanners, but the patient will be aware of his or her surroundings."
+			description = "Zombie Powder is a strong neurotoxin that completely paralyzes the patient. The patient will appear to be in a death-like state, visually and by scanners, but the patient will be aware of his or her surroundings."
 			reagent_state = SOLID
 			color = "#669900" // rgb: 102, 153, 0
 			toxpwr = 0.5
@@ -2763,7 +2763,7 @@ datum
 
 			glass_icon_state = "grenadineglass"
 			glass_name = "glass of grenadine syrup"
-			glass_desc = "It's a glass of grenadine syrup. It's sweet and tangy; what drink will the barkeep use it for?"
+			glass_desc = "It's a glass of sweet and tangy grenadine syrup. What drink will the barkeep use it for?"
 			glass_center_of_mass = list("x"=17, "y"=6)
 
 		drink/hot_coco
