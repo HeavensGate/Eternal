@@ -38,18 +38,18 @@
 				if(1 to 2)
 					user.visible_message("<span class='danger'>[user] scratched [target] across \his cheek!</span>")
 				if(3 to 4)
-					user.visible_message("<span class='danger'>[user] clawed [target]'s [pick("head", "neck")]!</span>") //'with spread claws' sounds a little bit odd, just enough that conciseness is better here I think
+					user.visible_message("<span class='danger'>[user] [pick(attack_verb)] [target]'s [pick("head", "neck")]!</span>") //'with spread claws' sounds a little bit odd, just enough that conciseness is better here I think
 				if(5)
 					user.visible_message(pick(
-						"<span class='danger'>[user] raked \his [pick(attack_noun)] across [target]'s face!</span>",
-						"<span class='danger'>[user] tore \his [pick(attack_noun)] into [target]'s face!</span>",
+						"<span class='danger'>[user] rakes \his [pick(attack_noun)] across [target]'s face!</span>",
+						"<span class='danger'>[user] tears \his [pick(attack_noun)] into [target]'s face!</span>",
 						))
 		else
 			// ----- BODY ----- //
 			switch(attack_damage)
 				if(1 to 2)	user.visible_message("<span class='danger'>[user] scratched [target]'s [affecting.display_name]!</span>")
-				if(3 to 4)	user.visible_message("<span class='danger'>[user] [pick(attack_verb)] \his [pick(attack_noun)] [pick("", "", "the side of")] [target]'s [affecting.display_name]!</span>")
-				if(5)		user.visible_message("<span class='danger'>[user] [pick(attack_verb)] \his [pick(attack_noun)] [pick("deep into", "into", "across")] [target]'s [affecting.display_name]!</span>")
+				if(3 to 4)	user.visible_message("<span class='danger'>[user] [pick(attack_verb)] [pick("", "", "the side of")] [target]'s [affecting.display_name]!</span>")
+				if(5)		user.visible_message("<span class='danger'>[user] tears \his [pick(attack_noun)] [pick("deep into", "into", "across")] [target]'s [affecting.display_name]!</span>")
 
 /datum/unarmed_attack/claws/strong
 	attack_verb = list("mangled", "mauled", "gored")
@@ -68,10 +68,11 @@
 
 /datum/unarmed_attack/slime_glomp/apply_effects()
 	//Todo, maybe have a chance of causing an electrical shock?
+	return
 
 /datum/unarmed_attack/dig
 	attack_verb = list("raked", "dug", "gouged")
-	attack_noun = "claws"
+	attack_noun = ("claws")
 	attack_sound = "swing_hit"
 	sharp = 1
 	edge = 1
