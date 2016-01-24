@@ -222,7 +222,7 @@
 
 			filling.icon_state = "syringe[rounded_vol]"
 
-			filling.color = mix_color_from_reagents(reagents.reagent_list)
+			filling.icon += mix_color_from_reagents(reagents.reagent_list)
 			overlays += filling
 
 
@@ -473,3 +473,4 @@
 		reagents.add_reagent("anti_toxin", 8)
 		mode = SYRINGE_INJECT
 		update_icon()
+
