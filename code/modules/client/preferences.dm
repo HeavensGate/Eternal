@@ -19,6 +19,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	"diona" = 1,                                         // 12
 	"mutineer" = IS_MODE_COMPILED("mutiny"),             // 13
 	"pAI candidate" = 1, // -- TLE                       // 14
+	"vampire" = IS_MODE_COMPILED("vampire"), 			 // 15
 )
 
 //used for alternate_option

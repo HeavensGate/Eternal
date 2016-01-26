@@ -57,6 +57,12 @@
 		else if(prob(10))
 			user << "\red The rod slips in your hand."
 			..()
+		else if(M.mind && M.mind.vampire)
+			if(!(VAMP_FULL in M.mind.vampire.powers))
+				user << "\red The rod burns cold in your hand, filling you with grim determination.  You feel the creature's power weaken."
+				M << "<span class='warning'>The nullrod's power interferes with your own!  They are on to you!</span>"
+				M.mind.vampire.nullified = max(8, M.mind.vampire.nullified + 8)
+		//..() Ported from readapted vamp null code.  Original seen down there.  This doesn't need to be here since it's in the loops now.
 		else
 			user << "\red The rod appears to do nothing."
 			for(var/mob/O in viewers(M, null))

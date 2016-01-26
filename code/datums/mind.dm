@@ -52,7 +52,9 @@ datum/mind
 
 	var/datum/faction/faction 			//associated faction
 	var/datum/changeling/changeling		//changeling holder
-	var/datum/vampire/vampire      //vampire holder
+
+
+	var/datum/vampire/vampire //vampire holder
 
 	var/rev_cooldown = 0
 
@@ -781,11 +783,6 @@ datum/mind
 						ticker.mode.vampires -= src
 						special_role = null
 						current.remove_vampire_powers()
-				//		if(current.hud_used)
-				//			if(current.hud_used.vampire_blood_display)
-				//				current.client.screen -= current.hud_used.vampire_blood_display
-				//				current.hud_used.vampire_blood_display = null
-
 						if(vampire)  del(vampire)
 						current << "<FONT color='red' size = 3><B>You grow weak and lose your powers! You are no longer a vampire and are stuck in your current form!</B></FONT>"
 						log_admin("[key_name_admin(usr)] has de-vampired [current].")
