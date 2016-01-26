@@ -135,6 +135,8 @@
 	for(var/obj/item/weapon/grab/G in src)
 		G.process()
 
+	if(mind && mind.vampire)
+		handle_vampire()
 // Calculate how vulnerable the human is to under- and overpressure.
 // Returns 0 (equals 0 %) if sealed in an undamaged suit, 1 if unprotected (equals 100%).
 // Suitdamage can modifiy this in 10% steps.
@@ -336,6 +338,7 @@
 		if(reagents.has_reagent("lexorin")) return
 		if(istype(loc, /obj/machinery/atmospherics/unary/cryo_cell)) return
 		if(species && (species.flags & NO_BREATHE || species.flags & IS_SYNTHETIC)) return
+		if(mind && mind.vampire) return
 
 		var/datum/gas_mixture/environment = loc.return_air()
 		var/datum/gas_mixture/breath
@@ -1089,6 +1092,15 @@
 				if( prob(2) && health && !hal_crit )
 					spawn(0)
 						emote("snore")
+				if(mind)
+					if(mind.vampire)
+						if(istype(loc, /obj/structure/closet/coffin))
+							adjustBruteLoss(-1)
+							adjustFireLoss(-1)
+							adjustToxLoss(-1)
+			else if(resting)
+				if(halloss > 0)
+					adjustHalLoss(-3)
 			//CONSCIOUS
 			else
 				stat = CONSCIOUS
@@ -1281,6 +1293,14 @@
 			sight &= ~(SEE_TURFS|SEE_MOBS|SEE_OBJS)
 			see_in_dark = species.darksight
 			see_invisible = see_in_dark>2 ? SEE_INVISIBLE_LEVEL_ONE : SEE_INVISIBLE_LIVING
+
+			if(mind && mind.vampire)
+				if((VAMP_VISION in mind.vampire.powers) && !(VAMP_FULL in mind.vampire.powers))
+					sight |= SEE_MOBS
+				if((VAMP_FULL in mind.vampire.powers))
+					sight |= SEE_TURFS|SEE_MOBS|SEE_OBJS
+					see_in_dark = 8
+					see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
 
 			if(XRAY in mutations)
 				sight |= SEE_TURFS|SEE_MOBS|SEE_OBJS
@@ -1758,7 +1778,8 @@
 				if("Death Commando")
 					holder.icon_state = "huddeathsquad"
 				if("Ninja")
-					holder.icon_state = "hudninja"
+				if("Vampire")
+					holder.icon_state = "hudvampire"
 				if("head_loyalist")
 					holder.icon_state = "hudloyalist"
 				if("loyalist")

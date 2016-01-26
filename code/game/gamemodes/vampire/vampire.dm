@@ -7,14 +7,12 @@
 /datum/game_mode/vampire
 	name = "vampire"
 	config_tag = "vampire"
-	//restricted_species = list("Machine")
-	restricted_jobs = list("AI", "Cyborg", "Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Chaplain") //Consistent screening has filtered all infiltration attempts on high value jobs
-	protected_jobs = list()
-	//restricted_species = list("Machine","Vox")
+	restricted_jobs = list("AI", "Cyborg", "Mobile MMI","Head of Security", "Captain", "Chaplain") //Consistent screening has filtered all infiltration attempts on high value jobs
+	protected_jobs = list( "Security Officer", "Warden", "Detective" )
 	required_players = 1
-	required_players_secret = 15
+	required_players_secret = 10
 	required_enemies = 1
-	recommended_enemies = 2
+	recommended_enemies = 4
 
 	uplink_welcome = "Syndicate Uplink Console:"
 	uplink_uses = 10
@@ -54,15 +52,19 @@
 	var/list/datum/mind/possible_vampires = get_players_for_role(BE_VAMPIRE)
 
 	for(var/datum/mind/player in possible_vampires)
-		for(var/job in restricted_jobs)//Removing robots from the list
+//This could be the fuckup with game start
+		if(player.current.client.prefs.species == "Machine")
+			possible_vampires -= player
+			//msg_scopes("[player.key] has an invalid mob for this role.")
+			continue
+		for(var/job in restricted_jobs)
 			if(player.assigned_role == job)
 				possible_vampires -= player
-//		for(var/species in restricted_species)//Removing IPCs from the list
-//			if(player.current.client.prefs.species == species)
-//				possible_vampires -= player
+			//	msg_scopes("[player.key] has an invalid job for this role.")
+				break
 
 	vampire_amount = max(1,round(num_players() / 10)) //1 + round(num_players() / 10)
-
+	//msg_scopes("vampire_amount: [vampire_amount]")
 	if(possible_vampires.len>0)
 		for(var/i = 0, i < vampire_amount, i++)
 			if(!possible_vampires.len) break
@@ -72,18 +74,20 @@
 			modePlayer += vampires
 		return 1
 	else
+	//	msg_scopes("possible_vampires went poof")
 		return 0
 
 /datum/game_mode/vampire/post_setup()
 	for(var/datum/mind/vampire in vampires)
 		grant_vampire_powers(vampire.current)
 		vampire.special_role = "Vampire"
-		forge_vampire_objectives(vampire)
+		if(!config.objectives_disabled)
+			forge_vampire_objectives(vampire)
 		greet_vampire(vampire)
 
-//	spawn (rand(waittime_l, waittime_h))
-//		send_intercept()
-//	..()
+	//spawn (rand(waittime_l, waittime_h))
+	//	send_intercept()
+	//..()
 	return
 
 /datum/game_mode/proc/auto_declare_completion_vampire()
@@ -91,10 +95,8 @@
 		var/text = "<FONT size = 2><B>The vampires were:</B></FONT>"
 		for(var/datum/mind/vampire in vampires)
 			var/traitorwin = 1
-			if(vampire.key)
-				text += "<br>[vampire.key] was [vampire.name] ("
-			else
-				text += "<br>Vamipre(DCed) was [vampire.name] ("
+
+			text += "<br>[vampire.key] was [vampire.name] ("
 			if(vampire.current)
 				if(vampire.current.stat == DEAD)
 					text += "died"
@@ -108,46 +110,44 @@
 
 			if(vampire.objectives.len)//If the traitor had no objectives, don't need to process this.
 				var/count = 1
-				for(var/datum/objective/objective in vampire.objectives)
-					if(objective.check_completion())
-						text += "<br><B>Objective #[count]</B>: [objective.explanation_text] <font color='green'><B>Success!</B></font>"
-						feedback_add_details("traitor_objective","[objective.type]|SUCCESS")
-					else
-						text += "<br><B>Objective #[count]</B>: [objective.explanation_text] <font color='red'>Fail.</font>"
-						feedback_add_details("traitor_objective","[objective.type]|FAIL")
-						traitorwin = 0
-					count++
+				if (!config.objectives_disabled)
+					for(var/datum/objective/objective in vampire.objectives)
+						if(objective.check_completion())
+							text += "<br><B>Objective #[count]</B>: [objective.explanation_text] <font color='green'><B>Success!</B></font>"
+							feedback_add_details("traitor_objective","[objective.type]|SUCCESS")
+						else
+							text += "<br><B>Objective #[count]</B>: [objective.explanation_text] <font color='red'>Fail.</font>"
+							feedback_add_details("traitor_objective","[objective.type]|FAIL")
+							traitorwin = 0
+						count++
 
 			var/special_role_text
 			if(vampire.special_role)
 				special_role_text = lowertext(vampire.special_role)
 			else
 				special_role_text = "antagonist"
-
-			if(traitorwin)
-				text += "<br><font color='green'><B>The [special_role_text] was successful!</B></font>"
-				feedback_add_details("traitor_success","SUCCESS")
-			else
-				text += "<br><font color='red'><B>The [special_role_text] has failed!</B></font>"
-				feedback_add_details("traitor_success","FAIL")
+			if (!config.objectives_disabled)
+				if(traitorwin)
+					text += "<br><font color='green'><B>The [special_role_text] was successful!</B></font>"
+					feedback_add_details("traitor_success","SUCCESS")
+				else
+					text += "<br><font color='red'><B>The [special_role_text] has failed!</B></font>"
+					feedback_add_details("traitor_success","FAIL")
 		world << text
 	return 1
 
 /datum/game_mode/proc/auto_declare_completion_enthralled()
 	if(enthralled.len)
 		var/text = "<FONT size = 2><B>The Enthralled were:</B></FONT>"
-		for(var/datum/mind/enthralled in enthralled)
-			if(enthralled.key)
-				text += "<br>[enthralled.key] was [enthralled.name] ("
-			else
-				text += "<br>Enthralled(DCed) was [enthralled.name] ("
-			if(enthralled.current)
-				if(enthralled.current.stat == DEAD)
+		for(var/datum/mind/Mind in enthralled)
+			text += "<br>[Mind.key] was [Mind.name] ("
+			if(Mind.current)
+				if(Mind.current.stat == DEAD)
 					text += "died"
 				else
 					text += "survived"
-				if(enthralled.current.real_name != enthralled.name)
-					text += " as [enthralled.current.real_name]"
+				if(Mind.current.real_name != Mind.name)
+					text += " as [Mind.current.real_name]"
 			else
 				text += "body destroyed"
 			text += ")"
@@ -156,6 +156,9 @@
 
 /datum/game_mode/proc/forge_vampire_objectives(var/datum/mind/vampire)
 	//Objectives are traitor objectives plus blood objectives
+
+	if (config.objectives_disabled)
+		return
 
 	var/datum/objective/blood/blood_objective = new
 	blood_objective.owner = vampire
@@ -199,11 +202,11 @@ You are weak to holy things and starlight. Don't go into space and avoid the Cha
 	vampire.current << dat
 	vampire.current << "<B>You must complete the following tasks:</B>"
 
-	if (vampire.current.mind)
+/*	if (vampire.current.mind)
 		if (vampire.current.mind.assigned_role == "Clown")
 			vampire.current << "Your lust for blood has allowed you to overcome your clumsy nature allowing you to wield weapons without harming yourself."
-			vampire.current.mutations.Remove(CLUMSY)
-
+			vampire.current.mutations.Remove(M_CLUMSY)
+*/
 	var/obj_count = 1
 	for(var/datum/objective/objective in vampire.objectives)
 		vampire.current << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
@@ -271,10 +274,7 @@ You are weak to holy things and starlight. Don't go into space and avoid the Cha
 	var/blood = 0
 	var/bloodtotal = 0 //used to see if we increased our blood total
 	var/bloodusable = 0 //used to see if we increased our blood usable
-	src.attack_log += text("\[[time_stamp()]\] <font color='red'>Bit [src.name] ([src.ckey]) in the neck and draining their blood</font>")
-	H.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been bit in the neck by [src.name] ([src.ckey])</font>")
-	log_attack("[src.name] ([src.ckey]) bit [H.name] ([H.ckey]) in the neck")
-	msg_admin_attack("[src.name] ([src.ckey]) bit [H.name] ([H.ckey]) in the neck")
+
 	src.visible_message("\red <b>[src.name] bites [H.name]'s neck!<b>", "\red <b>You bite [H.name]'s neck and begin to drain their blood.", "\blue You hear a soft puncture and a wet sucking noise")
 	if(!iscarbon(src))
 		H.LAssailant = null
@@ -286,9 +286,6 @@ You are weak to holy things and starlight. Don't go into space and avoid the Cha
 			return 0
 		bloodtotal = src.mind.vampire.bloodtotal
 		bloodusable = src.mind.vampire.bloodusable
-		if(H.species && (H.species.flags & NO_BLOOD))
-			src << "\red They've got no blood!."
-			break
 		if(!H.vessel.get_reagent_amount("blood"))
 			src << "\red They've got no blood left to give."
 			break
@@ -296,7 +293,7 @@ You are weak to holy things and starlight. Don't go into space and avoid the Cha
 			blood = min(10, H.vessel.get_reagent_amount("blood"))// if they have less than 10 blood, give them the remnant else they get 10 blood
 			src.mind.vampire.bloodtotal += blood
 			src.mind.vampire.bloodusable += blood
-			H.adjustCloneLoss(10) // beep boop 10 damage
+//			H.adjustCloneLoss(10) // beep boop 10 damage //probably not necessary actually honestly okay
 		else
 			blood = min(5, H.vessel.get_reagent_amount("blood"))// The dead only give 5 bloods
 			src.mind.vampire.bloodtotal += blood
@@ -307,7 +304,6 @@ You are weak to holy things and starlight. Don't go into space and avoid the Cha
 
 	src.mind.vampire.draining = null
 	src << "\blue You stop draining [H.name] of blood."
-
 	return 1
 
 /mob/proc/check_vampire_upgrade(datum/mind/v)
@@ -333,8 +329,7 @@ You are weak to holy things and starlight. Don't go into space and avoid the Cha
 	if(vamp.bloodtotal >= 150)
 		if(!(VAMP_CLOAK in vamp.powers))
 			vamp.powers.Add(VAMP_CLOAK)
-		if(!(VAMP_DISEASE in vamp.powers))
-			vamp.powers.Add(VAMP_DISEASE)
+
 
 	// TIER 3
 	if(vamp.bloodtotal >= 200)
@@ -342,8 +337,9 @@ You are weak to holy things and starlight. Don't go into space and avoid the Cha
 			vamp.powers.Add(VAMP_BATS)
 		if(!(VAMP_SCREAM in vamp.powers))
 			vamp.powers.Add(VAMP_SCREAM)
-		// Commented out until we can figured out a way to stop this from spamming.
-		//src << "\blue Your rejuvination abilities have improved and will now heal you over time when used."
+			src << "\blue Your rejuvination abilities have improved and will now heal you over time when used."
+		if(!(VAMP_DISEASE in vamp.powers))
+			vamp.powers.Add(VAMP_DISEASE)
 
 	// TIER 3.5 (/vg/)
 	if(vamp.bloodtotal >= 250)
@@ -384,10 +380,10 @@ You are weak to holy things and starlight. Don't go into space and avoid the Cha
 					src << "\blue You have gained the Summon Bats ability."
 					verbs += /client/vampire/proc/vampire_bats // work in progress
 				if(VAMP_SCREAM)
-					src << "\blue You have gained the Chriopteran Screech ability which stuns anything with ears in a large radius and shatters glass in the process."
+					src << "\blue You have gained the Chiropteran Screech ability which stuns anything with ears in a large radius and shatters glass in the process."
 					verbs += /client/vampire/proc/vampire_screech
 				if(VAMP_JAUNT)
-					src << "\blue You have gained the Blood Mist Form ability which allows you to take on the form of mist for a short period and pass over any obstacle in your path."
+					src << "\blue You have gained the Mist Form ability which allows you to take on the form of mist for a short period and pass over any obstacle in your path."
 					verbs += /client/vampire/proc/vampire_jaunt
 				if(VAMP_SLAVE)
 					src << "\blue You have gained the Enthrall ability which at a heavy blood cost allows you to enslave a human that is not loyal to any other for a random period of time."
@@ -461,10 +457,7 @@ You are weak to holy things and starlight. Don't go into space and avoid the Cha
 	vampire_mind.current << "\red <FONT size = 3><B>The fog clouding your mind clears. You remember nothing from the moment you were enthralled until now.</B></FONT>"
 
 /mob/living/carbon/human/proc/check_sun()
-	if(istype(src:head, /obj/item/clothing/head/helmet/space) && istype(src:wear_suit, /obj/item/clothing/suit/space))
-		return
-	if(src.stat == 2)
-		return
+
 	var/ax = x
 	var/ay = y
 
@@ -485,60 +478,30 @@ You are weak to holy things and starlight. Don't go into space and avoid the Cha
 				src << "\red Your skin flakes away..."
 			if(60 to 80)
 				src << "<span class='warning'>Your skin sizzles!</span>"
-			if((-INFINITY) to 60)
-//				if(!on_fire)
-				src << "<b>\red Your skin burns horrifically!</b>"
-				adjustFireLoss(15)
-//				else
-//					src << "<b>\red You continue to burn!</b>"
-//				fire_stacks += 5
-//				IgniteMob()
-		emote("scream")
-//	else
-//		switch(health)
-//			if((-INFINITY) to 60)
-//				fire_stacks++
-//				IgniteMob()
-	adjustFireLoss(3)
-
+	//		if((-INFINITY) to 60)
+	//			if(!on_fire)
+	//				src << "<b>\red Your skin catches fire!</b>"
+	//			else
+	//				src << "<b>\red You continue to burn!</b>"
+	//			fire_stacks += 5
+	//			IgniteMob()
+	//	emote("scream")
+	//else
+	//	switch(health)
+	//		if((-INFINITY) to 60)
+	//			fire_stacks++
+	//			IgniteMob()
+	adjustFireLoss(30) //Original value was 3.  Barely did anything.  Vamps should vaporize in starlight.
 
 /mob/living/carbon/human/proc/handle_vampire()
-	/*if(hud_used)
+/*	if(hud_used)
 		if(!hud_used.vampire_blood_display)
 			hud_used.vampire_hud()
-		//if(hud_used.ninja_cell_display || hud_used.changeling_chem_display)
-		//	hud_used.vampire_blood_display.screen_loc = "13:28,9:15"
-		hud_used.vampire_blood_display.overlays.Cut()
-		var/BU
-		var/BT
-		if(mind.vampire.bloodusable>999)
-			var/A = num2text(mind.vampire.bloodusable)
-			var/B = copytext(A,1,2)
-			B +="."
-			B += copytext(A,2,3)
-			B +="k"
-			BU = B
-		else
-			BU = num2text(mind.vampire.bloodusable)
-		if(mind.vampire.bloodtotal>999)
-			var/A = num2text(mind.vampire.bloodtotal)
-			var/B = copytext(A,1,2)
-			B +="."
-			B += copytext(A,2,3)
-			B +="k"
-			BT = B
-		else
-			BT = num2text(mind.vampire.bloodtotal)
-		var/image/A = text2icon("U:[BU]",23,-9)
-		var/image/B = text2icon("T:[BT]",23,-17)
-		hud_used.vampire_blood_display.overlays += A
-		hud_used.vampire_blood_display.overlays += B*/
-			//hud_used.human_hud(hud_used.ui_style)
-		//hud_used.vampire_blood_display.maptext_width = 352
-		//hud_used.vampire_blood_display.maptext_height = 32
-		//var/newtext = {"<div style="font-size:6pt;color:#ffffff;font:'Verdana';text-align:center;" valign="center">U:<font color='#33FF33'>[num2text(mind.vampire.bloodusable)]</font><BR>T:<font color='#FFFF00'>[num2text(mind.vampire.bloodtotal)]</font></div>"}
-		//if(newtext)
-		//	..hud_used.vampire_blood_display.maptext = newtext
+			hud_used.human_hud('icons/mob/screen1_Vampire.dmi')
+		hud_used.vampire_blood_display.maptext_width = 64
+		hud_used.vampire_blood_display.maptext_height = 26
+		hud_used.vampire_blood_display.maptext = "<div align='left' valign='top' style='position:relative; top:0px; left:6px'> U:<font color='#33FF33' size='1'>[mind.vampire.bloodusable]</font><br> T:<font color='#FFFF00' size='1'>[mind.vampire.bloodtotal]</font></div>"
+		*/
 	handle_vampire_cloak()
 	if(istype(loc, /turf/space))
 		check_sun()

@@ -479,6 +479,9 @@
 		if(ticker.mode.traitors.len)
 			dat += check_role_table("Traitors", ticker.mode.traitors, src)
 
+		if(ticker.mode.vampires.len)
+			dat += check_role_table("Vampires", ticker.mode.vampires, src)
+
 		if(ticker.mode.borers.len)
 			dat += check_role_table("Cortical Borers", ticker.mode.borers, src)
 
