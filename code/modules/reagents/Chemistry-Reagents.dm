@@ -1445,7 +1445,7 @@ datum
 		spaceacillin
 			name = "Spaceacillin"
 			id = "spaceacillin"
-			description = "Spaceacillin is a slow-metabolizing, an all-purpose antiviral, and an all-purpose beta-lactam antibiotic. It treats infections, slows down the progression of viruses and halts transmission of viruses"
+			description = "Spaceacillin is a slow-metabolizing, an all-purpose antiviral, and an all-purpose beta-lactam antibiotic. It treats infections, slows down the progression of viruses and halts transmission of viruses."
 			reagent_state = LIQUID
 			color = "#C1C1C1" // rgb: 193, 193, 193
 			custom_metabolism = 0.01
