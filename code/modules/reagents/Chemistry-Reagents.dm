@@ -1093,7 +1093,7 @@ datum
 		dexalinp
 			name = "Dexalin Plus"
 			id = "dexalinp"
-			description = "Dexalin Plus is used in the treatment of oxygen deprivation and removing Lexorin from the body. It is highly effective; one unit completely replenishes the lungs."
+			description = "Dexalin Plus is used in the treatment of oxygen deprivation and removing Lexorin from the body. It is highly effective at replenishing the lungs with oxygen."
 			reagent_state = LIQUID
 			color = "#0040FF" // rgb: 0, 64, 255
 			overdose = REAGENTS_OVERDOSE/2
@@ -1160,7 +1160,7 @@ datum
 
 			glass_icon_state = "golden_cup"
 			glass_name = "golden cup"
-			glass_desc = "The lavender elixir sparkles, swirls and hums quietly; it looks magical beyond your comprehension."
+			glass_desc = "The lavender elixir sparkles, swirls and hums quietly. It looks magical beyond your comprehension."
 
 			on_mob_life(var/mob/living/carbon/M as mob)
 				if(!M) M = holder.my_atom ///This can even heal dead people.
@@ -1445,7 +1445,7 @@ datum
 		spaceacillin
 			name = "Spaceacillin"
 			id = "spaceacillin"
-			description = "Spaceacillin is a slow-metabolizing, an all-purpose antiviral, and an all-purpose beta-lactam antibiotic. It treats infections, slows down the progression of viruses and halts transmission of viruses"
+			description = "Spaceacillin is a slow-metabolizing, an all-purpose antiviral, and an all-purpose beta-lactam antibiotic. It treats infections, slows down the progression of viruses and halts transmission of viruses."
 			reagent_state = LIQUID
 			color = "#C1C1C1" // rgb: 193, 193, 193
 			custom_metabolism = 0.01
@@ -1520,7 +1520,7 @@ datum
 		diethylamine
 			name = "Diethylamine"
 			id = "diethylamine"
-			description = "Diethylamine is a secondary amine with the molecular structure of C4H11N used as a potent fertilizer.. It is a flammable, volatile, corrosive, weakly alkaline liquid, soluble in water and ethanol, and has unpleasant odor. "
+			description = "Diethylamine is a secondary amine with the molecular structure of C4H11N used as a potent fertilizer.. It is a flammable, volatile, corrosive, weakly alkaline liquid, soluble in water and ethanol, and has unpleasant odor."
 			reagent_state = LIQUID
 			color = "#604030" // rgb: 96, 64, 48
 
@@ -1699,7 +1699,7 @@ datum
 		toxin/zombiepowder
 			name = "Zombie Powder"
 			id = "zombiepowder"
-			description = "Zombie Powder is a strong neurotoxin that completely paralyzes the patient; the patient will appear to be in a death-like state, visually and by scanners, but the patient will be aware of his or her surroundings."
+			description = "Zombie Powder is a strong neurotoxin that completely paralyzes the patient. The patient will appear to be in a death-like state, visually and by scanners, but the patient will be aware of his or her surroundings."
 			reagent_state = SOLID
 			color = "#669900" // rgb: 102, 153, 0
 			toxpwr = 0.5
@@ -1726,7 +1726,6 @@ datum
 			description = "A more powerful variant of LSD, Mindbreaker Toxin is a powerful hallucinogenic narcotic that assaults and tricks the mind to generate frightening visual, auditory, and tactile hallucinations."
 			reagent_state = LIQUID
 			color = "#B31008" // rgb: 139, 166, 233
-			toxpwr = 0.5 // Fuck you, chemists. You ingest this shit, you pay for it.
 			custom_metabolism = 0.05
 			overdose = REAGENTS_OVERDOSE
 
@@ -1824,7 +1823,7 @@ datum
 			color = "#009CA8" // rgb: 232, 149, 204
 			toxpwr = 0
 			custom_metabolism = 0.1
-			overdose = REAGENTS_OVERDOSE
+			overdose = REAGENTS_OVERDOSE*1.5
 
 			on_mob_life(var/mob/living/M as mob)
 				if(!M) M = holder.my_atom
@@ -1848,7 +1847,7 @@ datum
 		toxin/chloralhydrate
 			name = "Chloral Hydrate"
 			id = "chloralhydrate"
-			description = "Chloral hydrate is an organic, toxic compound with the chemical formula C2H3Cl3O2, used as a strong sedative and hypnotic pharmaceutical drug. Normally a colorless solid, it was pre-dyed blue and pre-liquified for easy identification."
+			description = "Chloral hydrate is an organic, toxic compound with the chemical formula C2H3Cl3O2, used as a strong sedative and hypnotic pharmaceutical drug. Normally a colorless solid, it was pre-dyed blue and pre-liquefied for easy identification."
 			reagent_state = SOLID
 			color = "#000067" // rgb: 0, 0, 103
 			toxpwr = 1
@@ -1875,11 +1874,11 @@ datum
 		toxin/potassium_chloride
 			name = "Potassium Chloride"
 			id = "potassium_chloride"
-			description = "Potassium chloride is a white, odorless, water-soluble metal halide salt with a vitreous-crystal appearance and a taste very similar to sodium chloride. Upon ingestion, it will cause cardiac arrest."
+			description = "Potassium Chloride is a white, odorless, water-soluble metal halide salt with a vitreous-crystal appearance and a taste very similar to sodium chloride. Upon ingestion, it will cause cardiac arrest."
 			reagent_state = SOLID
 			color = "#FFFFFF" // rgb: 255,255,255
 			toxpwr = 0
-			overdose = 30
+			overdose = REAGENTS_OVERDOSE
 
 			on_mob_life(var/mob/living/carbon/M as mob)
 				var/mob/living/carbon/human/H = M
@@ -1895,20 +1894,20 @@ datum
 		toxin/potassium_chlorophoride //How is this different from potassium chloride?
 			name = "Potassium Chlorophoride"
 			id = "potassium_chlorophoride"
-			description = "Potassium chlorophoride is a a white, odorless, water-soluble metal halide salt with a vitreous-crystal appearance and a taste vaguely similar to sodium chloride. It is used to stop the heart during surgery." //There was absolutely no difference from this to potassium chloride, so I weakened it to make it 'seem' like a medicine.
+			description = "Potassium Chlorophoride is a a white, odorless, water-soluble metal halide salt with a vitreous-crystal appearance and a taste vaguely similar to sodium chloride. It is used to stop the heart during surgery." //Found its effects on modern bay code. This is more deadly.
 			reagent_state = SOLID
 			color = "#FFFFFF" // rgb: 255,255,255
 			toxpwr = 2
 			overdose = 20
 
 			on_mob_life(var/mob/living/carbon/M as mob)
-				if(ishuman(M))
-					var/mob/living/carbon/human/H = M
-					if(H.stat != 1)
-						if(H.losebreath >= 5)
-							H.losebreath = max(5, M.losebreath-5)
-						H.adjustOxyLoss(1)
-						H.Weaken(5)
+				var/mob/living/carbon/human/H = M
+				if(H.stat != 1)
+					if (volume >= overdose)
+						if(H.losebreath >= 10)
+							H.losebreath = max(10, H.losebreath-10)
+						H.adjustOxyLoss(2)
+						H.Weaken(10)
 				..()
 				return
 
@@ -2763,7 +2762,7 @@ datum
 
 			glass_icon_state = "grenadineglass"
 			glass_name = "glass of grenadine syrup"
-			glass_desc = "It's a glass of grenadine syrup. It's sweet and tangy; what drink will the barkeep use it for?"
+			glass_desc = "It's a glass of sweet and tangy grenadine syrup. What drink will the barkeep use it for?"
 			glass_center_of_mass = list("x"=17, "y"=6)
 
 		drink/hot_coco
@@ -3079,11 +3078,11 @@ datum
 			description = "The Doctor's Delight is a pink, bubbly, extremely delicious non-alcoholic health drink designed to revitalize the body and have a sweet, tangy, creamy taste to appeal to adults and children. It is made from orange juice, lime juice, tomato juice, cream, and tricordrazine."
 			reagent_state = LIQUID
 			color = "#FF8CFF" // rgb: 255, 140, 255
-			nutriment_factor = 1 * FOOD_METABOLISM
 			scannable = 1
+			nutriment_factor = 1 * FOOD_METABOLISM
 			glass_icon_state = "doctorsdelightglass"
 			glass_name = "glass of The Doctor's Delight"
-			glass_desc = "The healthiest drink around. Doctors love it, kids love it, adults love it, too. What can The Doctor's Delight do for you?"
+			glass_desc = "The Doctor's Delight--the healthiest drink around. Doctors love it, kids love it, and adults love it, too."
 			glass_center_of_mass = list("x"=16, "y"=8)
 
 			on_mob_life(var/mob/living/M as mob)
@@ -4373,14 +4372,11 @@ datum
 		ethanol/bluemotorcycle
 			name = "Blue Motorcycle A.M.F Cocktail"
 			id = "bluemotorcycle"
-			description = "Blue Motorcycle is a potent alcoholic beverage. It is a concoction of a mixture of vodka, tequila, rum, gin, Blue Curacao, Space-up, and Lemon-Lime, then chilled with ice."
-			nutriment_factor = 2 * FOOD_METABOLISM //Lots of alcohol, lots of calories.
+			description = "Blue Motorcycle is a potent alcoholic beverage. It is a concoction of a mixture of vodka, tequila, rum, gin, Blue Curacao, Space-up, and Lemon-Lime, then chilled with ice." //Lots of alcohol, lots of calories.
 			color = "#00E1FF" // rgb: 0, 225, 255
 			boozepwr = 5 //This has five types of alcohol in it. You won't finish two drinks without suffering heavy consequences.
 			dizzy_adj =5
 			slurr_adj = 5
-			slur_start = 15
-			confused_start = 30
 
 			glass_icon_state = "amfglass"
 			glass_name = "glass of Blue Motorcycle A.M.F Cocktail"

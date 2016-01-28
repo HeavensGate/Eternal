@@ -60,7 +60,7 @@
 /datum/reagent/antidepressant/paroxetine
 	name = "Paroxetine"
 	id = "paroxetine"
-	description = "Paroxetine, commonly referred as its brand name, Paxil, is a very effective antidepressant drug of the selective serotonin reuptake inhibitor class. Paroxetine is used to treat major depression, anxiety disorders, post-traumatic stress disorder, obsessive-compulsive disorder, and premenstrual dysphoric disorder. This medicine has become more powerful over the years; it causes violent withdrawals with horrific hallucinogenic symptoms, so it has become a habit-forming drug."
+	description = "Paroxetine, commonly referred as its brand name, Paxil, is a very effective antidepressant drug of the selective serotonin reuptake inhibitor class. Paroxetine is used to treat major depression, anxiety disorders, post-traumatic stress disorder, obsessive-compulsive disorder, and premenstrual dysphoric disorder. Over the years, this drug became more powerful and habit-forming with its violent withdrawals with horrific hallucinogenic symptoms."
 	reagent_state = LIQUID
 	color = "#FF80BF" // rgb: 255, 128, 191
 	custom_metabolism = 0.01

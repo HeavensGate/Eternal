@@ -274,7 +274,7 @@
 
 datum/wound/cut/massive
 	max_bleeding_stage = 2
-	stages = list("massive bone-exposing wound" = 70, "massive healing wound" = 50, "massive healing clot" = 10,  "massive, jagged, keloiding scar" = 0)
+	stages = list("massive bone-exposing wound" = 70, "massive healing wound" = 50, "massive healing clot" = 10,  "massive keloiding scar" = 0)
 	damage_type = CUT
 
 /** BRUISES **/
@@ -287,11 +287,11 @@ datum/wound/cut/massive
 
 /** BURNS **/
 /datum/wound/burn/moderate
-	stages = list("ripped blistering burn" = 10, "moderate burn" = 5, "healing, moderate burn" = 2, "tiny fresh skin" = 0)
+	stages = list("ripped blistering burn" = 10, "moderate burn" = 5, "healing moderate burn" = 2, "tiny fresh skin" = 0)
 	damage_type = BURN
 
 /datum/wound/burn/large
-	stages = list("ripped blistering large burn" = 20, "blistering large burn" = 15, "healing, large burn" = 5, "fresh skin" = 0)
+	stages = list("ripped blistering large burn" = 20, "blistering large burn" = 15, "healing large burn" = 5, "fresh skin" = 0)
 	damage_type = BURN
 
 /datum/wound/burn/severe
