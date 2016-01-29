@@ -24,10 +24,10 @@
 	darksight = 3
 	gluttonous = 1
 
-	blurb = "A heavily, carnivorous, reptillian species, Unathi (or 'Sinta as they call themselves) hail from the \
-	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Coming from a harsh, radioactive \
-	desert planet, Moghes, they mostly hold ideals of honesty, virtue, property, martial combat and bravery above all \
-	else, frequently even their own lives. They prefer warmer temperatures than most species and \
+	blurb = "A carnivorous, heavily-reptillian species, Unathi (or 'Sinta as they call themselves) hail from the \
+	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Hailing from a harsh, radioactive \
+	desert planet named Moghes, they mostly hold ideals of honesty, virtue, property, martial combat and bravery above all \
+	else, frequently above even their own lives. They prefer warmer temperatures than most species and \
 	their native tongue is a heavy hissing laungage called Sinta'Unathi."
 
 	cold_level_1 = 280 //Default 260 - Lower is better
@@ -67,7 +67,7 @@
 	language = "Siik'Maas"
 	tail = "tajtail"
 	ears = "tajears"
-	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
+	unarmed_types = list(/datum/unarmed_attack/dig, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
 	darksight = 8
 	slowdown = -0.6 //Supercat nerf
 
