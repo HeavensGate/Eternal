@@ -203,9 +203,9 @@ REAGENT SCANNER
 			var/blood_percent =  blood_volume / 560
 			var/blood_type = M.dna.b_type
 			blood_percent *= 100
-			if(blood_volume <= 500 && blood_volume > 336)
+			if(blood_volume <= 448 && blood_volume > 364)
 				user.show_message("\red <b>Warning: Blood Level LOW: [blood_percent]% [blood_volume]cl.\blue Type: [blood_type]")
-			else if(blood_volume <= 336)
+			else if(blood_volume <= 364)
 				user.show_message("\red <b>Warning: Blood Level CRITICAL: [blood_percent]% [blood_volume]cl.\blue Type: [blood_type]")
 			else
 				user.show_message("\blue Blood Level Normal: [blood_percent]% [blood_volume]cl. Type: [blood_type]")
