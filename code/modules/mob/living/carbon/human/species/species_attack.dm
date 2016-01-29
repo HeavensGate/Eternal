@@ -1,5 +1,5 @@
 /datum/unarmed_attack/bite/sharp //eye teeth
-	attack_verb = list("bit", "chomped on", "crunched on",)
+	attack_verb = list("bit", "chomped on", "crunched on")
 	attack_sound = 'sound/weapons/bite.ogg'
 	shredding = 0
 	damage = 5
@@ -73,7 +73,8 @@
 /datum/unarmed_attack/dig
 	attack_verb = list("raked", "dug", "gouged")
 	attack_noun = ("claws")
-	attack_sound = "swing_hit"
+	attack_sound = 'sound/weapons/slice.ogg'
+	miss_sound = 'sound/weapons/slashmiss.ogg'
 	sharp = 1
 	edge = 1
 
