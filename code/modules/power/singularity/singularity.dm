@@ -235,13 +235,6 @@ var/global/list/uneatable = list(
 		gain = 20
 		if(istype(A,/mob/living/carbon/human))
 			var/mob/living/carbon/human/H = A
-			if(H.mind)
-
-				if((H.mind.assigned_role == "Station Engineer") || (H.mind.assigned_role == "Chief Engineer") )
-					gain = 100
-
-				if(H.mind.assigned_role == "Clown")
-					gain = rand(-300, 300) // HONK
 
 		spawn()
 			A:gib()
