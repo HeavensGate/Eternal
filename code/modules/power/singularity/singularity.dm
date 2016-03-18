@@ -233,8 +233,6 @@ var/global/list/uneatable = list(
 		return 0
 	if (istype(A,/mob/living))//Mobs get gibbed
 		gain = 20
-		if(istype(A,/mob/living/carbon/human))
-			var/mob/living/carbon/human/H = A
 
 		spawn()
 			A:gib()
