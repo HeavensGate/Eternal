@@ -270,7 +270,7 @@
 			comm.messagetext.Add(intercepttext)
 	world << sound('sound/AI/commandreport.ogg')
 */
-	
+
 /*	command_alert("Summary downloaded and printed out at all communications consoles.", "Enemy communication intercept. Security Level Elevated.")
 	for(var/mob/M in player_list)
 		if(!istype(M,/mob/new_player))
@@ -300,7 +300,7 @@
 	// Assemble a list of active players without jobbans.
 	for(var/mob/new_player/player in player_list)
 		if( player.client && player.ready )
-			if(!jobban_isbanned(player, "Syndicate") && !jobban_isbanned(player, roletext))
+			if(!jobban_isbanned(player, "Antagonists") && !jobban_isbanned(player, roletext))
 				players += player
 
 	// Shuffle the players list so that it becomes ping-independent.
