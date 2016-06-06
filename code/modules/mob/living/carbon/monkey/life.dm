@@ -593,9 +593,9 @@
 
 		if(blind && stat != DEAD)
 			if(blinded)
-				blind.layer = 18
+				blind.invisibility = 0
 			else
-				blind.layer = 0
+				blind.invisibility = 101
 
 				if(disabilities & NEARSIGHTED)
 					client.screen += global_hud.vimpaired
