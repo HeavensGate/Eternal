@@ -132,7 +132,7 @@ text("<A href='?src=\ref[src];operation=oddbutton'>[src.oddbutton ? "Yes" : "No"
 			src.updateUsrDialog()
 		if("screw")
 			src.screwloose = !src.screwloose
-			usr << "<span class='notice>You twiddle the screw.</span>"
+			usr << "<span class='notice'>You twiddle the screw.</span>"
 			src.updateUsrDialog()
 		if("oddbutton")
 			src.oddbutton = !src.oddbutton
