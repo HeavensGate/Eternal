@@ -127,13 +127,13 @@ var/global/list/gear_datums = list()
 	cost = 2
 	slot = slot_head
 
- /datum/gear/grcap
+/datum/gear/grcap
 	display_name = "cap, grey"
 	path = /obj/item/clothing/head/soft/grey
 	cost = 2
 	slot = slot_head
 
- /datum/gear/ocap
+/datum/gear/ocap
 	display_name = "cap, orange"
 	path = /obj/item/clothing/head/soft/orange
 	cost = 2
@@ -193,7 +193,7 @@ var/global/list/gear_datums = list()
 	cost = 2
 	slot = slot_head
 
- /datum/gear/bowler
+/datum/gear/bowler
 	display_name = "hat, bowler"
 	path = /obj/item/clothing/head/bowler
 	cost = 2

@@ -828,7 +828,7 @@
 	var/limit = 10
 	var/list/blend_items = list (
 
-		//Sheets
+		//Sheets,
 		/obj/item/stack/sheet/mineral/phoron = list("phoron" = 20),
 		/obj/item/stack/sheet/mineral/uranium = list("uranium" = 20),
 		/obj/item/stack/sheet/mineral/silver = list("silver" = 20),
@@ -836,7 +836,7 @@
 		/obj/item/weapon/grown/nettle/death = list("pacid" = 0),
 		/obj/item/weapon/grown/nettle = list("sacid" = 0),
 
-		//Blender Stuff
+		//Blender Stuff,
 		/obj/item/weapon/reagent_containers/food/snacks/grown/soybeans = list("soymilk" = 0),
 		/obj/item/weapon/reagent_containers/food/snacks/grown/tomato = list("ketchup" = 0),
 		/obj/item/weapon/reagent_containers/food/snacks/grown/corn = list("cornoil" = 0),
@@ -846,19 +846,19 @@
 		/obj/item/weapon/reagent_containers/food/snacks/grown/plastellium = list("plasticide" = 5),
 
 
-		//archaeology!
+		//archaeology!,
 		/obj/item/weapon/rocksliver = list("ground_rock" = 50),
 
 
 
-		//All types that you can put into the grinder to transfer the reagents to the beaker. !Put all recipes above this.!
+		//All types that you can put into the grinder to transfer the reagents to the beaker. !Put all recipes above this.!,
 		/obj/item/weapon/reagent_containers/pill = list(),
 		/obj/item/weapon/reagent_containers/food = list()
 	)
 
 	var/list/juice_items = list (
 
-		//Juicer Stuff
+		//Juicer Stuff,
 		/obj/item/weapon/reagent_containers/food/snacks/grown/tomato = list("tomatojuice" = 0),
 		/obj/item/weapon/reagent_containers/food/snacks/grown/carrot = list("carrotjuice" = 0),
 		/obj/item/weapon/reagent_containers/food/snacks/grown/berries = list("berryjuice" = 0),
