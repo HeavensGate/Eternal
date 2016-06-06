@@ -203,7 +203,8 @@
 	set src in usr
 	if(!istype(usr, /mob/living)) return
 	if(usr.stat) return
-		if(!holstered)
+	
+	if(!holstered)
 		if(!istype(usr.get_active_hand(), /obj/item/weapon/gun))
 			usr << "\blue You need your gun equiped to holster it."
 			return
