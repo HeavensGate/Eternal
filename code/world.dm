@@ -20,7 +20,7 @@ var/global/datum/global_init/init = new ()
 
 
 
-#define RECOMMENDED_VERSION 501
+#define RECOMMENDED_VERSION 508
 /world/New()
 	//logs
 	var/date_string = time2text(world.realtime, "YYYY/MM-Month/DD-Day")
@@ -52,7 +52,7 @@ var/global/datum/global_init/init = new ()
 	. = ..()
 
 	sleep_offline = 1
-
+	
 	// Set up roundstart seed list. This is here because vendors were
 	// bugging out and not populating with the correct packet names
 	// due to this list not being instantiated.
@@ -64,13 +64,14 @@ var/global/datum/global_init/init = new ()
 	master_controller = new /datum/controller/game_controller()
 	spawn(1)
 		master_controller.setup()
+		
 
 	spawn(3000)		//so we aren't adding to the round-start lag
 		if(config.ToRban)
 			ToRban_autoupdate()
 		if(config.kick_inactive)
 			KickInactiveClients()
-
+			
 #undef RECOMMENDED_VERSION
 
 	return
