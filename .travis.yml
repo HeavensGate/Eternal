@@ -10,15 +10,15 @@ env:
 cache:
   directories:
     - tgui/node_modules
-    - $HOME/BYOND-${BYOND_MAJOR}
-	
+    - $HOME/BYOND-${BYOND_MAJOR}.${BYOND_MINOR}
+
 addons:
   apt:
     packages:
-	  - libc6-i386 
-	  - libgcc1:i386
-	  - libstdc++6:i386
-	  
+      - libc6-i386 
+      - libgcc1:i386
+      - libstdc++6:i386
+
 install:
   - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $NODE_VERSION
   - npm install -g gulp-cli
@@ -29,6 +29,7 @@ before_script:
   - cd tgui && npm install && cd ..
   - chmod +x ./tools/Travis/install-byond.sh
   - ./tools/Travis/install-byond.sh
+
 script:
   - shopt -s globstar
   - (! grep 'step_[xy]' maps/**/*.dmm)
