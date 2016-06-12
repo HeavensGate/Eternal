@@ -1830,8 +1830,6 @@ var/list/ghostteleportlocs = list()
 	name = "\improper AI Main New"
 	icon_state = "storage"
 
-
-
 //Misc
 
 
@@ -1890,14 +1888,45 @@ var/list/ghostteleportlocs = list()
 	icon_state = "tcomsateast"
 	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
 
+/area/turret_protected/tcomtstorage
+	name = "\improper Telecommunications Technology Storage"
+	icon_state = "tcomsatstore"
+	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+
+/area/turret_protected/tcomemstorage
+	name = "\improper Telecommunications Emergency Storage"
+	icon_state = "tcomsatemstore"
+	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+
 /area/tcommsat/computer
-	name = "\improper Telecoms Control Room"
+	name = "\improper Telecommunications Control Room"
 	icon_state = "tcomsatcomp"
 
 /area/tcommsat/lounge
 	name = "\improper Telecommunications Satellite Lounge"
 	icon_state = "tcomsatlounge"
 
+/area/tcommsat/starsolarc
+	name = "\improper Telecommunications Starboard Solar Control"
+	icon_state = "SolarcontrolS"
+
+/area/tcommsat/starsolar
+	name = "\improper Telecommunications Starboard Solars"
+	icon_state = "panelsS"
+	ambience = list('sound/ambience/ambispace.ogg','sound/music/title2.ogg','sound/music/space.ogg','sound/music/main.ogg','sound/music/traitor.ogg')
+
+/area/tcommsat/portsolarc
+	name = "\improper Telecommunications Port Solar Control"
+	icon_state = "SolarcontrolP"
+
+/area/tcommsat/portsolar
+	name = "\improper Telecommunications Port Solars"
+	icon_state = "panelsP"
+	ambience = list('sound/ambience/ambispace.ogg','sound/music/title2.ogg','sound/music/space.ogg','sound/music/main.ogg','sound/music/traitor.ogg')
+
+/area/tcommsat/atmos
+	name = "\improper Telecommunications Atmospherics"
+	icon_state = "atmos"
 
 
 // Away Missions
